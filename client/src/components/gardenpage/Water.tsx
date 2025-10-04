@@ -56,7 +56,7 @@ export default function Water() {
         />
       </div>
       <ul>
-        {garden.environment.waterConservation.map((feature, index) => (
+        {garden.environment?.waterConservation?.map((feature, index) => (
           <li key={index}>{feature.trim()}</li>
         ))}
       </ul>

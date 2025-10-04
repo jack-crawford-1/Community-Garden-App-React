@@ -44,7 +44,7 @@ export default function GardenDetails({ garden }: { garden: Garden | null }) {
 
       <div className="mb-10">
         <Link
-          to={`/gardens/${garden.id}`}
+          to={`/venues/${garden.id}`}
           className="inline-block bg-[#55b47e] hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200"
           target="_blank"
         >

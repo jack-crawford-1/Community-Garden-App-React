@@ -44,7 +44,7 @@ export default function Soil() {
         />
       </div>
       <ul>
-        {garden.environment.soilType.map((feature, index) => (
+        {garden.environment?.soilType?.map((feature, index) => (
           <li key={index}>{feature.trim()}</li>
         ))}
       </ul>

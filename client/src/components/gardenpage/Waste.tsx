@@ -48,7 +48,7 @@ export default function Waste() {
         />
       </div>
       <ul>
-        {garden.wasteManagement.map((feature, index) => (
+        {garden.wasteManagement?.map((feature, index) => (
           <li key={index}>{feature.trim()}</li>
         ))}
       </ul>

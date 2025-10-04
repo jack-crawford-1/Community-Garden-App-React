@@ -130,9 +130,13 @@ export default function Form() {
     };
 
     try {
+      const token = localStorage.getItem("token");
       const res = await fetch("http://localhost:3000/gardens", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
         body: JSON.stringify(gardenToSend),
       });
 
@@ -150,7 +154,7 @@ export default function Form() {
   }
 
   return (
-    <div className="bg-green-800">
+    <div className="bg-[#55b47e]">
       <Navbar />
       <div className="bg-black z-100 w-full opacity-55">
         <form
@@ -444,6 +448,7 @@ export default function Form() {
 
           <fieldset className="block border p-2 rounded mb-2">
             <legend className="font-semibold">Opening Hours</legend>
+
             {Object.entries(garden.openingHours).map(([day, hours]) => (
               <div key={day} className="flex items-center mb-2">
                 <label className="w-24">{day}</label>
@@ -478,6 +483,28 @@ export default function Form() {
                 />
               </div>
             ))}
+
+            <button
+              type="button"
+              className="mt-2 px-3 py-1 bg-green-700 rounded text-white hover:bg-green-800"
+              onClick={() => {
+                setGarden((prev) => {
+                  const mondayHours = prev.openingHours.Monday;
+                  const updated = Object.fromEntries(
+                    Object.keys(prev.openingHours).map((day) => [
+                      day,
+                      mondayHours,
+                    ])
+                  );
+                  return {
+                    ...prev,
+                    openingHours: updated,
+                  };
+                });
+              }}
+            >
+              Copy Monday’s Hours to All
+            </button>
           </fieldset>
 
           <fieldset className="block border p-2 rounded mb-2">
@@ -1678,6 +1705,11 @@ export default function Form() {
                   try {
                     const res = await fetch("http://localhost:3000/upload", {
                       method: "POST",
+                      headers: {
+                        Authorization: `Bearer ${localStorage.getItem(
+                          "token"
+                        )}`,
+                      },
                       body: formData,
                     });
 

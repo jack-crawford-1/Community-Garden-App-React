@@ -39,6 +39,11 @@ function MarkerLayer() {
         cluster: false,
         gardenId: feature.id,
         ...feature.properties,
+        description: feature.properties?.description,
+        address: feature.properties?.address,
+        coordinator: feature.properties?.coordinator,
+        contact: feature.properties?.contact,
+        photos: feature.properties?.photos,
       },
       geometry: {
         type: "Point" as const,
@@ -239,7 +244,7 @@ function InnerMap({ apiKey, mapId }: { apiKey: string; mapId: string }) {
   );
 }
 
-export default function Example3() {
+export default function MapPage() {
   const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
   const MAP_ID = import.meta.env.VITE_MAP_ID;
 

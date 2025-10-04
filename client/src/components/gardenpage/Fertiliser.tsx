@@ -40,7 +40,7 @@ export default function Fertiliser() {
         />
       </div>
       <ul>
-        {garden.environment.fertiliserUse.map((feature, index) => (
+        {garden.environment?.fertiliserUse?.map((feature, index) => (
           <li key={index}>{feature.trim()}</li>
         ))}
       </ul>

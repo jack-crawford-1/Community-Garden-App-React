@@ -44,25 +44,25 @@ export default function ContactCard({
           <h5 className="text-xl font-semibold">{garden.coordinator}</h5>
           <span className="text-sm text-gray-400 mb-10">
             Garden Coordinator
-            {garden.contact.phone && <p>{garden.contact.phone}</p>}
+            {garden?.contact?.phone && <p>{garden.contact?.phone}</p>}
           </span>
         </div>
       </div>
 
       <div className=" space-y-1 text-gray-300 break-words">
-        {garden.contact.email && (
+        {garden?.contact?.email && (
           <p>
-            <strong>Email:</strong> {garden.contact.email}
+            <strong>Email:</strong> {garden?.contact?.email}
           </p>
         )}
 
-        {garden.contact.phone && (
+        {garden?.contact?.phone && (
           <p>
-            <strong>Phone:</strong> {garden.contact.phone}
+            <strong>Phone:</strong> {garden?.contact?.phone}
           </p>
         )}
 
-        {garden.contact.website && (
+        {garden?.contact?.website && (
           <p>
             <strong>Website:</strong>{" "}
             <a
@@ -71,20 +71,20 @@ export default function ContactCard({
               rel="noreferrer"
               className="underline text-[#55b47e]"
             >
-              {garden.contact.website}
+              {garden?.contact?.website}
             </a>
           </p>
         )}
-        {garden.contact.social?.facebook && (
+        {garden?.contact?.social?.facebook && (
           <p>
             <strong>Facebook:</strong>{" "}
             <a
-              href={garden.contact.social.facebook}
+              href={garden?.contact?.social?.facebook}
               target="_blank"
               rel="noreferrer"
               className="underline text-[#55b47e]"
             >
-              {garden.contact.social.facebook}
+              {garden?.contact?.social?.facebook}
             </a>
           </p>
         )}

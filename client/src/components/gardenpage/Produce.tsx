@@ -57,7 +57,7 @@ export default function Produce() {
           />
         </div>
         <ul>
-          {garden.environment.produceType.map((feature, index) => (
+          {garden.environment?.produceType.map((feature, index) => (
             <li key={index}>{feature.trim()}</li>
           ))}
         </ul>

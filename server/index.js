@@ -7,6 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
+app.use("/api/auth", router);
 
 app.use((req, res) => {
   res.status(404).send("Route not found");

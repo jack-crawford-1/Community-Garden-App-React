@@ -317,19 +317,19 @@ export default function GardenPage() {
                   {section === "Contact" && (
                     <ContactCard>
                       <Info label="Coordinator" value={garden.coordinator} />
-                      <Info label="Email" value={garden.contact.email} />
-                      <Info label="Phone" value={garden.contact.phone} />
+                      <Info label="Email" value={garden?.contact?.email} />
+                      <Info label="Phone" value={garden?.contact?.phone} />
 
                       <Info
                         label="Website"
                         value={
                           <a
-                            href={garden.contact.website}
+                            href={garden.contact?.website}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-300 hover:underline"
                           >
-                            {garden.contact.website}
+                            {garden.contact?.website}
                           </a>
                         }
                       />
@@ -337,12 +337,12 @@ export default function GardenPage() {
                         label="Facebook"
                         value={
                           <a
-                            href={garden.contact.social.facebook}
+                            href={garden.contact?.social?.facebook}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-300 hover:underline"
                           >
-                            {garden.contact.social.facebook}
+                            {garden.contact?.social?.facebook}
                           </a>
                         }
                       />
@@ -353,7 +353,7 @@ export default function GardenPage() {
                     <div className="">
                       <Events
                         events={
-                          Array.isArray(garden.events) &&
+                          Array.isArray(garden?.events) &&
                           typeof garden.events[0] === "string"
                             ? garden.events.map((ev) => ({
                                 date: "",
@@ -378,15 +378,15 @@ export default function GardenPage() {
 
                   {section === "Seasonal Planting" && (
                     <SeasonalCalendar
-                      calendar={garden.environment.seasonalPlantingCalendar}
+                      calendar={garden?.environment?.seasonalPlantingCalendar}
                     />
                   )}
                   {section === "Photo Gallery" && (
-                    <PhotoGallery photos={garden.photos} />
+                    <PhotoGallery photos={garden?.photos} />
                   )}
                   {section === "Access" && <Facilities />}
 
-                  {section === "Rules" && <Rules rules={garden.rules} />}
+                  {section === "Rules" && <Rules rules={garden?.rules || []} />}
 
                   {section === "Garden" && <Produce />}
                 </div>

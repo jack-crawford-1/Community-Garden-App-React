@@ -51,7 +51,7 @@ export default function PollenAndWildlife() {
           />
         </div>
         <ul className="grid grid-cols-1 text-sm text-green-50 pt-4">
-          {garden.environment.pollinatorSupport.map((item, idx) => (
+          {garden.environment?.pollinatorSupport?.map((item, idx) => (
             <li key={item + idx} className=" ">
               <span>{item}</span>
             </li>
