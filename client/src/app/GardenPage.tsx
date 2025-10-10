@@ -235,7 +235,7 @@ export default function GardenPage() {
   return (
     <>
       <Navbar />
-      <div className="flex ">
+      <div className="flex bg-gray-800">
         {/* Sidebar */}
         <div className="w-1/7  h-screen sticky top-20 overflow-y-auto text-white p-4 pl-13 pt-10 pangolin-regular">
           <ul className="space-y-2">

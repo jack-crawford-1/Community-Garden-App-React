@@ -156,12 +156,13 @@ function MarkerLayer() {
             }}
           >
             <div
+              className="bg-[#55b47e]"
               style={{
-                background: "#ffffffdd",
                 padding: "6px",
                 borderRadius: "100px",
-                width: "40px",
-                height: "40px",
+                border: "2px solid white",
+                width: "45px",
+                height: "45px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -213,8 +214,8 @@ function InnerMap({ apiKey, mapId }: { apiKey: string; mapId: string }) {
           <Map
             mapId={mapId}
             className="h-full w-full"
-            defaultZoom={10}
-            defaultCenter={{ lat: -41.3, lng: 174.9 }}
+            defaultZoom={7}
+            defaultCenter={{ lat: -40.8, lng: 174.9 }}
             disableDefaultUI
             gestureHandling="greedy"
             onClick={(e) => {

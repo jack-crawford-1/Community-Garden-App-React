@@ -32,7 +32,7 @@ export default function ContactCard({
   if (loading) return <p>Loading…</p>;
   if (!garden) return <p>Garden not found.</p>;
   return (
-    <div className="mt-4 bg-gray-800 rounded-xl shadow-lg p-6 text-white border-l-8 border-green-600 ">
+    <div className="mt-4 bg-gray-800 rounded-xl shadow-lg p-6 text-white border-l-8 border-[#55b47e] ">
       {/* Profile Image and Info */}
       <div className="flex flex-row space-x-6 ">
         <img

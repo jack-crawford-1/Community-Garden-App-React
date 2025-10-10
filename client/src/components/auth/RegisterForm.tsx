@@ -35,11 +35,11 @@ export default function RegisterForm() {
   };
 
   return (
-    <>
+    <div className="bg-gray-800 h-screen">
       <Navbar />
       <form
         onSubmit={handleSubmit}
-        className="max-w-sm mx-auto mt-10 p-6 bg-gray-800 rounded-lg shadow-md"
+        className="max-w-sm mx-auto mt-20 p-6 bg-gray-800 rounded-lg shadow-md"
       >
         <h2 className="text-2xl font-bold text-center text-[#55b47e] mb-6">
           Register
@@ -83,6 +83,6 @@ export default function RegisterForm() {
           Register
         </button>
       </form>
-    </>
+    </div>
   );
 }

@@ -9,11 +9,11 @@ import RegisterForm from "../components/auth/RegisterForm";
 
 export const routeList = [
   { path: "/", element: <App /> },
-  { path: "/map", element: <MapPage />, name: "Map" },
-  { path: "/form", element: <Form />, name: "Form" },
+  { path: "/map", element: <MapPage /> },
+  { path: "/form", element: <Form /> },
 
   { path: "/register", element: <RegisterForm /> },
-  { path: "/login", element: <LoginForm />, name: "Login" },
+  { path: "/login", element: <LoginForm /> },
 
   // { path: "/gardens/:id", element: <GardenPage /> },
   { path: "/venues/:id", element: <GardenPage /> },

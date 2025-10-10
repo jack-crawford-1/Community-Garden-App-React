@@ -64,6 +64,7 @@ const initialGarden: Garden = {
   membershipRequired: false,
   insurance: "",
   phone: "",
+  _id: undefined,
 };
 
 const predefinedFacilities = [
