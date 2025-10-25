@@ -89,7 +89,7 @@ function MarkerLayer() {
 
         if (isCluster) {
           const pointCount = (properties as any).point_count;
-          const size = 50 + (pointCount / points.length) * 50;
+          const size = Math.ceil(30 + Math.log(pointCount) * 15);
 
           return (
             <AdvancedMarker
@@ -214,8 +214,8 @@ function InnerMap({ apiKey, mapId }: { apiKey: string; mapId: string }) {
           <Map
             mapId={mapId}
             className="h-full w-full"
-            defaultZoom={7}
-            defaultCenter={{ lat: -40.8, lng: 174.9 }}
+            defaultZoom={10}
+            defaultCenter={{ lat: -41.2, lng: 174.9 }}
             disableDefaultUI
             gestureHandling="greedy"
             onClick={(e) => {

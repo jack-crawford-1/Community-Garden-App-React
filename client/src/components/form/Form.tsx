@@ -271,13 +271,13 @@ export default function Form() {
                 Add
               </button>
             </div>
-            {garden.partnerships.map((partner, idx) => (
+            {(garden.partnerships ?? []).map((partner, idx) => (
               <div key={idx} className="flex items-center mb-2 space-x-2">
                 <input
                   type="text"
                   value={partner}
                   onChange={(e) => {
-                    const updated = [...garden.partnerships];
+                    const updated = [...(garden.partnerships ?? [])];
                     updated[idx] = e.target.value;
                     setGarden((prev) => ({ ...prev, partnerships: updated }));
                   }}
@@ -289,7 +289,7 @@ export default function Form() {
                   onClick={() => {
                     setGarden((prev) => ({
                       ...prev,
-                      partnerships: prev.partnerships.filter(
+                      partnerships: (prev.partnerships ?? []).filter(
                         (_, i) => i !== idx
                       ),
                     }));
@@ -319,7 +319,7 @@ export default function Form() {
               Email
               <input
                 name="email"
-                value={garden.contact.email}
+                value={garden.contact?.email ?? ""}
                 onChange={(e) => {
                   setGarden((prev) => ({
                     ...prev,
@@ -337,7 +337,7 @@ export default function Form() {
               Phone
               <input
                 name="phone"
-                value={garden.contact.phone}
+                value={garden.contact?.phone ?? ""}
                 onChange={(e) => {
                   setGarden((prev) => ({
                     ...prev,
@@ -355,7 +355,7 @@ export default function Form() {
               Website URL
               <input
                 name="website"
-                value={garden.contact.website}
+                value={garden.contact?.website ?? ""}
                 onChange={(e) => {
                   setGarden((prev) => ({
                     ...prev,
@@ -373,14 +373,14 @@ export default function Form() {
               Facebook URL
               <input
                 name="facebook"
-                value={garden.contact.social.facebook}
+                value={garden.contact?.social?.facebook ?? ""}
                 onChange={(e) => {
                   setGarden((prev) => ({
                     ...prev,
                     contact: {
                       ...prev.contact,
                       social: {
-                        ...prev.contact.social,
+                        ...((prev.contact && prev.contact.social) || {}),
                         facebook: e.target.value,
                       },
                     },
@@ -394,14 +394,14 @@ export default function Form() {
               Other URL
               <input
                 name="other"
-                value={garden.contact.social.other}
+                value={garden.contact?.social?.other ?? ""}
                 onChange={(e) => {
                   setGarden((prev) => ({
                     ...prev,
                     contact: {
                       ...prev.contact,
                       social: {
-                        ...prev.contact.social,
+                        ...((prev.contact && prev.contact.social) || {}),
                         instagram: e.target.value,
                       },
                     },
@@ -440,7 +440,7 @@ export default function Form() {
               <input
                 type="checkbox"
                 name="organicCertification"
-                value={garden.environment.organicCertification}
+                value={garden.environment?.organicCertification ?? ""}
                 onChange={handleChange}
                 className="ml-2"
               />
@@ -450,7 +450,7 @@ export default function Form() {
           <fieldset className="block border p-2 rounded mb-2">
             <legend className="font-semibold">Opening Hours</legend>
 
-            {Object.entries(garden.openingHours).map(([day, hours]) => (
+            {Object.entries(garden.openingHours ?? {}).map(([day, hours]) => (
               <div key={day} className="flex items-center mb-2">
                 <label className="w-24">{day}</label>
                 <input

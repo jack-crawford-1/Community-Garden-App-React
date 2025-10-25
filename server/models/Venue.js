@@ -27,6 +27,7 @@ const VenueSchema = new mongoose.Schema({
   photos: [String],
   rules: [String],
   partnerships: [String],
+  isTestGarden: { type: Boolean, default: false },
 });
 
 export default mongoose.model("Venue", VenueSchema);

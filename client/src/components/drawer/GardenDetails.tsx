@@ -1,11 +1,10 @@
-// GardenDetails.tsx
 import { Link } from "react-router";
 import type { Garden } from "../../types/GardenInterface";
 import { useEffect, useState } from "react";
 import { PhotoGallery } from "../../app/GardenPage";
 
 export default function GardenDetails({ garden }: { garden: Garden | null }) {
-  const [signedUrl, setSignedUrl] = useState<string | null>(null);
+  const [, setSignedUrl] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchFirstSignedUrl = async () => {
@@ -46,14 +45,13 @@ export default function GardenDetails({ garden }: { garden: Garden | null }) {
         <Link
           to={`/venues/${garden.id}`}
           className="inline-block bg-[#55b47e] hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200"
-          target="_blank"
         >
           More Information
         </Link>
       </div>
       <div>
         <div className="max-w-[380px]">
-          <PhotoGallery photos={garden.photos} />
+          <PhotoGallery photos={garden.photos ?? []} />
         </div>
       </div>
     </div>

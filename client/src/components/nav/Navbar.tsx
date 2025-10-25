@@ -78,9 +78,7 @@ const Navbar = () => {
           {isLoggedIn ? (
             <>
               <li className="text-white font-semibold">
-                Logged in:{" "}
-                {/* <span className="text-green-100">{displayName}: </span> */}
-                <span className="text-green-100">{userEmail}</span>
+                Logged in: <span className="text-green-100">{userEmail}</span>
               </li>
               <button
                 onClick={handleLogout}

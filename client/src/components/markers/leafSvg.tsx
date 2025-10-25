@@ -1,4 +1,3 @@
-// leafSvg.tsx
 export const LeafSvg = () => (
   <svg
     width="35px"

@@ -32,7 +32,7 @@ const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 export default function EventsPage() {
   const { id } = useParams<{ id: string }>();
   const [events, setEvents] = useState<EventType[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [, setLoading] = useState(true);
   const [garden, setGarden] = useState<Garden | null>(null);
 
   useEffect(() => {
@@ -60,9 +60,9 @@ export default function EventsPage() {
   }, [id]);
 
   return (
-    <>
+    <div className="bg-gray-800">
       <Navbar />
-      <div className="min-h-screen bg-[#0a0a0a] text-white">
+      <div className="min-h-screen  text-white pb-10">
         <div className="pl-40 pr-40">
           <h1 className="text-4xl md:text-5xl font-bold text-[#55b47e] mb-2 tracking-wide  md:max-w-5xl ml-20 mt-10">
             Events at {garden?.description}
@@ -105,14 +105,21 @@ export default function EventsPage() {
                         </p>
 
                         <div className="flex items-center gap-4 mt-5">
-                          <button className="px-4 py-2 bg-green-600 rounded-md">
+                          <button className="px-4 py-2 border-2 border-green-600 hover:bg-green-600 rounded-md font-bold">
                             register
                           </button>
-                          <img
-                            src="/savefav.svg"
-                            alt="Save"
-                            className="w-5 h-5 object-cover transition-transform duration-200 hover:scale-105"
-                          />
+                          <div className="group w-10 h-10">
+                            <img
+                              src="/icons/favalt.svg"
+                              alt="Save"
+                              className="w-10 h-10 object-cover transition-transform duration-200 group-hover:hidden"
+                            />
+                            <img
+                              src="/icons/fav.svg"
+                              alt="Saved"
+                              className="w-10 h-10 object-cover hidden group-hover:block transition-transform duration-200"
+                            />
+                          </div>
                         </div>
                       </div>
 
@@ -174,14 +181,19 @@ export default function EventsPage() {
 
         <div className="m-10">
           {garden?._id && (
-            <Link to={`/gardens/${garden._id}`} className="">
-              <button className="bg-green-600/40 font-bold px-3 py-2 rounded-md mt-10">
-                ⏎ {garden?.description}
+            <Link to={`/venues/${garden._id}`} className="">
+              <button className="bg-green-600/40 font-bold px-3 py-2 rounded-md mt-10 flex justify-center items-center">
+                <img
+                  src="/icons/back.svg"
+                  alt="Save"
+                  className="w-5 h-5 object-cover"
+                />{" "}
+                {garden?.description}
               </button>
             </Link>
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }

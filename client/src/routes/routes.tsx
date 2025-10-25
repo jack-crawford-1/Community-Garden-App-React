@@ -15,9 +15,7 @@ export const routeList = [
   { path: "/register", element: <RegisterForm /> },
   { path: "/login", element: <LoginForm /> },
 
-  // { path: "/gardens/:id", element: <GardenPage /> },
   { path: "/venues/:id", element: <GardenPage /> },
-  // { path: "/gardens/:id/events", element: <EventsPage /> },
   { path: "/venues/:id/events", element: <EventsPage /> },
 ];
 

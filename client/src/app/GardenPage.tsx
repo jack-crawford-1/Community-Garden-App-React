@@ -67,7 +67,7 @@ function SeasonalCalendar({
   calendar,
   onUpdate,
 }: {
-  calendar: Garden["environment"]["seasonalPlantingCalendar"];
+  calendar?: Record<string, string>;
   onUpdate?: (season: string, crops: string) => void;
 }) {
   if (!calendar) return null;
@@ -85,7 +85,7 @@ function SeasonalCalendar({
             </summary>
             <div className="mt-2">
               <textarea
-                value={crops}
+                value={String(crops ?? "")}
                 onChange={(e) => onUpdate && onUpdate(season, e.target.value)}
                 placeholder={`Enter crops for ${season}`}
                 rows={2}
@@ -309,7 +309,7 @@ export default function GardenPage() {
                         <PartnershipsCard />
                       </SectionList>
                       <SectionList label="Photo Gallery">
-                        <PhotoGallery photos={garden.photos} />
+                        <PhotoGallery photos={garden.photos ?? []} />
                       </SectionList>
                     </>
                   )}
@@ -359,15 +359,20 @@ export default function GardenPage() {
                                 date: "",
                                 details: ev,
                               }))
-                            : (garden.events as unknown as {
-                                date: string;
-                                details: string;
-                              }[])
+                            : Array.isArray(garden?.events)
+                            ? garden.events.map((ev: any) => ({
+                                date: ev.date,
+                                details:
+                                  typeof ev.details === "string"
+                                    ? ev.details
+                                    : JSON.stringify(ev.details),
+                              }))
+                            : []
                         }
                       />
 
                       {garden._id && (
-                        <Link to={`/gardens/${garden._id}/events`}>
+                        <Link to={`/venues/${garden._id}/events`}>
                           <button className="bg-green-600/40 hover:bg-green-600/80 font-bold px-3 py-2 rounded-md">
                             View All Events
                           </button>
@@ -382,7 +387,7 @@ export default function GardenPage() {
                     />
                   )}
                   {section === "Photo Gallery" && (
-                    <PhotoGallery photos={garden?.photos} />
+                    <PhotoGallery photos={garden?.photos ?? []} />
                   )}
                   {section === "Access" && <Facilities />}
 

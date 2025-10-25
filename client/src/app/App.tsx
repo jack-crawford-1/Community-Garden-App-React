@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col bg-[#55b47e] ubuntu-regular ">
+      <div className="flex flex-col bg-[#55b47e]">
         <div className="flex flex-col justify-center items-center h-[calc(100vh-90px)] w-full">
           <div className="flex-title pangolin-regular flex flex-row">
             <p className="uppercase">Grow Local</p>

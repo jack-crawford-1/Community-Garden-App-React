@@ -1,4 +1,3 @@
-// SlidingDrawer.tsx
 import type { ReactNode } from "react";
 
 type SlidingDrawerProps = {

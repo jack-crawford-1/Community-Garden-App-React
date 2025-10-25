@@ -1,4 +1,3 @@
-// useGardens.ts
 import { useEffect, useState } from "react";
 import type { FeatureCollection, Point } from "geojson";
 import { fetchGardensGeoJSON } from "../api/garden";

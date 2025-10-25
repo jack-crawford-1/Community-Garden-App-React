@@ -1,4 +1,3 @@
-// useSelectedGardens.ts
 import { useCallback, useState } from "react";
 import type { Feature, Point } from "geojson";
 import type { Garden } from "../types/GardenInterface";
