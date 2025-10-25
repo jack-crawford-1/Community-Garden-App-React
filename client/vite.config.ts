@@ -8,9 +8,12 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:3000",
+        target:
+          import.meta.env.NODE_ENV === "production"
+            ? "https://community-garden-app-react-production.up.railway.app"
+            : "http://localhost:3000",
         changeOrigin: true,
-        rewrite: (path) => path.substring(4),
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
