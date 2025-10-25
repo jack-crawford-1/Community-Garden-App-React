@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Garden } from "../../types/GardenInterface";
 import { useParams } from "react-router";
-import { APIProvider, Map } from "@vis.gl/react-google-maps";
 
 export default function PollenAndWildlife() {
   const { id } = useParams<{ id: string }>();
@@ -31,7 +30,6 @@ export default function PollenAndWildlife() {
   return (
     <div className="bg-gray-800 rounded-xl shadow-lg p-3 text-white mt-4">
       <div className="grid grid-cols-1 items-center ml-0">
-        {/* <div className=""> */}
         <div className="flex gap-2 items-center mb-2 w-14">
           <img
             src={"/svg/gardenpage/bee.svg"}

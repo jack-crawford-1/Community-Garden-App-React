@@ -91,7 +91,7 @@ export default function Form() {
   const [customSoilType, setCustomSoilType] = useState("");
   const [customWasteManagement, setCustomWasteManagement] = useState("");
   const [newPartnership, setNewPartnership] = useState("");
-  const [photoFiles, setPhotoFiles] = useState<File[]>([]);
+  const [photoFiles] = useState<File[]>([]);
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
@@ -455,30 +455,36 @@ export default function Form() {
                 <label className="w-24">{day}</label>
                 <input
                   type="time"
-                  value={hours[0]}
+                  value={hours?.[0] ?? ""}
                   onChange={(e) => {
-                    setGarden((prev) => ({
-                      ...prev,
-                      openingHours: {
-                        ...prev.openingHours,
-                        [day]: [e.target.value, prev.openingHours[day][1]],
-                      },
-                    }));
+                    setGarden((prev) => {
+                      const current = prev.openingHours?.[day] ?? ["", ""];
+                      return {
+                        ...prev,
+                        openingHours: {
+                          ...prev.openingHours,
+                          [day]: [e.target.value, current[1]],
+                        },
+                      };
+                    });
                   }}
                   className="ml-2 p-1 rounded bg-gray-800"
                 />
                 <span className="mx-2">to</span>
                 <input
                   type="time"
-                  value={hours[1]}
+                  value={hours?.[1] ?? ""}
                   onChange={(e) => {
-                    setGarden((prev) => ({
-                      ...prev,
-                      openingHours: {
-                        ...prev.openingHours,
-                        [day]: [prev.openingHours[day][0], e.target.value],
-                      },
-                    }));
+                    setGarden((prev) => {
+                      const current = prev.openingHours?.[day] ?? ["", ""];
+                      return {
+                        ...prev,
+                        openingHours: {
+                          ...prev.openingHours,
+                          [day]: [current[0], e.target.value],
+                        },
+                      };
+                    });
                   }}
                   className="p-1 rounded bg-gray-800"
                 />
@@ -490,7 +496,7 @@ export default function Form() {
               className="mt-2 px-3 py-1 bg-green-700 rounded text-white hover:bg-green-800"
               onClick={() => {
                 setGarden((prev) => {
-                  const mondayHours = prev.openingHours.Monday;
+                  const mondayHours = prev.openingHours?.Monday;
                   const updated = Object.fromEntries(
                     Object.keys(prev.openingHours).map((day) => [
                       day,
@@ -617,7 +623,7 @@ export default function Form() {
 
             {garden.facilities
               .filter((f) => !predefinedFacilities.includes(f))
-              .map((custom, idx) => (
+              .map((custom) => (
                 <div key={custom} className="flex items-center mt-1">
                   <span className="flex-1">{custom}</span>
                   <button
@@ -887,7 +893,7 @@ export default function Form() {
                 {option}
               </label>
             ))}
-            {/* List custom accessibility options with remove button */}
+
             {garden.accessibility
               .filter(
                 (a) =>
@@ -905,7 +911,7 @@ export default function Form() {
                     "Tactile maps of the garden",
                   ].includes(a)
               )
-              .map((custom, idx) => (
+              .map((custom) => (
                 <div key={custom} className="flex items-center mt-1">
                   <span className="flex-1">{custom}</span>
                   <button
@@ -1017,7 +1023,7 @@ export default function Form() {
                 {type}
               </label>
             ))}
-            {/* List custom produce types with remove button */}
+
             {garden.environment.produceType
               .filter(
                 (t) =>
@@ -1036,7 +1042,7 @@ export default function Form() {
                     "Pollinator plants",
                   ].includes(t)
               )
-              .map((custom, idx) => (
+              .map((custom) => (
                 <div key={custom} className="flex items-center mt-1">
                   <span className="flex-1">{custom}</span>
                   <button
@@ -1240,7 +1246,6 @@ export default function Form() {
                 {type}
               </label>
             ))}
-            {/* List custom soil types with remove button */}
             {garden.environment.soilType
               .filter(
                 (t) =>
@@ -1254,7 +1259,7 @@ export default function Form() {
                     "Saline",
                   ].includes(t)
               )
-              .map((custom, idx) => (
+              .map((custom) => (
                 <div key={custom} className="flex items-center mt-1">
                   <span className="flex-1">{custom}</span>
                   <button
@@ -1387,7 +1392,7 @@ export default function Form() {
                     "Log piles for lizards",
                   ].includes(v)
               )
-              .map((custom, idx) => (
+              .map((custom) => (
                 <div key={custom} className="flex items-center mt-1">
                   <span className="flex-1">{custom}</span>
                   <button
@@ -1511,7 +1516,7 @@ export default function Form() {
                     "Community green waste drop-off",
                   ].includes(v)
               )
-              .map((custom, idx) => (
+              .map((custom) => (
                 <div key={custom} className="flex items-center mt-1">
                   <span className="flex-1">{custom}</span>
                   <button
@@ -1633,7 +1638,7 @@ export default function Form() {
                     "Worm castings",
                   ].includes(v)
               )
-              .map((custom, idx) => (
+              .map((custom) => (
                 <div key={custom} className="flex items-center mt-1">
                   <span className="flex-1">{custom}</span>
                   <button

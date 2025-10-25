@@ -24,7 +24,47 @@ export function useSelectedGarden() {
       photos: props.photos || [],
       membershipRequired: props.membershipRequired || false,
       email: props.email || "",
+      lastUpdated: new Date().toISOString(),
+      volunteersWelcome: props.volunteersWelcome ?? false,
+      facilities: props.facilities || [],
+      events: props.events || [],
+      accessibility: props.accessibility || [],
+      environment: props.environment || {
+        gardenSizeSqm: 0,
+        numberOfBeds: 0,
+        produceType: [],
+        waterSource: [],
+        soilType: [],
+        irrigationSystem: "",
+        compostingFacilities: [],
+        mulchingPractices: [],
+        organicCertification: "",
+        pollinatorSupport: [],
+        waterConservation: [],
+        fertiliserUse: [],
+        seasonalPlantingCalendar: {
+          Summer: "",
+          Autumn: "",
+          Winter: "",
+          Spring: "",
+        },
+      },
+      openingHours: props.openingHours || {
+        Monday: ["", ""],
+        Tuesday: ["", ""],
+        Wednesday: ["", ""],
+        Thursday: ["", ""],
+        Friday: ["", ""],
+        Saturday: ["", ""],
+        Sunday: ["", ""],
+        Holidays: ["", ""],
+      },
+      partnerships: props.partnerships || [],
+      wasteManagement: props.wasteManagement || [],
+      rules: props.rules || [],
+      insurance: props.insurance || "",
     });
+
     setDrawerOpen(true);
   }, []);
 

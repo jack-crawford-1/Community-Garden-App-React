@@ -182,6 +182,7 @@ function featureToGarden(feature: Feature<Point> | null): Garden | null {
   const props = feature.properties || {};
   const coordinates = feature.geometry?.coordinates;
   if (!coordinates) return null;
+
   return {
     id: feature.id as string,
     name: props.name || "Unknown",
@@ -195,6 +196,45 @@ function featureToGarden(feature: Feature<Point> | null): Garden | null {
     photos: props.photos || [],
     membershipRequired: props.membershipRequired || false,
     email: props.email || "",
+    lastUpdated: props.lastUpdated || new Date().toISOString(),
+    volunteersWelcome: props.volunteersWelcome ?? false,
+    facilities: props.facilities || [],
+    events: props.events || [],
+    accessibility: props.accessibility || [],
+    environment: props.environment || {
+      gardenSizeSqm: 0,
+      numberOfBeds: 0,
+      produceType: [],
+      waterSource: [],
+      soilType: [],
+      irrigationSystem: "",
+      compostingFacilities: [],
+      mulchingPractices: [],
+      organicCertification: "",
+      pollinatorSupport: [],
+      waterConservation: [],
+      fertiliserUse: [],
+      seasonalPlantingCalendar: {
+        Summer: "",
+        Autumn: "",
+        Winter: "",
+        Spring: "",
+      },
+    },
+    openingHours: props.openingHours || {
+      Monday: ["", ""],
+      Tuesday: ["", ""],
+      Wednesday: ["", ""],
+      Thursday: ["", ""],
+      Friday: ["", ""],
+      Saturday: ["", ""],
+      Sunday: ["", ""],
+      Holidays: ["", ""],
+    },
+    partnerships: props.partnerships || [],
+    wasteManagement: props.wasteManagement || [],
+    rules: props.rules || [],
+    insurance: props.insurance || "",
   };
 }
 
