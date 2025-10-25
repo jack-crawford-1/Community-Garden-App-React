@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
-import type { Garden } from "./GardenInterface";
+import type { Garden } from "../../../types/GardenInterface";
 import { useParams } from "react-router";
 
-export default function ContactCard({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ContactCard({}: { children: React.ReactNode }) {
   const { id } = useParams<{ id: string }>();
   const [garden, setGarden] = useState<Garden | null>(null);
   const [loading, setLoading] = useState(true);
@@ -33,7 +29,6 @@ export default function ContactCard({
   if (!garden) return <p>Garden not found.</p>;
   return (
     <div className="mt-4 bg-gray-800 rounded-xl shadow-lg p-6 text-white border-l-8 border-[#55b47e] ">
-      {/* Profile Image and Info */}
       <div className="flex flex-row space-x-6 ">
         <img
           alt="Coordinator"

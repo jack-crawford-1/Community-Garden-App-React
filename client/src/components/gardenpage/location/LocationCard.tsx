@@ -35,7 +35,7 @@ export default function LocationCard() {
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-col justify-center pl-10">
           <div className=" space-y-1 text-gray-300 text-sm">
-            <p>ID: {garden._id.slice(0, 7)}</p>
+            <p>ID: {garden._id?.slice(0, 7)}</p>
             <p>{garden.description}</p>
             <p>{garden.address.split(",")[0]}</p>
             <p>

@@ -38,11 +38,6 @@ const Navbar = () => {
     navigate("/login");
   };
 
-  const displayName =
-    userEmail && userEmail.includes("@")
-      ? userEmail.split("@")[0]
-      : userEmail || "Unknown";
-
   return (
     <nav
       className={`w-full sticky top-0 transition-transform duration-300 ${
@@ -62,7 +57,7 @@ const Navbar = () => {
         </NavLink>
 
         <ul className="flex gap-4 items-center text-white font-bold">
-          {routeList.map(({ path, name }) => (
+          {routeList.map(({ path }) => (
             <li key={path}>
               <NavLink
                 to={path}
@@ -70,7 +65,7 @@ const Navbar = () => {
                   isActive ? "text-green-900" : "hover:text-green-300"
                 }
               >
-                {name}
+                {}
               </NavLink>
             </li>
           ))}
