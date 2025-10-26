@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import type { Garden } from "../types/GardenInterface";
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import Navbar from "../components/nav/Navbar";
+import { API_BASE_URL } from "../api/config";
 
 type EventType = {
   date: string;
@@ -40,13 +41,11 @@ export default function EventsPage() {
 
     const fetchData = async () => {
       try {
-        const gardenRes = await fetch(`http://localhost:3000/gardens/${id}`);
+        const gardenRes = await fetch(`${API_BASE_URL}/gardens/${id}`);
         const gardenData = await gardenRes.json();
         setGarden(gardenData);
 
-        const eventsRes = await fetch(
-          `http://localhost:3000/gardens/${id}/events`
-        );
+        const eventsRes = await fetch(`${API_BASE_URL}/gardens/${id}/events`);
         const eventsData = await eventsRes.json();
         setEvents(eventsData.events || []);
       } catch (err) {

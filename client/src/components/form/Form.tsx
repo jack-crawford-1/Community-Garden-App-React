@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { Garden } from "../../types/GardenInterface";
 import Navbar from "../nav/Navbar";
 import { useSearchParams } from "react-router";
+import { API_BASE_URL } from "../../api/config";
 
 const initialGarden: Garden = {
   lastUpdated: new Date(),
@@ -132,7 +133,7 @@ export default function Form() {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:3000/gardens", {
+      const res = await fetch(`${API_BASE_URL}/gardens`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1709,7 +1710,7 @@ export default function Form() {
                   formData.append("image", file);
 
                   try {
-                    const res = await fetch("http://localhost:3000/upload", {
+                    const res = await fetch(`${API_BASE_URL}/upload`, {
                       method: "POST",
                       headers: {
                         Authorization: `Bearer ${localStorage.getItem(

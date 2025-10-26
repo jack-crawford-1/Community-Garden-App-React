@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import type { Garden } from "../../types/GardenInterface";
 import { useEffect, useState } from "react";
 import { PhotoGallery } from "../../app/GardenPage";
+import { API_BASE_URL } from "../../api/config";
 
 export default function GardenDetails({ garden }: { garden: Garden | null }) {
   const [, setSignedUrl] = useState<string | null>(null);
@@ -15,7 +16,7 @@ export default function GardenDetails({ garden }: { garden: Garden | null }) {
       if (!filename) return;
 
       try {
-        const res = await fetch(`http://localhost:3000/image/${filename}`);
+        const res = await fetch(`${API_BASE_URL}/image/${filename}`);
         if (res.ok) {
           const { url } = await res.json();
           setSignedUrl(url);

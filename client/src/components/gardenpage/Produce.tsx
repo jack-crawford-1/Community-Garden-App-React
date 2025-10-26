@@ -5,6 +5,7 @@ import PollenAndWildlife from "./PollenAndWildlife";
 import Water from "./Water";
 import Fertiliser from "./Fertiliser";
 import Soil from "./Soil";
+import { API_BASE_URL } from "../../api/config";
 
 export default function Produce() {
   const { id } = useParams<{ id: string }>();
@@ -13,7 +14,7 @@ export default function Produce() {
 
   useEffect(() => {
     if (!id) return;
-    fetch(`http://localhost:3000/gardens/${id}`)
+    fetch(`${API_BASE_URL}/gardens/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Not found");
         return res.json();

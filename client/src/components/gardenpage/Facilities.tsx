@@ -3,6 +3,7 @@ import type { Garden } from "../../types/GardenInterface";
 import { useParams } from "react-router";
 import Waste from "./Waste";
 import Accessibility from "./Accessibility";
+import { API_BASE_URL } from "../../api/config";
 
 export default function Facilities() {
   const { id } = useParams<{ id: string }>();
@@ -11,7 +12,7 @@ export default function Facilities() {
 
   useEffect(() => {
     if (!id) return;
-    fetch(`http://localhost:3000/gardens/${id}`)
+    fetch(`${API_BASE_URL}0/gardens/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Not found");
         return res.json();

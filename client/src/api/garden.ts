@@ -1,7 +1,8 @@
 import type { FeatureCollection, Point } from "geojson";
+import { API_BASE_URL } from "./config";
 
 export async function fetchGardensGeoJSON(): Promise<FeatureCollection<Point>> {
-  const res = await fetch("http://localhost:3000/gardens");
+  const res = await fetch(`${API_BASE_URL}/gardens`);
   const geojson = await res.json();
 
   if (geojson.type === "FeatureCollection" && Array.isArray(geojson.features)) {

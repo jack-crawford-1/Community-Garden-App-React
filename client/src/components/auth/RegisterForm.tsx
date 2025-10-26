@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "../nav/Navbar";
+import { API_BASE_URL } from "../../api/config";
 
 export default function RegisterForm() {
   const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ export default function RegisterForm() {
     setSuccess("");
 
     try {
-      const res = await fetch("http://localhost:3000/api/auth/register", {
+      const res = await fetch(`${API_BASE_URL}/api/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

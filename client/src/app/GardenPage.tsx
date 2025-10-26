@@ -9,6 +9,7 @@ import Produce from "../components/gardenpage/Produce";
 import Rules from "../components/gardenpage/Rules";
 import Events from "../components/gardenpage/events/Events";
 import Navbar from "../components/nav/Navbar";
+import { API_BASE_URL } from "../api/config";
 
 export function Info({
   label,
@@ -109,7 +110,7 @@ export function PhotoGallery({ photos }: { photos: string[] }) {
           const filename = photoUrl.split("/").pop();
           if (!filename) return null;
 
-          const res = await fetch(`http://localhost:3000/image/${filename}`);
+          const res = await fetch(`${API_BASE_URL}/image/${filename}`);
           if (res.ok) {
             const { url } = await res.json();
             return url;
@@ -178,7 +179,7 @@ export default function GardenPage() {
 
   useEffect(() => {
     if (!id) return;
-    fetch(`http://localhost:3000/gardens/${id}`)
+    fetch(`${API_BASE_URL}/gardens/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Not found");
         return res.json();

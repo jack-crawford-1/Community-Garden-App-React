@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Garden } from "../../types/GardenInterface";
 import { useParams } from "react-router";
+import { API_BASE_URL } from "../../api/config";
 
 export default function Waste() {
   const { id } = useParams<{ id: string }>();
@@ -9,7 +10,7 @@ export default function Waste() {
 
   useEffect(() => {
     if (!id) return;
-    fetch(`http://localhost:3000/gardens/${id}`)
+    fetch(`${API_BASE_URL}/gardens/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Not found");
         return res.json();

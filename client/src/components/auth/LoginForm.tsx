@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router";
 import Navbar from "../nav/Navbar";
 import { jwtDecode } from "jwt-decode";
+import { API_BASE_URL } from "../../api/config";
 
 interface TokenPayload {
   email?: string;
@@ -32,7 +33,7 @@ export default function LoginForm({ onLogin }: LoginFormProps) {
     setSuccess(false);
 
     try {
-      const res = await fetch("http://localhost:3000/api/auth/login", {
+      const res = await fetch(`${API_BASE_URL}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
