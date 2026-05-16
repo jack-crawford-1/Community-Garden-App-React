@@ -1,3 +1,21 @@
+const ACCENT = "#55b47e";
+
+function formatDate(date: string): { day: string; month: string; full: string } | null {
+  if (!date) return null;
+  const d = new Date(date);
+  if (Number.isNaN(d.getTime())) return { day: "·", month: "TBC", full: date };
+  return {
+    day: String(d.getDate()).padStart(2, "0"),
+    month: d.toLocaleString("default", { month: "short" }).toUpperCase(),
+    full: d.toLocaleDateString("default", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
+  };
+}
+
 export default function Events({
   events,
 }: {
@@ -6,23 +24,42 @@ export default function Events({
   if (!events || events.length === 0) return null;
 
   return (
-    <div className="mb-5 rounded-xl shadow-lg p-6 bg-gray-800 border-l-8 border-[#55b47e] font-mono">
-      <h3 className="text-white text-lg uppercase mb-4 border-b border-yellow-500 pb-2">
-        Upcoming Events
-      </h3>
-      <ul className="space-y-3">
-        {events.map((ev, idx) => (
+    <ul className="space-y-3">
+      {events.map((ev, idx) => {
+        const d = formatDate(ev.date);
+        return (
           <li
             key={ev.date + ev.details + idx}
-            className="flex items-center space-x-4 bg-green-900/20 p-3 rounded-lg shadow-inner"
+            className="flex items-stretch gap-4 rounded-xl bg-white/5 border border-white/10 overflow-hidden"
           >
-            <span className="bg-[#55b47e] text-black px-2 py-1 rounded font-bold text-xs min-w-[100px] text-center shadow-md">
-              {ev.date}
-            </span>
-            <span className="text-green-100 text-sm">{ev.details}</span>
+            <div
+              className="flex flex-col justify-center items-center px-5 py-4 min-w-[88px] shrink-0"
+              style={{ backgroundColor: `${ACCENT}1a` }}
+            >
+              <span
+                className="text-2xl font-bold leading-none"
+                style={{ color: ACCENT }}
+              >
+                {d?.day ?? "·"}
+              </span>
+              <span
+                className="text-[11px] uppercase tracking-[0.2em] mt-1"
+                style={{ color: ACCENT }}
+              >
+                {d?.month ?? "TBC"}
+              </span>
+            </div>
+            <div className="flex-1 py-4 pr-4 min-w-0">
+              {d?.full && (
+                <p className="text-xs uppercase tracking-[0.15em] text-white/40 mb-1">
+                  {d.full}
+                </p>
+              )}
+              <p className="text-green-50 leading-relaxed">{ev.details}</p>
+            </div>
           </li>
-        ))}
-      </ul>
-    </div>
+        );
+      })}
+    </ul>
   );
 }

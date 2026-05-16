@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router";
 import type { Garden } from "../types/GardenInterface";
 import ContactCard from "../components/gardenpage/contact/ContactCard";
@@ -11,91 +11,80 @@ import Events from "../components/gardenpage/events/Events";
 import Navbar from "../components/nav/Navbar";
 import { API_BASE_URL } from "../api/config";
 
-export function Info({
+const ACCENT = "#55b47e";
+
+function hasItems<T>(value?: T[] | null): value is T[] {
+  return Array.isArray(value) && value.length > 0;
+}
+
+function hasObject(value?: Record<string, unknown> | null): boolean {
+  return !!value && Object.keys(value).length > 0;
+}
+
+function suburbFromAddress(address?: string): string | null {
+  if (!address) return null;
+  const parts = address.split(",").map((s) => s.trim());
+  return parts.length >= 2 ? parts[parts.length - 2] : null;
+}
+
+function SectionCard({
+  id,
+  title,
+  kicker,
+  children,
+  sectionRef,
+}: {
+  id: string;
+  title: string;
+  kicker?: string;
+  children: React.ReactNode;
+  sectionRef?: (el: HTMLElement | null) => void;
+}) {
+  return (
+    <section
+      id={id}
+      ref={(el) => sectionRef?.(el)}
+      className="scroll-mt-28"
+    >
+      <div className="mb-5">
+        {kicker && (
+          <p
+            className="text-xs uppercase tracking-[0.3em] mb-2"
+            style={{ color: ACCENT }}
+          >
+            {kicker}
+          </p>
+        )}
+        <h2 className="text-3xl text-white pangolin-regular">{title}</h2>
+        <div
+          className="h-px w-12 mt-3"
+          style={{ backgroundColor: ACCENT }}
+        />
+      </div>
+      <div className="text-green-50">{children}</div>
+    </section>
+  );
+}
+
+function StatPill({
   label,
   value,
 }: {
   label: string;
   value: React.ReactNode;
 }) {
-  if (!value) return null;
+  if (value === null || value === undefined || value === "") return null;
   return (
-    <div className="mb-2 flex items-center gap-2 bg-green-200/20 p-2 rounded-md ">
-      <span className="font-bold text-white tracking-wide uppercase text-xs">
+    <div className="flex flex-col px-4 py-3 bg-white/5 border border-white/10 rounded-lg min-w-[140px]">
+      <span
+        className="text-[10px] uppercase tracking-[0.2em] mb-1"
+        style={{ color: ACCENT }}
+      >
         {label}
       </span>
-      <span className="text-green-50 text-sm">{value}</span>
-    </div>
-  );
-}
-
-function SectionList({
-  label,
-  list,
-  children,
-}: {
-  label: string;
-  list?: string[];
-  children?: React.ReactNode;
-}) {
-  if ((!list || list.length === 0) && !children) return null;
-  return (
-    <div className=" rounded-xl">
-      <div className="flex items-center">
-        <p className="text-base font-bold text-white tracking-wide uppercase p-2">
-          {label}
-        </p>
-      </div>
-      {list && list.length > 0 ? (
-        <ul className="grid grid-cols-2 gap-2 text-sm text-green-50">
-          {list.map((item, idx) => (
-            <li
-              key={item + idx}
-              className="flex items-center gap-2 bg-green-200/20 rounded px-2 py-1 shadow-inner "
-            >
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        children
-      )}
-    </div>
-  );
-}
-
-function SeasonalCalendar({
-  calendar,
-  onUpdate,
-}: {
-  calendar?: Record<string, string>;
-  onUpdate?: (season: string, crops: string) => void;
-}) {
-  if (!calendar) return null;
-
-  return (
-    <div className="mb-5 rounded-xl shadow-lg p-4 border-l-8 border-[#55b47e]  pl-5">
-      <ul className="space-y-4">
-        {Object.entries(calendar).map(([season, crops]) => (
-          <details
-            key={season}
-            className="bg-gray-800 rounded px-2 py-1 shadow-inner"
-          >
-            <summary className="font-semibold text-white capitalize cursor-pointer">
-              {season}
-            </summary>
-            <div className="mt-2">
-              <textarea
-                value={String(crops ?? "")}
-                onChange={(e) => onUpdate && onUpdate(season, e.target.value)}
-                placeholder={`Enter crops for ${season}`}
-                rows={2}
-                className="p-2 rounded bg-gray-800 text-green-50 w-full"
-              />
-            </div>
-          </details>
-        ))}
-      </ul>
+      <span className="text-sm text-white font-medium break-words">
+        {value}
+      </span>
     </div>
   );
 }
@@ -104,55 +93,107 @@ export function PhotoGallery({ photos }: { photos: string[] }) {
   const [signedUrls, setSignedUrls] = useState<string[]>([]);
 
   useEffect(() => {
+    let cancelled = false;
     const fetchSignedUrls = async () => {
       const urls = await Promise.all(
         photos.map(async (photoUrl) => {
           const filename = photoUrl.split("/").pop();
           if (!filename) return null;
-
           const res = await fetch(`${API_BASE_URL}/image/${filename}`);
           if (res.ok) {
             const { url } = await res.json();
-            return url;
+            return url as string;
           }
-          console.error(`Failed to fetch signed URL for ${filename}`);
           return null;
         })
       );
-      setSignedUrls(urls.filter(Boolean) as string[]);
+      if (!cancelled) setSignedUrls(urls.filter(Boolean) as string[]);
     };
-
     fetchSignedUrls();
+    return () => {
+      cancelled = true;
+    };
   }, [photos]);
 
-  if (!signedUrls || signedUrls.length === 0) return null;
+  if (!signedUrls.length) return null;
 
   return (
-    <div className="  grid grid-cols-2 gap-4 mb-8   rounded-2xl">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
       {signedUrls.map((url, idx) => (
         <div
           key={url + idx}
-          className={`relative group overflow-hidden rounded-lg shadow-md ${
-            idx % 5 === 0 ? "row-span-2 col-span-2" : "row-span-1 col-span-1"
+          className={`relative group overflow-hidden rounded-xl ${
+            idx % 5 === 0 ? "col-span-2 row-span-2 aspect-square" : "aspect-square"
           }`}
-          style={{
-            gridRow: idx % 7 === 0 ? "span 2" : undefined,
-            gridColumn: idx % 7 === 0 ? "span 2" : undefined,
-          }}
         >
           <img
             src={url}
             alt={`Garden photo ${idx + 1}`}
-            className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="absolute bottom-0 left-0 right-0  text-xs text-green-100 px-2 py-1">
-            Photo {idx + 1}
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
         </div>
       ))}
     </div>
   );
 }
+
+function SeasonalCalendar({
+  calendar,
+}: {
+  calendar?: Record<string, string>;
+}) {
+  if (!calendar || !hasObject(calendar)) return null;
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+      {Object.entries(calendar).map(([season, crops]) => (
+        <div
+          key={season}
+          className="rounded-xl bg-white/5 border border-white/10 p-4"
+        >
+          <p
+            className="text-xs uppercase tracking-[0.2em] mb-2"
+            style={{ color: ACCENT }}
+          >
+            {season}
+          </p>
+          <p className="text-sm text-green-50 whitespace-pre-line">
+            {String(crops || "—")}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function OpeningHoursTable({
+  hours,
+}: {
+  hours: Garden["openingHours"];
+}) {
+  if (!hours || !hasObject(hours as Record<string, unknown>)) return null;
+  return (
+    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      {Object.entries(hours).map(([day, times]) => {
+        const open =
+          Array.isArray(times) && times.filter(Boolean).length > 0
+            ? (times as string[]).join(" – ")
+            : "Closed";
+        return (
+          <li
+            key={day}
+            className="flex justify-between items-center px-3 py-2 rounded-lg bg-white/5 border border-white/10"
+          >
+            <span className="text-sm font-semibold text-white">{day}</span>
+            <span className="text-sm text-green-50">{open}</span>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+type SectionDef = { id: string; label: string; visible: boolean };
 
 export default function GardenPage() {
   const { id } = useParams<{ id: string }>();
@@ -161,243 +202,449 @@ export default function GardenPage() {
   const [currentSection, setCurrentSection] = useState<string | null>(null);
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
-  const slugify = (text: string) =>
-    text
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]/g, "");
-
-  const sections = [
-    "Contact",
-    "Overview",
-    "Events",
-    "Seasonal Planting",
-    "Access",
-    "Garden",
-    "Rules",
-  ];
-
   useEffect(() => {
     if (!id) return;
+    setLoading(true);
     fetch(`${API_BASE_URL}/gardens/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Not found");
         return res.json();
       })
-
-      .then((g) => {
-        console.log("Fetched garden:", g);
-        setGarden(g);
-      })
-      .catch(() => {
-        setGarden(null);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+      .then(setGarden)
+      .catch(() => setGarden(null))
+      .finally(() => setLoading(false));
   }, [id]);
 
+  const sections: SectionDef[] = useMemo(() => {
+    if (!garden) return [];
+    return [
+      { id: "overview", label: "Overview", visible: true },
+      {
+        id: "contact",
+        label: "Contact",
+        visible:
+          !!garden.coordinator ||
+          !!garden.contact?.email ||
+          !!garden.contact?.phone ||
+          !!garden.contact?.website ||
+          !!garden.contact?.social?.facebook,
+      },
+      {
+        id: "hours",
+        label: "Opening Hours",
+        visible: hasObject(garden.openingHours as Record<string, unknown>),
+      },
+      {
+        id: "photos",
+        label: "Photos",
+        visible: hasItems(garden.photos),
+      },
+      {
+        id: "facilities",
+        label: "Facilities",
+        visible:
+          hasItems(garden.facilities) ||
+          hasItems(garden.accessibility) ||
+          hasItems(garden.wasteManagement),
+      },
+      {
+        id: "garden",
+        label: "Growing",
+        visible:
+          hasItems(garden.environment?.produceType) ||
+          hasItems(garden.environment?.waterConservation) ||
+          hasItems(garden.environment?.soilType) ||
+          hasItems(garden.environment?.fertiliserUse) ||
+          hasItems(garden.environment?.pollinatorSupport),
+      },
+      {
+        id: "seasonal",
+        label: "Seasonal Planting",
+        visible: hasObject(garden.environment?.seasonalPlantingCalendar),
+      },
+      {
+        id: "events",
+        label: "Events",
+        visible: hasItems(garden.events),
+      },
+      {
+        id: "rules",
+        label: "Rules",
+        visible: hasItems(garden.rules),
+      },
+      {
+        id: "partnerships",
+        label: "Partnerships",
+        visible: hasItems(garden.partnerships),
+      },
+    ];
+  }, [garden]);
+
+  const visibleSections = sections.filter((s) => s.visible);
+
   useEffect(() => {
+    if (!garden) return;
     const observer = new IntersectionObserver(
       (entries) => {
         let maxRatio = 0;
-        let activeSection = null;
-
+        let activeSection: string | null = null;
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
             maxRatio = entry.intersectionRatio;
-            activeSection = slugify(entry.target.id);
+            activeSection = entry.target.id;
           }
         });
-
-        if (activeSection !== currentSection) {
+        if (activeSection && activeSection !== currentSection) {
           setCurrentSection(activeSection);
         }
       },
-      { root: null, rootMargin: "0px", threshold: 0.1 }
+      { rootMargin: "-25% 0px -55% 0px", threshold: [0, 0.25, 0.5, 1] }
     );
-
-    Object.values(sectionRefs.current).forEach((section) => {
-      if (section) {
-        observer.observe(section);
-      }
+    Object.values(sectionRefs.current).forEach((el) => {
+      if (el) observer.observe(el);
     });
+    return () => observer.disconnect();
+  }, [garden, currentSection, visibleSections.length]);
 
-    return () => {
-      Object.values(sectionRefs.current).forEach((section) => {
-        if (section) observer.unobserve(section);
-      });
-    };
-  }, [currentSection, garden]);
+  if (loading) {
+    return (
+      <>
+        <Navbar />
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center text-white pangolin-regular">
+          Loading garden…
+        </div>
+      </>
+    );
+  }
 
-  if (loading) return <p>Loading…</p>;
-  if (!garden) return <p>Garden not found.</p>;
+  if (!garden) {
+    return (
+      <>
+        <Navbar />
+        <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center text-white pangolin-regular gap-4">
+          <p className="text-2xl">Garden not found.</p>
+          <Link
+            to="/map"
+            className="border-2 px-4 py-2 rounded-md hover:bg-white/10"
+            style={{ borderColor: ACCENT }}
+          >
+            ⏎ Back to map
+          </Link>
+        </div>
+      </>
+    );
+  }
+
+  const suburb = suburbFromAddress(garden.address);
 
   return (
     <>
       <Navbar />
-      <div className="flex bg-gray-800">
-        {/* Sidebar */}
-        <div className="w-1/7  h-screen sticky top-20 overflow-y-auto text-white p-4 pl-13 pt-10 pangolin-regular">
-          <ul className="space-y-2">
-            {sections.map((section) => {
-              const slug = slugify(section);
-              return (
-                <li
-                  key={slug}
-                  className={`cursor-pointer ${
-                    currentSection === slug ? "text-[#55b47e]" : "text-white"
-                  } hover:text-[#479d6c] transition-colors duration-200`}
-                  onClick={() => {
-                    const el = sectionRefs.current[slug];
-                    if (el) {
-                      const yOffset = -200;
-                      const y =
-                        el.getBoundingClientRect().top +
-                        window.pageYOffset +
-                        yOffset;
-                      window.scrollTo({ top: y, behavior: "smooth" });
-                    }
-                  }}
-                >
-                  {section}
-                </li>
-              );
-            })}
-          </ul>
-          <Link
-            to={"/map"}
-            className=" ubuntu-bold inline-block  border-2 border-[#55b47e] hover:bg-green-900 text-white font-bold py-1 px-5 rounded-md transition-colors duration-200 mt-10  hover:scale-98"
-          >
-            <span className="pr-2">⏎ </span> map
-          </Link>
-        </div>
-        {/* Main Content */}
-        <div className="flex-1 p-6 space-y-6 max-w-3xl mx-auto pangolin-regular">
-          <div className="p-6 space-y-6 max-w-3xl mx-auto">
-            <h1 className="text-8xl font-bold text-[#55b47e] pangolin-regular uppercase">
+      <div className="bg-gray-900 min-h-screen pangolin-regular">
+        {/* HERO */}
+        <header className="relative overflow-hidden border-b border-white/10">
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              background: `radial-gradient(circle at 20% 30%, ${ACCENT} 0%, transparent 55%), radial-gradient(circle at 80% 70%, ${ACCENT} 0%, transparent 50%)`,
+            }}
+          />
+          <div className="relative max-w-6xl mx-auto px-6 lg:px-10 pt-16 pb-12">
+            {suburb && (
+              <p
+                className="text-xs uppercase tracking-[0.4em] mb-4"
+                style={{ color: ACCENT }}
+              >
+                {suburb} · Wellington
+              </p>
+            )}
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] max-w-4xl">
               {garden.description}
             </h1>
-            <h2 className="text-xl font-bold text-white mb-20 pangolin-regular">
+            <p className="text-white/70 mt-6 text-base md:text-lg max-w-2xl">
               {garden.address}
-            </h2>
+            </p>
 
-            {sections.map((section) => {
-              const slug = slugify(section);
-
-              console.log("Link to events for garden id:", garden?.id);
-
-              return (
-                <div
-                  key={slug}
-                  id={slug}
-                  ref={(el) => {
-                    sectionRefs.current[slug] = el;
-                  }}
-                  className="mb-10"
+            {/* Quick action bar */}
+            <div className="flex flex-wrap gap-3 mt-8">
+              <Link
+                to="/map"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-md border text-white text-sm hover:bg-white/10 transition-colors"
+                style={{ borderColor: ACCENT }}
+              >
+                <span>⏎</span> Back to map
+              </Link>
+              {garden.contact?.website && (
+                <a
+                  href={garden.contact.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-semibold text-gray-900 hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: ACCENT }}
                 >
-                  <h2 className="text-lg font-bold text-[#55b47e] mb-4 border-b-2 border-[#55b47e] pb-2">
-                    {" "}
-                    {section}
-                  </h2>
+                  Visit website ↗
+                </a>
+              )}
+              {garden.contact?.email && (
+                <a
+                  href={`mailto:${garden.contact.email}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-white/20 text-white text-sm hover:bg-white/10 transition-colors"
+                >
+                  ✉ Email coordinator
+                </a>
+              )}
+            </div>
 
-                  {section === "Overview" && (
-                    <>
-                      <SectionList label="Location and Membership">
-                        <LocationCard />
-                      </SectionList>
-                      <SectionList label="Partnerships">
-                        <PartnershipsCard />
-                      </SectionList>
-                      <SectionList label="Photo Gallery">
-                        <PhotoGallery photos={garden.photos ?? []} />
-                      </SectionList>
-                    </>
+            {/* Stats strip */}
+            <div className="flex flex-wrap gap-3 mt-10">
+              {garden.coordinator && (
+                <StatPill label="Coordinator" value={garden.coordinator} />
+              )}
+              {garden.established && (
+                <StatPill
+                  label="Established"
+                  value={new Date(garden.established).toLocaleString("default", {
+                    month: "long",
+                    year: "numeric",
+                  })}
+                />
+              )}
+              {typeof garden.membershipRequired === "boolean" && (
+                <StatPill
+                  label="Membership"
+                  value={garden.membershipRequired ? "Required" : "Drop-in welcome"}
+                />
+              )}
+              {typeof garden.volunteersWelcome === "boolean" && (
+                <StatPill
+                  label="Volunteers"
+                  value={garden.volunteersWelcome ? "Welcome" : "Not at this time"}
+                />
+              )}
+              {hasItems(garden.facilities) && (
+                <StatPill
+                  label="Facilities"
+                  value={`${garden.facilities.length} on site`}
+                />
+              )}
+              {hasItems(garden.events) && (
+                <StatPill
+                  label="Events"
+                  value={`${garden.events.length} upcoming`}
+                />
+              )}
+            </div>
+          </div>
+        </header>
+
+        {/* MAIN GRID */}
+        <div className="max-w-6xl mx-auto px-6 lg:px-10 py-12">
+          <div className="flex flex-col lg:flex-row gap-10">
+            {/* Sidebar TOC */}
+            <aside className="lg:w-56 lg:sticky lg:top-24 lg:self-start">
+              <p
+                className="text-xs uppercase tracking-[0.3em] mb-4"
+                style={{ color: ACCENT }}
+              >
+                On this page
+              </p>
+              <ul className="space-y-1 text-sm">
+                {visibleSections.map((section) => {
+                  const isActive = currentSection === section.id;
+                  return (
+                    <li key={section.id}>
+                      <button
+                        onClick={() => {
+                          const el = sectionRefs.current[section.id];
+                          if (el) {
+                            const y =
+                              el.getBoundingClientRect().top +
+                              window.pageYOffset -
+                              100;
+                            window.scrollTo({ top: y, behavior: "smooth" });
+                          }
+                        }}
+                        className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
+                          isActive
+                            ? "bg-white/10 text-white"
+                            : "text-white/60 hover:text-white hover:bg-white/5"
+                        }`}
+                      >
+                        <span
+                          className="inline-block w-1 h-1 rounded-full mr-2 align-middle"
+                          style={{
+                            backgroundColor: isActive ? ACCENT : "transparent",
+                          }}
+                        />
+                        {section.label}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </aside>
+
+            {/* Content */}
+            <main className="flex-1 min-w-0 space-y-16">
+              {/* Overview / Location */}
+              <SectionCard
+                id="overview"
+                title="Overview"
+                kicker="The garden"
+                sectionRef={(el) => (sectionRefs.current["overview"] = el)}
+              >
+                <LocationCard garden={garden} />
+              </SectionCard>
+
+              {/* Contact */}
+              {sections.find((s) => s.id === "contact")?.visible && (
+                <SectionCard
+                  id="contact"
+                  title="Get in touch"
+                  kicker="Contact"
+                  sectionRef={(el) => (sectionRefs.current["contact"] = el)}
+                >
+                  <ContactCard garden={garden} />
+                </SectionCard>
+              )}
+
+              {/* Opening Hours */}
+              {sections.find((s) => s.id === "hours")?.visible && (
+                <SectionCard
+                  id="hours"
+                  title="Opening hours"
+                  kicker="When to visit"
+                  sectionRef={(el) => (sectionRefs.current["hours"] = el)}
+                >
+                  <OpeningHoursTable hours={garden.openingHours} />
+                </SectionCard>
+              )}
+
+              {/* Photos */}
+              {sections.find((s) => s.id === "photos")?.visible && (
+                <SectionCard
+                  id="photos"
+                  title="Photos"
+                  kicker="Gallery"
+                  sectionRef={(el) => (sectionRefs.current["photos"] = el)}
+                >
+                  <PhotoGallery photos={garden.photos ?? []} />
+                </SectionCard>
+              )}
+
+              {/* Facilities & Access */}
+              {sections.find((s) => s.id === "facilities")?.visible && (
+                <SectionCard
+                  id="facilities"
+                  title="Facilities & access"
+                  kicker="On site"
+                  sectionRef={(el) => (sectionRefs.current["facilities"] = el)}
+                >
+                  <Facilities garden={garden} />
+                </SectionCard>
+              )}
+
+              {/* Garden — Produce */}
+              {sections.find((s) => s.id === "garden")?.visible && (
+                <SectionCard
+                  id="garden"
+                  title="What's growing"
+                  kicker="Garden"
+                  sectionRef={(el) => (sectionRefs.current["garden"] = el)}
+                >
+                  <Produce garden={garden} />
+                </SectionCard>
+              )}
+
+              {/* Seasonal */}
+              {sections.find((s) => s.id === "seasonal")?.visible && (
+                <SectionCard
+                  id="seasonal"
+                  title="Seasonal planting"
+                  kicker="Calendar"
+                  sectionRef={(el) => (sectionRefs.current["seasonal"] = el)}
+                >
+                  <SeasonalCalendar
+                    calendar={garden.environment?.seasonalPlantingCalendar}
+                  />
+                </SectionCard>
+              )}
+
+              {/* Events */}
+              {sections.find((s) => s.id === "events")?.visible && (
+                <SectionCard
+                  id="events"
+                  title="Events"
+                  kicker="What's on"
+                  sectionRef={(el) => (sectionRefs.current["events"] = el)}
+                >
+                  <Events
+                    events={
+                      Array.isArray(garden.events) &&
+                      typeof garden.events[0] === "string"
+                        ? (garden.events as unknown as string[]).map((ev) => ({
+                            date: "",
+                            details: ev,
+                          }))
+                        : garden.events.map((ev: any) => ({
+                            date: ev.date ?? "",
+                            details:
+                              typeof ev.details === "string"
+                                ? ev.details
+                                : JSON.stringify(ev.details),
+                          }))
+                    }
+                  />
+                  {garden._id && (
+                    <Link
+                      to={`/venues/${garden._id}/events`}
+                      className="inline-block mt-4 text-sm px-4 py-2 rounded-md border text-white hover:bg-white/10 transition-colors"
+                      style={{ borderColor: ACCENT }}
+                    >
+                      View all events →
+                    </Link>
                   )}
+                </SectionCard>
+              )}
 
-                  {section === "Contact" && (
-                    <ContactCard>
-                      <Info label="Coordinator" value={garden.coordinator} />
-                      <Info label="Email" value={garden?.contact?.email} />
-                      <Info label="Phone" value={garden?.contact?.phone} />
+              {/* Rules */}
+              {sections.find((s) => s.id === "rules")?.visible && (
+                <SectionCard
+                  id="rules"
+                  title="House rules"
+                  kicker="Before you visit"
+                  sectionRef={(el) => (sectionRefs.current["rules"] = el)}
+                >
+                  <Rules rules={garden.rules || []} />
+                </SectionCard>
+              )}
 
-                      <Info
-                        label="Website"
-                        value={
-                          <a
-                            href={garden.contact?.website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-300 hover:underline"
-                          >
-                            {garden.contact?.website}
-                          </a>
-                        }
-                      />
-                      <Info
-                        label="Facebook"
-                        value={
-                          <a
-                            href={garden.contact?.social?.facebook}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-300 hover:underline"
-                          >
-                            {garden.contact?.social?.facebook}
-                          </a>
-                        }
-                      />
-                    </ContactCard>
-                  )}
+              {/* Partnerships */}
+              {sections.find((s) => s.id === "partnerships")?.visible && (
+                <SectionCard
+                  id="partnerships"
+                  title="Partners"
+                  kicker="Supported by"
+                  sectionRef={(el) => (sectionRefs.current["partnerships"] = el)}
+                >
+                  <PartnershipsCard garden={garden} />
+                </SectionCard>
+              )}
 
-                  {section === "Events" && (
-                    <div className="">
-                      <Events
-                        events={
-                          Array.isArray(garden?.events) &&
-                          typeof garden.events[0] === "string"
-                            ? garden.events.map((ev) => ({
-                                date: "",
-                                details: ev,
-                              }))
-                            : Array.isArray(garden?.events)
-                            ? garden.events.map((ev: any) => ({
-                                date: ev.date,
-                                details:
-                                  typeof ev.details === "string"
-                                    ? ev.details
-                                    : JSON.stringify(ev.details),
-                              }))
-                            : []
-                        }
-                      />
-
-                      {garden._id && (
-                        <Link to={`/venues/${garden._id}/events`}>
-                          <button className="bg-green-600/40 hover:bg-green-600/80 font-bold px-3 py-2 rounded-md">
-                            View All Events
-                          </button>
-                        </Link>
-                      )}
-                    </div>
-                  )}
-
-                  {section === "Seasonal Planting" && (
-                    <SeasonalCalendar
-                      calendar={garden?.environment?.seasonalPlantingCalendar}
-                    />
-                  )}
-                  {section === "Photo Gallery" && (
-                    <PhotoGallery photos={garden?.photos ?? []} />
-                  )}
-                  {section === "Access" && <Facilities />}
-
-                  {section === "Rules" && <Rules rules={garden?.rules || []} />}
-
-                  {section === "Garden" && <Produce />}
-                </div>
-              );
-            })}
+              {/* Coordinates footer */}
+              <div className="pt-8 border-t border-white/10 text-xs text-white/40 flex flex-wrap gap-x-6 gap-y-1">
+                <span>
+                  Coordinates: {garden.lat?.toFixed(5)}, {garden.lon?.toFixed(5)}
+                </span>
+                {garden._id && <span>ID: {garden._id}</span>}
+                {garden.lastUpdated && (
+                  <span>
+                    Updated:{" "}
+                    {new Date(garden.lastUpdated).toLocaleDateString()}
+                  </span>
+                )}
+              </div>
+            </main>
           </div>
         </div>
       </div>

@@ -1,84 +1,68 @@
-import { useEffect, useState } from "react";
-import type { Garden } from "../../../types/GardenInterface";
-import { useParams } from "react-router";
 import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
-import { API_BASE_URL } from "../../../api/config";
+import type { Garden } from "../../../types/GardenInterface";
 
-export default function LocationCard() {
-  const { id } = useParams<{ id: string }>();
-  const [garden, setGarden] = useState<Garden | null>(null);
-  const [loading, setLoading] = useState(true);
+const ACCENT = "#55b47e";
 
+export default function LocationCard({ garden }: { garden: Garden }) {
   const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+  const addressLines = (garden.address ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
 
-  useEffect(() => {
-    if (!id) return;
-    fetch(`${API_BASE_URL}/gardens/${id}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Not found");
-        return res.json();
-      })
-      .then((g) => {
-        setGarden(g);
-      })
-      .catch(() => {
-        setGarden(null);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [id]);
-
-  if (loading) return <p>Loading…</p>;
-  if (!garden) return <p>Garden not found.</p>;
   return (
-    <div className=" bg-gray-800 rounded-xl p-0 text-white mb-5">
-      <div className="flex flex-row justify-between items-center">
-        <div className="flex flex-col justify-center pl-10">
-          <div className=" space-y-1 text-gray-300 text-sm">
-            <p>ID: {garden._id?.slice(0, 7)}</p>
-            <p>{garden.description}</p>
-            <p>{garden.address.split(",")[0]}</p>
-            <p>
-              {garden.address.split(",")[1]}
-              {garden.address.split(",")[2]}
-            </p>
-
-            <p>
-              Established{" "}
-              <span className="font-bold">
-                {" "}
-                {garden.established
-                  ? new Date(garden.established).toLocaleString("default", {
-                      month: "long",
-                      year: "numeric",
-                    })
-                  : "Unknown"}
-              </span>
-            </p>
-            <p>
-              Memberships required:{" "}
-              <span className="font-bold">
-                {garden.membershipRequired ? "Yes" : "No"}
-              </span>
-            </p>
-          </div>
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 rounded-2xl overflow-hidden bg-white/5 border border-white/10">
+      {/* Left: address & meta */}
+      <div className="lg:col-span-2 p-6 flex flex-col justify-between gap-6">
+        <div>
+          <p
+            className="text-xs uppercase tracking-[0.2em] mb-3"
+            style={{ color: ACCENT }}
+          >
+            Address
+          </p>
+          <address className="not-italic text-white space-y-0.5 leading-relaxed">
+            {addressLines.map((line, idx) => (
+              <p
+                key={line + idx}
+                className={idx === 0 ? "font-semibold" : "text-white/70 text-sm"}
+              >
+                {line}
+              </p>
+            ))}
+          </address>
         </div>
 
-        <div className="rounded-lg p-2">
+        <a
+          href={`https://www.google.com/maps/dir/?api=1&destination=${garden.lat},${garden.lon}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm self-start px-3 py-2 rounded-md border border-white/20 text-white hover:bg-white/10 transition-colors"
+        >
+          Get directions →
+        </a>
+      </div>
+
+      {/* Right: map */}
+      <div className="lg:col-span-3 h-[260px] lg:h-auto min-h-[200px]">
+        {API_KEY ? (
           <APIProvider apiKey={API_KEY}>
             <Map
               mapId={"4ede449a95c7241845c0af90"}
               defaultCenter={{ lat: garden.lat, lng: garden.lon }}
-              defaultZoom={10}
+              defaultZoom={14}
               gestureHandling={"greedy"}
               disableDefaultUI
-              className={"w-[300px] h-[200px]"}
+              className="w-full h-full"
             >
               <Marker position={{ lat: garden.lat, lng: garden.lon }} />
             </Map>
           </APIProvider>
-        </div>
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-white/40 text-sm">
+            Map unavailable
+          </div>
+        )}
       </div>
     </div>
   );

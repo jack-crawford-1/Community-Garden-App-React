@@ -1,17 +1,23 @@
+const ACCENT = "#55b47e";
+
 export default function Rules({ rules }: { rules: string[] }) {
+  if (!rules.length) return null;
   return (
-    <div className="bg-[#000000] p-6 rounded-xl border-l-8 border-[#55b47e] shadow-lg font-pixel text-xs leading-relaxed tracking-wide max-w-3xl mx-auto">
-      <ul className="space-y-3 ">
-        {rules.map((rule, idx) => (
-          <li
-            key={idx}
-            className="text-white text-lg leading-8 ipangolin-regular"
+    <ol className="space-y-3">
+      {rules.map((rule, idx) => (
+        <li
+          key={idx}
+          className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10"
+        >
+          <span
+            className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold text-gray-900"
+            style={{ backgroundColor: ACCENT }}
           >
-            <span className="mr-4 text-white">{idx + 1}</span>
-            {rule}
-          </li>
-        ))}
-      </ul>
-    </div>
+            {idx + 1}
+          </span>
+          <span className="text-green-50 leading-relaxed">{rule}</span>
+        </li>
+      ))}
+    </ol>
   );
 }

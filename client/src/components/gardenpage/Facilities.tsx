@@ -1,90 +1,88 @@
-import { useEffect, useState } from "react";
 import type { Garden } from "../../types/GardenInterface";
-import { useParams } from "react-router";
-import Waste from "./Waste";
-import Accessibility from "./Accessibility";
-import { API_BASE_URL } from "../../api/config";
 
-export default function Facilities() {
-  const { id } = useParams<{ id: string }>();
-  const [garden, setGarden] = useState<Garden | null>(null);
-  const [loading, setLoading] = useState(true);
+const ACCENT = "#55b47e";
 
-  useEffect(() => {
-    if (!id) return;
-    fetch(`${API_BASE_URL}0/gardens/${id}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Not found");
-        return res.json();
-      })
-      .then((g) => {
-        setGarden(g);
-      })
-      .catch(() => {
-        setGarden(null);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [id]);
-
-  if (loading) return <p>Loading…</p>;
-  if (!garden) return <p>Garden not found.</p>;
+function ChipList({ items }: { items: string[] }) {
   return (
-    <div className="text-white mb-2 border-l-8 border-[#55b47e]  rounded-2xl pl-5">
-      <details className="mb-4 bg-gray-800  rounded-xl pl-8 p-5 ">
-        <summary className="cursor-pointer font-bold text-white pb-3">
-          Facilities
-        </summary>
-        <div className="flex gap-2 items-center mt-2 w-14 pb-4">
-          <img
-            src={"/svg/gardenpage/toilet.svg"}
-            className=" border-2 p-1 rounded-md"
-          />
-          <img
-            src={"/svg/gardenpage/bbq.svg"}
-            className=" p-1 rounded-md border-2"
-          />
-          <img
-            src={"/svg/gardenpage/playground.svg"}
-            className=" p-1 rounded-md border-2"
-          />
-          <img
-            src={"/svg/gardenpage/greenhouse.svg"}
-            className=" p-1 rounded-md border-2"
-          />
-          <img
-            src={"/svg/gardenpage/bike.svg"}
-            className=" p-1 rounded-md border-2"
-          />
-          <img
-            src={"/svg/gardenpage/kitchen.svg"}
-            className=" p-1 rounded-md border-2"
-          />
-          <img
-            src={"/svg/gardenpage/meeting.svg"}
-            className=" p-1 rounded-md border-2"
-          />
-        </div>
-        <ul>
-          {garden.facilities.map((feature, index) => (
-            <li key={index}>{feature.trim()}</li>
-          ))}
-        </ul>
-      </details>
+    <ul className="flex flex-wrap gap-2">
+      {items.map((item, idx) => (
+        <li
+          key={item + idx}
+          className="px-3 py-1.5 rounded-full text-sm bg-white/5 border border-white/10 text-green-50"
+        >
+          {item.trim()}
+        </li>
+      ))}
+    </ul>
+  );
+}
 
-      <details className="mb-4 bg-gray-800  rounded-xl pl-8 p-5 ">
-        <summary className="cursor-pointer font-bold text-white pb-3">
-          Accssibility
-        </summary>
-        <Accessibility />
-      </details>
-      <details className="mb-4 bg-gray-800  rounded-xl pl-8 p-5 ">
-        <summary className="cursor-pointer font-bold text-white pb-3">
-          Waste
-        </summary>
-        <Waste />
-      </details>
+function SubBlock({
+  title,
+  icons,
+  items,
+}: {
+  title: string;
+  icons: string[];
+  items?: string[];
+}) {
+  if (!items || items.length === 0) return null;
+  return (
+    <div className="rounded-xl bg-white/5 border border-white/10 p-5">
+      <div className="flex items-center justify-between mb-4">
+        <h4
+          className="text-xs uppercase tracking-[0.2em]"
+          style={{ color: ACCENT }}
+        >
+          {title}
+        </h4>
+        <div className="flex gap-1.5">
+          {icons.slice(0, 4).map((src) => (
+            <img
+              key={src}
+              src={src}
+              alt=""
+              className="w-7 h-7 p-1 rounded-md border border-white/15"
+            />
+          ))}
+        </div>
+      </div>
+      <ChipList items={items} />
+    </div>
+  );
+}
+
+export default function Facilities({ garden }: { garden: Garden }) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <SubBlock
+        title="On-site facilities"
+        icons={[
+          "/svg/gardenpage/toilet.svg",
+          "/svg/gardenpage/bbq.svg",
+          "/svg/gardenpage/greenhouse.svg",
+          "/svg/gardenpage/kitchen.svg",
+        ]}
+        items={garden.facilities}
+      />
+      <SubBlock
+        title="Accessibility"
+        icons={[
+          "/svg/gardenpage/parking.svg",
+          "/svg/gardenpage/disabled.svg",
+          "/svg/gardenpage/toilet.svg",
+        ]}
+        items={garden.accessibility}
+      />
+      <SubBlock
+        title="Waste management"
+        icons={[
+          "/svg/gardenpage/recycling.svg",
+          "/svg/gardenpage/rubbish.svg",
+          "/svg/gardenpage/biohazard.svg",
+        ]}
+        items={garden.wasteManagement}
+      />
     </div>
   );
 }

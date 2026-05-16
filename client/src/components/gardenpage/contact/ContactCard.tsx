@@ -1,110 +1,104 @@
-import { useEffect, useState } from "react";
 import type { Garden } from "../../../types/GardenInterface";
-import { useParams } from "react-router";
-import { API_BASE_URL } from "../../../api/config";
 
-export default function ContactCard({}: { children: React.ReactNode }) {
-  const { id } = useParams<{ id: string }>();
-  const [garden, setGarden] = useState<Garden | null>(null);
-  const [loading, setLoading] = useState(true);
+const ACCENT = "#55b47e";
 
-  useEffect(() => {
-    if (!id) return;
-    fetch(`${API_BASE_URL}/gardens/${id}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Not found");
-        return res.json();
-      })
-      .then((g) => {
-        setGarden(g);
-      })
-      .catch(() => {
-        setGarden(null);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [id]);
-
-  if (loading) return <p>Loading…</p>;
-  if (!garden) return <p>Garden not found.</p>;
+function ContactRow({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
-    <div className="mt-4 bg-gray-800 rounded-xl shadow-lg p-6 text-white border-l-8 border-[#55b47e] ">
-      <div className="flex flex-row space-x-6 ">
-        <img
-          alt="Coordinator"
-          src="https://www.citypng.com/public/uploads/preview/white-user-member-guest-icon-png-image-701751695037005zdurfaim0y.png"
-          className="w-20 h-20 rounded-md border-4 border-[#55b47e]"
-        />
-        <div className="flex flex-col justify-center">
-          <h5 className="text-xl font-semibold">{garden.coordinator}</h5>
-          <span className="text-sm text-gray-400 mb-10">
-            Garden Coordinator
-            {garden?.contact?.phone && <p>{garden.contact?.phone}</p>}
-          </span>
+    <div className="flex items-start gap-3 py-3 border-b border-white/5 last:border-0">
+      <span className="text-xs uppercase tracking-[0.2em] w-24 shrink-0 mt-0.5 text-white/50">
+        {label}
+      </span>
+      <span className="text-sm text-green-50 break-all min-w-0">{children}</span>
+    </div>
+  );
+}
+
+export default function ContactCard({ garden }: { garden: Garden }) {
+  const c = garden.contact ?? {};
+  const hasAnyContact =
+    !!c.email || !!c.phone || !!c.website || !!c.social?.facebook;
+
+  return (
+    <div className="rounded-2xl bg-white/5 border border-white/10 overflow-hidden">
+      {/* Coordinator header */}
+      <div className="flex items-center gap-5 p-6 border-b border-white/10">
+        <div
+          className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-gray-900 shrink-0"
+          style={{ backgroundColor: ACCENT }}
+        >
+          {garden.coordinator?.charAt(0)?.toUpperCase() ?? "·"}
+        </div>
+        <div className="min-w-0">
+          <p
+            className="text-xs uppercase tracking-[0.2em] mb-1"
+            style={{ color: ACCENT }}
+          >
+            Garden coordinator
+          </p>
+          <h3 className="text-xl text-white font-semibold truncate">
+            {garden.coordinator ?? "Coordinator not listed"}
+          </h3>
         </div>
       </div>
 
-      <div className=" space-y-1 text-gray-300 break-words">
-        {garden?.contact?.email && (
-          <p>
-            <strong>Email:</strong> {garden?.contact?.email}
-          </p>
-        )}
-
-        {garden?.contact?.phone && (
-          <p>
-            <strong>Phone:</strong> {garden?.contact?.phone}
-          </p>
-        )}
-
-        {garden?.contact?.website && (
-          <p>
-            <strong>Website:</strong>{" "}
-            <a
-              href={garden.contact.website}
-              target="_blank"
-              rel="noreferrer"
-              className="underline text-[#55b47e]"
-            >
-              {garden?.contact?.website}
-            </a>
-          </p>
-        )}
-        {garden?.contact?.social?.facebook && (
-          <p>
-            <strong>Facebook:</strong>{" "}
-            <a
-              href={garden?.contact?.social?.facebook}
-              target="_blank"
-              rel="noreferrer"
-              className="underline text-[#55b47e]"
-            >
-              {garden?.contact?.social?.facebook}
-            </a>
-          </p>
-        )}
-      </div>
-      <div className=" mt-10">
-        <h5 className="text-lg font-semibold mb-4 text-[#55b47e]">
-          Opening Hours
-        </h5>
-        <ul className="grid grid-cols-2 gap-2 text-sm text-blue-50">
-          {Object.entries(garden.openingHours ?? {}).map(([day, times]) => (
-            <li
-              key={day}
-              className="flex items-center gap-2 bg-blue-300/20 rounded px-2 py-1 shadow-inner"
-            >
-              <span className="font-semibold text-white w-20">{day}:</span>
-              <span>
-                {Array.isArray(times) && times.filter(Boolean).length > 0
-                  ? (times as string[]).join(" - ")
-                  : "Closed"}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* Contact rows */}
+      {hasAnyContact && (
+        <div className="px-6 py-2">
+          {c.email && (
+            <ContactRow label="Email">
+              <a
+                href={`mailto:${c.email}`}
+                className="hover:underline"
+                style={{ color: ACCENT }}
+              >
+                {c.email}
+              </a>
+            </ContactRow>
+          )}
+          {c.phone && (
+            <ContactRow label="Phone">
+              <a
+                href={`tel:${c.phone.replace(/\s+/g, "")}`}
+                className="hover:underline text-white"
+              >
+                {c.phone}
+              </a>
+            </ContactRow>
+          )}
+          {c.website && (
+            <ContactRow label="Website">
+              <a
+                href={c.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+                style={{ color: ACCENT }}
+              >
+                {c.website.replace(/^https?:\/\//, "")}
+              </a>
+            </ContactRow>
+          )}
+          {c.social?.facebook && (
+            <ContactRow label="Facebook">
+              <a
+                href={c.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+                style={{ color: ACCENT }}
+              >
+                {c.social.facebook.replace(/^https?:\/\//, "")}
+              </a>
+            </ContactRow>
+          )}
+        </div>
+      )}
     </div>
   );
 }

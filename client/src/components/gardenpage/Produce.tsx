@@ -1,96 +1,111 @@
-import { useEffect, useState } from "react";
 import type { Garden } from "../../types/GardenInterface";
-import { useParams } from "react-router";
-import PollenAndWildlife from "./PollenAndWildlife";
-import Water from "./Water";
-import Fertiliser from "./Fertiliser";
-import Soil from "./Soil";
-import { API_BASE_URL } from "../../api/config";
 
-export default function Produce() {
-  const { id } = useParams<{ id: string }>();
-  const [garden, setGarden] = useState<Garden | null>(null);
-  const [loading, setLoading] = useState(true);
+const ACCENT = "#55b47e";
 
-  useEffect(() => {
-    if (!id) return;
-    fetch(`${API_BASE_URL}/gardens/${id}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Not found");
-        return res.json();
-      })
-      .then((g) => {
-        setGarden(g);
-      })
-      .catch(() => {
-        setGarden(null);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [id]);
-
-  if (loading) return <p>Loading…</p>;
-  if (!garden) return <p>Garden not found.</p>;
+function ChipList({ items }: { items: string[] }) {
   return (
-    <div className="space-y-1 text-gray-300 border-l-8 border-[#55b47e]  rounded-2xl pl-5">
-      <details className="mb-4 bg-gray-800  rounded-xl pl-8 p-5">
-        <summary className="cursor-pointer font-bold text-white pb-3">
-          Produce Grown
-        </summary>
+    <ul className="flex flex-wrap gap-2">
+      {items.map((item, idx) => (
+        <li
+          key={item + idx}
+          className="px-3 py-1.5 rounded-full text-sm bg-white/5 border border-white/10 text-green-50"
+        >
+          {item.trim()}
+        </li>
+      ))}
+    </ul>
+  );
+}
 
-        <div className="flex gap-2 items-center mb-2 w-14">
-          <img
-            src={"/svg/gardenpage/apple.svg"}
-            className="border-2 border-white-700 p-1 rounded-md"
-          />
-          <img
-            src={"/svg/gardenpage/sprout.svg"}
-            className="border-2 border-white-700 p-1 rounded-md"
-          />
-          <img
-            src={"/svg/gardenpage/carrot.svg"}
-            className="border-2 border-white-700 p-1 rounded-md"
-          />
-          <img
-            src={"/svg/gardenpage/herb.svg"}
-            className="border-2 border-white-700 p-1 rounded-md"
-          />
-        </div>
-        <ul>
-          {garden.environment?.produceType.map((feature, index) => (
-            <li key={index}>{feature.trim()}</li>
+function SubBlock({
+  title,
+  icons,
+  items,
+}: {
+  title: string;
+  icons: string[];
+  items?: string[];
+}) {
+  if (!items || items.length === 0) return null;
+  return (
+    <div className="rounded-xl bg-white/5 border border-white/10 p-5">
+      <div className="flex items-center justify-between mb-4">
+        <h4
+          className="text-xs uppercase tracking-[0.2em]"
+          style={{ color: ACCENT }}
+        >
+          {title}
+        </h4>
+        <div className="flex gap-1.5">
+          {icons.slice(0, 4).map((src) => (
+            <img
+              key={src}
+              src={src}
+              alt=""
+              className="w-7 h-7 p-1 rounded-md border border-white/15"
+            />
           ))}
-        </ul>
-      </details>
+        </div>
+      </div>
+      <ChipList items={items} />
+    </div>
+  );
+}
 
-      <details className="mb-4 bg-gray-800  rounded-xl pl-8 p-5">
-        <summary className="cursor-pointer font-bold text-white pb-3">
-          Pollinators and Wildlife
-        </summary>
-        <PollenAndWildlife />
-      </details>
-
-      <details className="mb-4 bg-gray-800  rounded-xl pl-8 p-5">
-        <summary className="cursor-pointer font-bold text-white pb-3">
-          Water Management
-        </summary>
-        <Water />
-      </details>
-
-      <details className="mb-4 bg-gray-800  rounded-xl pl-8 p-5">
-        <summary className="cursor-pointer font-bold text-white pb-3">
-          Fertiliser Use
-        </summary>
-        <Fertiliser />
-      </details>
-
-      <details className="mb-4 bg-gray-800  rounded-xl pl-8 p-5">
-        <summary className="cursor-pointer font-bold text-white pb-3">
-          Soil Type
-        </summary>
-        <Soil />
-      </details>
+export default function Produce({ garden }: { garden: Garden }) {
+  const env = garden.environment;
+  if (!env) return null;
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <SubBlock
+        title="Produce grown"
+        icons={[
+          "/svg/gardenpage/apple.svg",
+          "/svg/gardenpage/sprout.svg",
+          "/svg/gardenpage/carrot.svg",
+          "/svg/gardenpage/herb.svg",
+        ]}
+        items={env.produceType}
+      />
+      <SubBlock
+        title="Pollinators & wildlife"
+        icons={[
+          "/svg/gardenpage/bee.svg",
+          "/svg/gardenpage/lizard.svg",
+          "/svg/gardenpage/frog.svg",
+          "/svg/gardenpage/birdhouse.svg",
+        ]}
+        items={env.pollinatorSupport}
+      />
+      <SubBlock
+        title="Water management"
+        icons={[
+          "/svg/gardenpage/water.svg",
+          "/svg/gardenpage/rainwater.svg",
+          "/svg/gardenpage/drip.svg",
+          "/svg/gardenpage/mulch.svg",
+        ]}
+        items={env.waterConservation}
+      />
+      <SubBlock
+        title="Fertiliser use"
+        icons={["/svg/gardenpage/organic.svg", "/svg/gardenpage/seaweed.svg"]}
+        items={env.fertiliserUse}
+      />
+      <SubBlock
+        title="Soil type"
+        icons={[
+          "/svg/gardenpage/sandy.svg",
+          "/svg/gardenpage/sandy1.svg",
+          "/svg/gardenpage/hand.svg",
+        ]}
+        items={env.soilType}
+      />
+      <SubBlock
+        title="Composting"
+        icons={["/svg/gardenpage/recycling.svg"]}
+        items={env.compostingFacilities}
+      />
     </div>
   );
 }
