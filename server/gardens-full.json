@@ -1,0 +1,467 @@
+[
+  {
+    "description": "Houghton Bay Community Gardens",
+    "address": "104 Houghton Bay Road, Houghton Bay, Wellington",
+    "lat": -41.33382873952372,
+    "lon": 174.78702059131902,
+    "isTestGarden": false,
+    "contact": {
+      "email": "davemcarthur@truehope.info"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 2,
+      "name": "Houghton Bay Community Gardens",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Tawa Community Gardens",
+    "address": "21- 29 Oxford Street, Tawa, Wellington",
+    "lat": -41.17156669377803,
+    "lon": 174.8264556794282,
+    "isTestGarden": false,
+    "contact": {
+      "email": "tawa.community.garden@gmail.com",
+      "website": "https://www.facebook.com/tawacommunitygarden"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 14,
+      "name": "Tawa Community Gardens",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Te Kawakawa Commons",
+    "address": "46 Hornsey Road, Melrose, Wellington",
+    "lat": -41.32982347942037,
+    "lon": 174.78560226677067,
+    "isTestGarden": false,
+    "contact": {
+      "email": "kenandmirandaoe@gmail.com"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 16,
+      "name": "Te Kawakawa Commons",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "A beautiful and hidden away terraced garden next to Houghton Valley school.",
+    "address": "Harrison Street, Brooklyn, Wellington",
+    "lat": -41.30603619016248,
+    "lon": 174.76491125812308,
+    "isTestGarden": false,
+    "contact": {
+      "email": "earthmotherb4@gmail.com",
+      "website": "https://www.facebook.com/BrooklynFoodGroupNZ/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 1,
+      "name": "Brooklyn Community Orchard",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "The gem of Mount Victoria, Innermost Gardens is nestled between an inner-city suburb and the city’s famed town belt.",
+    "address": "Lawson Place, Mount Victoria, Wellington",
+    "lat": -41.29618557618583,
+    "lon": 174.78970341748038,
+    "isTestGarden": false,
+    "contact": {
+      "email": "innermostgardens@gmail.com",
+      "website": "https://www.facebook.com/innermostgardens"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 3,
+      "name": "Innermost Gardens",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "An urban orchard bursting with apples, berries and bees in spring and summer.",
+    "address": "Beside 559 Adelaide Rd, Berhampore",
+    "lat": -41.325231961951225,
+    "lon": 174.77561898208262,
+    "isTestGarden": false,
+    "contact": {
+      "email": "communityfruit@gmail.com",
+      "website": "https://www.facebook.com/communityfruit/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 4,
+      "name": "Island Bay and Berhampore Community Orchard",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "An urban farm and composting hub in the heart of Newtown.",
+    "address": "5 Hospital Road, Newtown, Wellington",
+    "lat": -41.30619347507297,
+    "lon": 174.77944347889306,
+    "isTestGarden": false,
+    "contact": {
+      "email": "hello@kaicycle.org.nz",
+      "website": "https://kaicycle.org.nz/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 5,
+      "name": "Kaicycle",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "A small but bountiful garden tucked behind Karori’s Beauchamp Street Chapel.",
+    "address": "21 Beauchamp Street, Karori, Wellington",
+    "lat": -41.28616452806992,
+    "lon": 174.73818619833375,
+    "isTestGarden": false,
+    "contact": {
+      "email": "karoricommunitygarden2020@gmail.com",
+      "website": "https://www.karoricommunitygarden.nz/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 6,
+      "name": "Karori Community Gardens",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "Kilbirnie/Lyall Bay Community Garden",
+    "address": "1 Endeavour Street, Lyall Bay, Wellington",
+    "lat": -41.32187534750211,
+    "lon": 174.79342900229608,
+    "isTestGarden": false,
+    "contact": {
+      "email": "endeavourcommunitygarden@gmail.com"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 8,
+      "name": "Kilbirnie/Lyall Bay Community Garden\r\n",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "An expansive and community-focused garden with private and communal allotments on offer.",
+    "address": "1 Main Road, Miramar, Wellington",
+    "lat": -41.29447785437829,
+    "lon": 174.82635511490287,
+    "isTestGarden": false,
+    "contact": {
+      "email": "milan.magan@gmail.com",
+      "website": "https://www.facebook.com/MiramarPrisonGarden"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 9,
+      "name": "Miramar Prison Garden Collective",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "Mokai Kainga - Owhiro Bay Community Gardens",
+    "address": "Owhiro Bay Community Gardens, 72 Happy Valley Road, Owhiro Bay, Wellington",
+    "lat": -41.34087916789776,
+    "lon": 174.7608688699453,
+    "isTestGarden": false,
+    "contact": {
+      "email": "Owhirobaycommunitygardens@gmail.com",
+      "website": "https://www.facebook.com/groups/373625379747713/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 10,
+      "name": "Mokai Kainga - Owhiro Bay Community Gardens",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "A relatively new community garden tucked behind a busy Community Centre.",
+    "address": "27 Chelsea Street, Miramar, Wellington",
+    "lat": -41.31767589476399,
+    "lon": 174.81699435580308,
+    "isTestGarden": false,
+    "contact": {
+      "email": "saskia@mmcc.org.nz"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 11,
+      "name": "Miramar & Maupuia Community Centre",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "Communal beds complete with a BBQ and seating area in Newtown's busy Carrara Park.",
+    "address": "Carrara Park, 107 Daniell Street, Newtownm Wellington",
+    "lat": -41.31543346443111,
+    "lon": 174.78365589742182,
+    "isTestGarden": false,
+    "contact": {
+      "email": "newtowngardens@gmail.com",
+      "website": "https://www.facebook.com/groups/148208265388696/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 12,
+      "name": "Newtown Community Gardens",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "A bold and beautiful community garden which hosts regular working bees and events.",
+    "address": "Jay Street Reserve, Paparangi, Wellington",
+    "lat": -41.21534418088773,
+    "lon": 174.82190874079058,
+    "isTestGarden": false,
+    "contact": {
+      "email": "info@ncg.org.nz",
+      "website": "https://www.facebook.com/Northern.Community.Gardens/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 13,
+      "name": "Northern Community Gardens",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "One of the city's oldest gardens, with communal and private beds - as well as harbour views!",
+    "address": "Tanera Park Community Garden\r\nTanera Park, Brooklyn",
+    "lat": -41.297463129400356,
+    "lon": 174.767266631671,
+    "isTestGarden": false,
+    "contact": {
+      "email": "taneragardens@gmail.com",
+      "website": "https://www.facebook.com/pages/category/Community/Tanera-Park-Community-Garden-162118757840705/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 15,
+      "name": "Tanera Gardens",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "You'll find apple and feijoa trees here, just to the side of Ben Burns Park.",
+    "address": "66 Thurleigh Grove, Karori, Wellington",
+    "lat": -41.28750688331195,
+    "lon": 174.71795268972855,
+    "isTestGarden": false,
+    "contact": {
+      "email": "hello@kaicycle.org.nz"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 17,
+      "name": "Thurleigh Grove Community Orchard",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "Situated on top of the Terrace Tunnel, this is a small community garden with a big heart.",
+    "address": "25 MacDonald Crescent, Te Aro",
+    "lat": -41.29092122579166,
+    "lon": 174.7718370283887,
+    "isTestGarden": false,
+    "contact": {
+      "email": "michael@bgi.org.nz"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 18,
+      "name": "Te Māramatanga / Terrace Tunnel Community Garden",
+      "hasDescription": true
+    }
+  },
+  {
+    "description": "Brooklyn Community Rongoā Forest",
+    "address": "Elliott Park, Brooklyn, Wellington",
+    "lat": -41.30833015215447,
+    "lon": 174.7578900153861,
+    "isTestGarden": false,
+    "contact": {
+      "email": "tanya.ruka@yahoo.co.nz",
+      "website": "https://www.facebook.com/CommunityRongoaForest"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 20,
+      "name": "Brooklyn Community Rongoā Forest",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Edible Earth x Wellington International Airport Community Garden",
+    "address": "6-8 Bridge Street, Rongotai",
+    "lat": -41.3201291926326,
+    "lon": 174.80523998927097,
+    "isTestGarden": false,
+    "contact": {
+      "website": "https://www.facebook.com/people/Edible-Earth-x-Wellington-International-Airport-Community-Garden/100095163495856/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 420,
+      "name": "Edible Earth x Wellington International Airport Community Garden",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Island Bay Community Centre",
+    "address": "137 The Parade, Island Bay",
+    "lat": -41.33449052656927,
+    "lon": 174.77392630361024,
+    "isTestGarden": false,
+    "contact": {
+      "email": "islandbaycc@wcc.govt.nz"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 421,
+      "name": "Island Bay Community Centre",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Kai Hapori Whānui ki Linden",
+    "address": "10 Linden Avenue",
+    "lat": -41.157264177604205,
+    "lon": 174.83122751243147,
+    "isTestGarden": false,
+    "contact": {
+      "email": "hello@vsctrust.org.nz"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 422,
+      "name": "Kai Hapori Whānui ki Linden",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Kai o te Aro",
+    "address": "48 Aro Street, Aro Valley",
+    "lat": -41.29493338743201,
+    "lon": 174.76891000602657,
+    "isTestGarden": false,
+    "contact": {
+      "email": "vorry.mahal@arovalley.org.nz",
+      "website": "https://www.facebook.com/groups/kaiotearo"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 423,
+      "name": "Kai o te Aro",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Kelburn Community Garden",
+    "address": "96 - 112 Kelburn Parade",
+    "lat": -41.29146955596913,
+    "lon": 174.7653963600158,
+    "isTestGarden": false,
+    "contact": {
+      "email": "kelburncommunitygarden@gmail.com",
+      "website": "https://kelburncommunityga.wixsite.com/garden"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 424,
+      "name": "Kelburn Community Garden",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Kumutoto Community Orchard",
+    "address": "Kelburn Park",
+    "lat": -41.287893411425955,
+    "lon": 174.77133951553625,
+    "isTestGarden": false,
+    "contact": {
+      "email": "kumutoto.co@gmail.com",
+      "website": "https://www.facebook.com/kumutoto.co"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 426,
+      "name": "Kumutoto Community Orchard",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Lyall bay community garden",
+    "address": "Lyall Bay Community Garden, 67 Freyberg Street, Lyall Bay",
+    "lat": -41.32689086741138,
+    "lon": 174.7937290894402,
+    "isTestGarden": false,
+    "contact": {
+      "email": "lyallbaycommunitygarden@gmail.com",
+      "website": "https://www.facebook.com/groups/lyallbaycommunitygarden/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 427,
+      "name": "Lyall bay community garden",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Massey University Māra Kai",
+    "address": "Massey Wellington Campus, Tasman Street",
+    "lat": -41.30149636074133,
+    "lon": 174.7762532112897,
+    "isTestGarden": false,
+    "contact": {
+      "email": "earthworms.compost@gmail.com",
+      "website": "https://www.instagram.com/earthworms_wlg/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 428,
+      "name": "Massey University Māra Kai",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Pukehinau māra kai",
+    "address": "Pukehinau Flats, lawn on the corner of Ohiro Road and Aro Street",
+    "lat": -41.296283605230904,
+    "lon": 174.76969895017464,
+    "isTestGarden": false,
+    "contact": {
+      "email": "pukehinau@kaicycle.org.nz or alex.hunter@tetoimahana.org.nz"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 429,
+      "name": "Pukehinau māra kai",
+      "hasDescription": false
+    }
+  },
+  {
+    "description": "Tarikaka Park Orchard",
+    "address": "Corner of Tarikaka Street and Ngata Street, Ngaio",
+    "lat": -41.24778002128509,
+    "lon": 174.77883029984204,
+    "isTestGarden": false,
+    "contact": {
+      "website": "https://www.facebook.com/TarikakaParkOrchard/"
+    },
+    "_meta": {
+      "source": "WCC GIS — Community/Facilities/MapServer/3",
+      "sourceId": 430,
+      "name": "Tarikaka Park Orchard",
+      "hasDescription": false
+    }
+  }
+]
