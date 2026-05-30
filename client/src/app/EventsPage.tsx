@@ -59,12 +59,12 @@ export default function EventsPage() {
   }, [id]);
 
   return (
-    <div className="bg-gray-800">
+    <div className="bg-[#111c16]">
       <Navbar />
       <div className="min-h-screen  text-white pb-10">
         <div className="pl-40 pr-40">
           <h1 className="text-4xl md:text-5xl font-bold text-[#55b47e] mb-2 tracking-wide  md:max-w-5xl ml-20 mt-10">
-            Events at {garden?.description}
+            Events at {garden?.name || garden?.description}
           </h1>
 
           <div className="flex flex-col md:flex-row mt-10 max-w-6xl ml-20">

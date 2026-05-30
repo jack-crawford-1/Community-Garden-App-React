@@ -18,6 +18,44 @@ import type { Feature, Point } from "geojson";
 import type { Garden } from "../types/GardenInterface";
 import Modal from "../components/modal/Modal";
 import Navbar from "../components/nav/Navbar";
+import { Link } from "react-router";
+
+function MapOverlay() {
+  const gardenData = useGardenData();
+  const count = gardenData?.features.length ?? 0;
+  const isLoggedIn =
+    typeof window !== "undefined" && !!localStorage.getItem("token");
+
+  return (
+    <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex justify-center p-4 sm:justify-start">
+      <div className="pointer-events-auto w-full max-w-xs rounded-xl bg-white/95 p-4 shadow-lg ring-1 ring-black/5 backdrop-blur">
+        <div className="flex items-center gap-2">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#55b47e]">
+            <img src="/svg/leaf.svg" alt="" className="h-4 w-4" />
+          </span>
+          <p className="text-sm font-bold text-gray-900">
+            {count > 0 ? `${count} community gardens` : "Community gardens"}
+          </p>
+        </div>
+        <p className="mt-2 text-xs leading-relaxed text-gray-600">
+          Tap a <span className="font-semibold text-[#3f8f5a]">marker</span> to
+          view a garden, or tap anywhere on the map to add one.
+        </p>
+        {!isLoggedIn && (
+          <p className="mt-1 text-xs text-gray-500">
+            <Link
+              to="/login"
+              className="font-semibold text-[#3f8f5a] hover:underline"
+            >
+              Log in
+            </Link>{" "}
+            to add a garden.
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
 
 function MarkerLayer() {
   const map = useMap();
@@ -109,20 +147,8 @@ function MarkerLayer() {
               }}
             >
               <div
-                style={{
-                  width: `${size}px`,
-                  height: `${size}px`,
-                  borderRadius: "50%",
-                  border: "4px solid #ffffffdd",
-                  background: "#276749dd",
-                  color: "white",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "1rem",
-                  cursor: "pointer",
-                  fontWeight: "bold",
-                }}
+                className="relative flex cursor-pointer items-center justify-center transition-transform duration-200 hover:scale-105"
+                style={{ width: `${size}px`, height: `${size}px` }}
                 onClick={() => {
                   const expansionZoom =
                     supercluster && typeof cluster.id === "number"
@@ -135,7 +161,23 @@ function MarkerLayer() {
                   map?.panTo({ lat, lng });
                 }}
               >
-                {pointCount}
+                <span
+                  className="absolute inset-0 rounded-full"
+                  style={{ background: "#55b47e", opacity: 0.25 }}
+                />
+                <span
+                  className="flex items-center justify-center rounded-full font-bold text-white"
+                  style={{
+                    width: `${Math.round(size * 0.74)}px`,
+                    height: `${Math.round(size * 0.74)}px`,
+                    background: "#2f7d4f",
+                    border: "2px solid rgba(255,255,255,0.92)",
+                    boxShadow: "0 3px 10px rgba(0,0,0,0.35)",
+                    fontSize: "0.95rem",
+                  }}
+                >
+                  {pointCount}
+                </span>
               </div>
             </AdvancedMarker>
           );
@@ -155,20 +197,19 @@ function MarkerLayer() {
               }
             }}
           >
-            <div
-              className="bg-[#55b47e]"
-              style={{
-                padding: "6px",
-                borderRadius: "100px",
-                border: "2px solid white",
-                width: "45px",
-                height: "45px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <LeafSvg />
+            <div className="group flex cursor-pointer items-center justify-center transition-transform duration-200 hover:scale-110">
+              <div
+                className="flex items-center justify-center rounded-full"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  background: "linear-gradient(145deg, #5cbf86, #3f9466)",
+                  border: "2px solid #ffffff",
+                  boxShadow: "0 3px 8px rgba(0,0,0,0.35)",
+                }}
+              >
+                <LeafSvg />
+              </div>
             </div>
           </AdvancedMarker>
         );
@@ -248,7 +289,7 @@ function InnerMap({ apiKey, mapId }: { apiKey: string; mapId: string }) {
   useEffect(() => {}, [selectedGarden, drawerOpen]);
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden">
+    <div className="relative h-[calc(100vh-64px)] w-full overflow-hidden">
       <APIProvider apiKey={apiKey}>
         <div className="absolute inset-0 z-0">
           <Map
@@ -270,6 +311,8 @@ function InnerMap({ apiKey, mapId }: { apiKey: string; mapId: string }) {
 
           <MarkerLayer />
         </div>
+
+        <MapOverlay />
 
         <SlidingDrawer open={drawerOpen} setOpen={setDrawerOpen}>
           <GardenDetails garden={featureToGarden(selectedGarden)} />

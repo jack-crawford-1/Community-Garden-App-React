@@ -75,9 +75,9 @@ function StatPill({
 }) {
   if (value === null || value === undefined || value === "") return null;
   return (
-    <div className="flex flex-col px-4 py-3 bg-white/5 border border-white/10 rounded-lg min-w-[140px]">
+    <div className="min-w-[110px]">
       <span
-        className="text-[10px] uppercase tracking-[0.2em] mb-1"
+        className="block text-[10px] uppercase tracking-[0.2em] mb-1"
         style={{ color: ACCENT }}
       >
         {label}
@@ -97,6 +97,8 @@ export function PhotoGallery({ photos }: { photos: string[] }) {
     const fetchSignedUrls = async () => {
       const urls = await Promise.all(
         photos.map(async (photoUrl) => {
+          // External/seeded images already point at a full URL — use as-is.
+          if (/^https?:\/\//i.test(photoUrl)) return photoUrl;
           const filename = photoUrl.split("/").pop();
           if (!filename) return null;
           const res = await fetch(`${API_BASE_URL}/image/${filename}`);
@@ -145,19 +147,19 @@ function SeasonalCalendar({
 }) {
   if (!calendar || !hasObject(calendar)) return null;
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div className="max-w-2xl divide-y divide-white/10">
       {Object.entries(calendar).map(([season, crops]) => (
         <div
           key={season}
-          className="rounded-xl bg-white/5 border border-white/10 p-4"
+          className="grid grid-cols-[90px_1fr] gap-5 py-3"
         >
           <p
-            className="text-xs uppercase tracking-[0.2em] mb-2"
+            className="text-xs uppercase tracking-[0.2em] pt-0.5"
             style={{ color: ACCENT }}
           >
             {season}
           </p>
-          <p className="text-sm text-green-50 whitespace-pre-line">
+          <p className="text-sm text-green-50/90 leading-relaxed whitespace-pre-line">
             {String(crops || "—")}
           </p>
         </div>
@@ -173,19 +175,16 @@ function OpeningHoursTable({
 }) {
   if (!hours || !hasObject(hours as Record<string, unknown>)) return null;
   return (
-    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+    <ul className="max-w-md divide-y divide-white/10">
       {Object.entries(hours).map(([day, times]) => {
         const open =
           Array.isArray(times) && times.filter(Boolean).length > 0
             ? (times as string[]).join(" – ")
             : "Closed";
         return (
-          <li
-            key={day}
-            className="flex justify-between items-center px-3 py-2 rounded-lg bg-white/5 border border-white/10"
-          >
-            <span className="text-sm font-semibold text-white">{day}</span>
-            <span className="text-sm text-green-50">{open}</span>
+          <li key={day} className="flex items-center justify-between py-2.5">
+            <span className="text-sm text-white/90">{day}</span>
+            <span className="text-sm text-green-50/70">{open}</span>
           </li>
         );
       })}
@@ -310,7 +309,7 @@ export default function GardenPage() {
     return (
       <>
         <Navbar />
-        <div className="min-h-screen bg-gray-900 flex items-center justify-center text-white pangolin-regular">
+        <div className="min-h-screen bg-[#111c16] flex items-center justify-center text-white pangolin-regular">
           Loading garden…
         </div>
       </>
@@ -321,7 +320,7 @@ export default function GardenPage() {
     return (
       <>
         <Navbar />
-        <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center text-white pangolin-regular gap-4">
+        <div className="min-h-screen bg-[#111c16] flex flex-col items-center justify-center text-white pangolin-regular gap-4">
           <p className="text-2xl">Garden not found.</p>
           <Link
             to="/map"
@@ -340,7 +339,7 @@ export default function GardenPage() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-900 min-h-screen pangolin-regular">
+      <div className="bg-[#111c16] min-h-screen pangolin-regular">
         {/* HERO */}
         <header className="relative overflow-hidden border-b border-white/10">
           <div
@@ -359,7 +358,7 @@ export default function GardenPage() {
               </p>
             )}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] max-w-4xl">
-              {garden.description}
+              {garden.name || garden.description}
             </h1>
             <p className="text-white/70 mt-6 text-base md:text-lg max-w-2xl">
               {garden.address}
@@ -396,7 +395,7 @@ export default function GardenPage() {
             </div>
 
             {/* Stats strip */}
-            <div className="flex flex-wrap gap-3 mt-10">
+            <div className="flex flex-wrap gap-x-10 gap-y-5 mt-10">
               {garden.coordinator && (
                 <StatPill label="Coordinator" value={garden.coordinator} />
               )}
@@ -493,6 +492,11 @@ export default function GardenPage() {
                 kicker="The garden"
                 sectionRef={(el) => (sectionRefs.current["overview"] = el)}
               >
+                {garden.description && garden.description !== garden.name && (
+                  <p className="mb-6 max-w-2xl leading-relaxed text-white/80">
+                    {garden.description}
+                  </p>
+                )}
                 <LocationCard garden={garden} />
               </SectionCard>
 
@@ -598,8 +602,8 @@ export default function GardenPage() {
                   {garden._id && (
                     <Link
                       to={`/venues/${garden._id}/events`}
-                      className="inline-block mt-4 text-sm px-4 py-2 rounded-md border text-white hover:bg-white/10 transition-colors"
-                      style={{ borderColor: ACCENT }}
+                      className="mt-4 inline-block text-sm hover:underline"
+                      style={{ color: ACCENT }}
                     >
                       View all events →
                     </Link>

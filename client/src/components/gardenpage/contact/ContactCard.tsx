@@ -10,8 +10,8 @@ function ContactRow({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex items-start gap-3 py-3 border-b border-white/5 last:border-0">
-      <span className="text-xs uppercase tracking-[0.2em] w-24 shrink-0 mt-0.5 text-white/50">
+    <div className="flex items-start gap-4 py-3 border-b border-white/10 last:border-0">
+      <span className="text-xs uppercase tracking-[0.2em] w-24 shrink-0 mt-0.5 text-white/40">
         {label}
       </span>
       <span className="text-sm text-green-50 break-all min-w-0">{children}</span>
@@ -25,31 +25,24 @@ export default function ContactCard({ garden }: { garden: Garden }) {
     !!c.email || !!c.phone || !!c.website || !!c.social?.facebook;
 
   return (
-    <div className="rounded-2xl bg-white/5 border border-white/10 overflow-hidden">
-      {/* Coordinator header */}
-      <div className="flex items-center gap-5 p-6 border-b border-white/10">
-        <div
-          className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-gray-900 shrink-0"
-          style={{ backgroundColor: ACCENT }}
-        >
-          {garden.coordinator?.charAt(0)?.toUpperCase() ?? "·"}
-        </div>
-        <div className="min-w-0">
+    <div className="max-w-2xl">
+      {garden.coordinator && (
+        <div className="mb-2">
           <p
             className="text-xs uppercase tracking-[0.2em] mb-1"
             style={{ color: ACCENT }}
           >
-            Garden coordinator
+            Coordinator
           </p>
-          <h3 className="text-xl text-white font-semibold truncate">
-            {garden.coordinator ?? "Coordinator not listed"}
-          </h3>
+          <p className="text-lg font-semibold text-white">
+            {garden.coordinator}
+          </p>
         </div>
-      </div>
+      )}
 
       {/* Contact rows */}
       {hasAnyContact && (
-        <div className="px-6 py-2">
+        <div>
           {c.email && (
             <ContactRow label="Email">
               <a

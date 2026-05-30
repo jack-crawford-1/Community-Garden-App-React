@@ -156,14 +156,23 @@ export default function Form() {
   }
 
   return (
-    <div className="bg-[#55b47e]">
+    <div className="bg-[#111c16] min-h-screen">
       <Navbar />
-      <div className="bg-black z-100 w-full opacity-55">
+      <div className="w-full">
         <form
-          className="max-w-2xl mx-auto p-6 bg-black rounded-xl text-gray-100 space-y-4"
+          className="max-w-2xl mx-auto px-6 py-12 text-gray-100 space-y-4"
           onSubmit={handleSubmit}
         >
-          <h2 className="text-2xl font-bold mb-4">Add Garden Form</h2>
+          <div className="mb-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#7fd1a3] mb-2">
+              Community gardens
+            </p>
+            <h2 className="text-3xl font-bold text-white">Add a garden</h2>
+            <p className="mt-2 text-sm text-white/60">
+              Share a community garden with the map. Only the name and location
+              are required — fill in as much of the rest as you like.
+            </p>
+          </div>
           {status && (
             <div
               className={`p-2 rounded ${
@@ -174,7 +183,7 @@ export default function Form() {
             </div>
           )}
 
-          <fieldset className="block border p-2 rounded mb-2">
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
             <label className="block">
               Garden Name/Description
               <textarea
@@ -183,7 +192,7 @@ export default function Form() {
                 onChange={handleChange}
                 placeholder='e.g. "Community Garden at Central Park"'
                 rows={3}
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
             <label className="block">
@@ -193,7 +202,7 @@ export default function Form() {
                 value={garden.address}
                 onChange={handleChange}
                 placeholder="123 Main St, Springfield"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
             <label className="block">
@@ -204,7 +213,7 @@ export default function Form() {
                 value={garden.lat}
                 onChange={handleChange}
                 placeholder="to auto populate"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
             <label className="block">
@@ -215,7 +224,7 @@ export default function Form() {
                 value={garden.lon}
                 onChange={handleChange}
                 placeholder="to auto populate"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
             <label className="block">
@@ -225,11 +234,11 @@ export default function Form() {
                 name="established"
                 value={garden.established}
                 onChange={handleChange}
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
 
-            <label className="font-semibold">Partnerships</label>
+            <label className="block text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2">Partnerships</label>
             <div className="flex mb-2">
               <input
                 type="text"
@@ -251,11 +260,11 @@ export default function Form() {
                   }
                 }}
                 placeholder="eg local council, local school"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <button
                 type="button"
-                className="ml-2 px-3 py-1 bg-green-900 rounded text-white"
+                className="ml-2 px-3 py-2 bg-[#55b47e] hover:bg-green-700 rounded-md text-white text-sm font-semibold transition-colors"
                 onClick={() => {
                   if (newPartnership.trim()) {
                     setGarden((prev) => ({
@@ -283,7 +292,7 @@ export default function Form() {
                     setGarden((prev) => ({ ...prev, partnerships: updated }));
                   }}
                   placeholder={`Partnership ${idx + 1}`}
-                  className="flex-1 p-2 rounded bg-gray-800"
+                  className="flex-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
                 />
                 <button
                   type="button"
@@ -304,8 +313,8 @@ export default function Form() {
             ))}
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Contact</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Contact</legend>
             <label className="block">
               Coordinator Name
               <input
@@ -313,7 +322,7 @@ export default function Form() {
                 value={garden.coordinator}
                 onChange={handleChange}
                 placeholder="John Doe"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
             <label className="block">
@@ -331,7 +340,7 @@ export default function Form() {
                   }));
                 }}
                 placeholder='e.g. "johndoe@example.com"'
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
             <label className="block">
@@ -349,7 +358,7 @@ export default function Form() {
                   }));
                 }}
                 placeholder='e.g. "+64 21 123 4567"'
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
             <label className="block">
@@ -367,7 +376,7 @@ export default function Form() {
                   }));
                 }}
                 placeholder='e.g. "https://example.com"'
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
             <label className="block">
@@ -388,7 +397,7 @@ export default function Form() {
                   }));
                 }}
                 placeholder='e.g. "https://facebook.com/example"'
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
             <label className="block">
@@ -409,12 +418,12 @@ export default function Form() {
                   }));
                 }}
                 placeholder='e.g. "https://thirdparty.com/example"'
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
           </fieldset>
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Details</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Details</legend>
             <label className="block">
               Membership Required
               <input
@@ -448,8 +457,8 @@ export default function Form() {
             </label>
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Opening Hours</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Opening Hours</legend>
 
             {Object.entries(garden.openingHours ?? {}).map(([day, hours]) => (
               <div key={day} className="flex items-center mb-2">
@@ -469,7 +478,7 @@ export default function Form() {
                       };
                     });
                   }}
-                  className="ml-2 p-1 rounded bg-gray-800"
+                  className="ml-2 p-1 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
                 />
                 <span className="mx-2">to</span>
                 <input
@@ -487,14 +496,14 @@ export default function Form() {
                       };
                     });
                   }}
-                  className="p-1 rounded bg-gray-800"
+                  className="p-1 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
                 />
               </div>
             ))}
 
             <button
               type="button"
-              className="mt-2 px-3 py-1 bg-green-700 rounded text-white hover:bg-green-800"
+              className="mt-2 px-3 py-2 bg-white/10 hover:bg-white/15 rounded-md text-white text-sm transition-colors"
               onClick={() => {
                 setGarden((prev) => {
                   const mondayHours = prev.openingHours?.Monday;
@@ -515,7 +524,7 @@ export default function Form() {
             </button>
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
             <label className="block">
               Garden Size (sqm)
               <input
@@ -531,7 +540,7 @@ export default function Form() {
                     },
                   }));
                 }}
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
             <label className="block">
@@ -549,13 +558,13 @@ export default function Form() {
                     },
                   }));
                 }}
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
             </label>
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Facilities</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Facilities</legend>
             <div className="flex mb-2">
               <input
                 type="text"
@@ -579,11 +588,11 @@ export default function Form() {
                   }
                 }}
                 placeholder="Add custom facility"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <button
                 type="button"
-                className="ml-2 px-3 py-1 bg-green-900 rounded text-white"
+                className="ml-2 px-3 py-2 bg-[#55b47e] hover:bg-green-700 rounded-md text-white text-sm font-semibold transition-colors"
                 onClick={() => {
                   if (
                     customFacility.trim() &&
@@ -644,8 +653,8 @@ export default function Form() {
               ))}
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Rules List</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Rules List</legend>
             <div className="flex mb-2">
               <input
                 type="text"
@@ -664,11 +673,11 @@ export default function Form() {
                   }
                 }}
                 placeholder="Add new rule"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <button
                 type="button"
-                className="ml-2 px-3 py-1 bg-green-900 rounded text-white"
+                className="ml-2 px-3 py-2 bg-[#55b47e] hover:bg-green-700 rounded-md text-white text-sm font-semibold transition-colors"
                 onClick={() => {
                   if (newRule.trim()) {
                     setGarden((prev) => ({
@@ -693,7 +702,7 @@ export default function Form() {
                     setGarden((prev) => ({ ...prev, rules: updated }));
                   }}
                   placeholder={`Rule ${idx + 1}`}
-                  className="flex-1 p-2 rounded bg-gray-800"
+                  className="flex-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
                 />
                 <button
                   type="button"
@@ -712,8 +721,8 @@ export default function Form() {
             ))}
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Regular Events</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Regular Events</legend>
             <div className="flex items-center mb-2 space-x-2">
               <input
                 type="date"
@@ -721,7 +730,7 @@ export default function Form() {
                 onChange={(e) => {
                   setNewEvent((ev) => ({ ...ev, date: e.target.value }));
                 }}
-                className="p-2 rounded bg-gray-800"
+                className="p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <input
                 type="text"
@@ -743,11 +752,11 @@ export default function Form() {
                   }
                 }}
                 placeholder="Event details"
-                className="flex-1 p-2 rounded bg-gray-800"
+                className="flex-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <button
                 type="button"
-                className="ml-2 px-3 py-1 bg-green-900 rounded text-white"
+                className="ml-2 px-3 py-2 bg-[#55b47e] hover:bg-green-700 rounded-md text-white text-sm font-semibold transition-colors"
                 onClick={() => {
                   if (newEvent.date || newEvent.details) {
                     setGarden((prev) => ({
@@ -781,7 +790,7 @@ export default function Form() {
                       return { ...prev, events: updated };
                     });
                   }}
-                  className="p-2 rounded bg-gray-800"
+                  className="p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
                 />
                 <input
                   type="text"
@@ -802,7 +811,7 @@ export default function Form() {
                     });
                   }}
                   placeholder="Event details"
-                  className="flex-1 p-2 rounded bg-gray-800"
+                  className="flex-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
                 />
                 <button
                   type="button"
@@ -820,8 +829,8 @@ export default function Form() {
               </div>
             ))}
           </fieldset>
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Accessibility</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Accessibility</legend>
             <div className="flex mb-2">
               <input
                 type="text"
@@ -847,11 +856,11 @@ export default function Form() {
                   }
                 }}
                 placeholder="Add custom accessibility option"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <button
                 type="button"
-                className="ml-2 px-3 py-1 bg-green-900 rounded text-white"
+                className="ml-2 px-3 py-2 bg-[#55b47e] hover:bg-green-700 rounded-md text-white text-sm font-semibold transition-colors"
                 onClick={() => {
                   if (
                     customAccessibility.trim() &&
@@ -934,8 +943,8 @@ export default function Form() {
               ))}
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Produce Type</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Produce Type</legend>
             <div className="flex mb-2">
               <input
                 type="text"
@@ -966,11 +975,11 @@ export default function Form() {
                   }
                 }}
                 placeholder="Add custom produce type"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <button
                 type="button"
-                className="ml-2 px-3 py-1 bg-green-900 rounded text-white"
+                className="ml-2 px-3 py-2 bg-[#55b47e] hover:bg-green-700 rounded-md text-white text-sm font-semibold transition-colors"
                 onClick={() => {
                   if (
                     customProduceType.trim() &&
@@ -1067,8 +1076,8 @@ export default function Form() {
                 </div>
               ))}
           </fieldset>
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Water Conservation</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Water Conservation</legend>
             <div className="flex mb-2">
               <input
                 type="text"
@@ -1099,11 +1108,11 @@ export default function Form() {
                   }
                 }}
                 placeholder="Add custom water conservation option"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <button
                 type="button"
-                className="ml-2 px-3 py-1 bg-green-900 rounded text-white"
+                className="ml-2 px-3 py-2 bg-[#55b47e] hover:bg-green-700 rounded-md text-white text-sm font-semibold transition-colors"
                 onClick={() => {
                   if (
                     customWaterConservation.trim() &&
@@ -1161,8 +1170,8 @@ export default function Form() {
             ))}
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Soil Type</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Soil Type</legend>
             <div className="flex mb-2">
               <input
                 type="text"
@@ -1191,11 +1200,11 @@ export default function Form() {
                   }
                 }}
                 placeholder="Add custom soil type"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <button
                 type="button"
-                className="ml-2 px-3 py-1 bg-green-900 rounded text-white"
+                className="ml-2 px-3 py-2 bg-[#55b47e] hover:bg-green-700 rounded-md text-white text-sm font-semibold transition-colors"
                 onClick={() => {
                   if (
                     customSoilType.trim() &&
@@ -1285,8 +1294,8 @@ export default function Form() {
               ))}
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Pollinator and Wildlife</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Pollinator and Wildlife</legend>
             <div className="flex mb-2">
               <input
                 type="text"
@@ -1317,11 +1326,11 @@ export default function Form() {
                   }
                 }}
                 placeholder="Add custom pollinator support and wildlife habitat"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <button
                 type="button"
-                className="ml-2 px-3 py-1 bg-green-900 rounded text-white"
+                className="ml-2 px-3 py-2 bg-[#55b47e] hover:bg-green-700 rounded-md text-white text-sm font-semibold transition-colors"
                 onClick={() => {
                   if (
                     customPollinatorSupport.trim() &&
@@ -1419,8 +1428,8 @@ export default function Form() {
               ))}
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Waste Management</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Waste Management</legend>
             <div className="flex mb-2">
               <input
                 type="text"
@@ -1448,11 +1457,11 @@ export default function Form() {
                   }
                 }}
                 placeholder="Add custom waste management method"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <button
                 type="button"
-                className="ml-2 px-3 py-1 bg-green-900 rounded text-white"
+                className="ml-2 px-3 py-2 bg-[#55b47e] hover:bg-green-700 rounded-md text-white text-sm font-semibold transition-colors"
                 onClick={() => {
                   if (
                     customWasteManagement.trim() &&
@@ -1539,8 +1548,8 @@ export default function Form() {
               ))}
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">Fertiliser Use</legend>
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">Fertiliser Use</legend>
             <div className="flex mb-2">
               <input
                 type="text"
@@ -1571,11 +1580,11 @@ export default function Form() {
                   }
                 }}
                 placeholder="Add custom fertiliser use"
-                className="w-full mt-1 p-2 rounded bg-gray-800"
+                className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
               />
               <button
                 type="button"
-                className="ml-2 px-3 py-1 bg-green-900 rounded text-white"
+                className="ml-2 px-3 py-2 bg-[#55b47e] hover:bg-green-700 rounded-md text-white text-sm font-semibold transition-colors"
                 onClick={() => {
                   if (
                     customFertiliserUse.trim() &&
@@ -1664,8 +1673,8 @@ export default function Form() {
               ))}
           </fieldset>
 
-          <fieldset className="block border p-2 rounded mb-2">
-            <legend className="font-semibold">
+          <fieldset className="block border border-white/10 bg-white/[0.02] p-5 rounded-xl mb-5 space-y-3">
+            <legend className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7fd1a3] mb-2 px-1">
               Seasonal Planting Calendar
             </legend>
             {(["Summer", "Autumn", "Winter", "Spring"] as const).map(
@@ -1688,7 +1697,7 @@ export default function Form() {
                       }));
                     }}
                     placeholder={`e.g. ${season} crops`}
-                    className="flex-1 p-2 rounded bg-gray-800 ml-2"
+                    className="flex-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e] ml-2"
                   />
                 </div>
               )
@@ -1736,7 +1745,7 @@ export default function Form() {
                   photos: [...prev.photos, ...uploadedFilenames],
                 }));
               }}
-              className="w-full mt-1 p-2 rounded bg-gray-800"
+              className="w-full mt-1 p-2 rounded bg-[#0d150f] border border-white/10 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#55b47e]"
             />
           </label>
           {photoFiles.length > 0 && (
@@ -1754,9 +1763,9 @@ export default function Form() {
 
           <button
             type="submit"
-            className="bg-[#1ca24f8b] hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-[#55b47e] hover:bg-green-700 text-white font-semibold py-2.5 px-6 rounded-lg transition-colors"
           >
-            Save
+            Save garden
           </button>
         </form>
       </div>

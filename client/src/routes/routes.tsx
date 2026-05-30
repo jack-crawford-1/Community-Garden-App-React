@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router";
-import App from "../app/App";
 import GardenPage from "../app/GardenPage";
 import EventsPage from "../app/EventsPage";
 import Form from "../components/form/Form";
@@ -8,7 +7,8 @@ import LoginForm from "../components/auth/LoginForm";
 import RegisterForm from "../components/auth/RegisterForm";
 
 export const routeList = [
-  { path: "/", element: <App /> },
+  // The map is the landing experience.
+  { path: "/", element: <MapPage /> },
   { path: "/map", element: <MapPage /> },
   { path: "/form", element: <Form /> },
 

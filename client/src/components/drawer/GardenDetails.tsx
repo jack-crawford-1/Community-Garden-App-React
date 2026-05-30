@@ -1,60 +1,73 @@
 import { Link } from "react-router";
 import type { Garden } from "../../types/GardenInterface";
-import { useEffect, useState } from "react";
 import { PhotoGallery } from "../../app/GardenPage";
-import { API_BASE_URL } from "../../api/config";
 
 export default function GardenDetails({ garden }: { garden: Garden | null }) {
-  const [, setSignedUrl] = useState<string | null>(null);
+  if (!garden) {
+    return (
+      <p className="text-sm text-white/60">Select a garden for details.</p>
+    );
+  }
 
-  useEffect(() => {
-    const fetchFirstSignedUrl = async () => {
-      if (!garden?.photos || garden.photos.length === 0) return;
-
-      const firstPhotoUrl = garden.photos[0];
-      const filename = firstPhotoUrl.split("/").pop();
-      if (!filename) return;
-
-      try {
-        const res = await fetch(`${API_BASE_URL}/image/${filename}`);
-        if (res.ok) {
-          const { url } = await res.json();
-          setSignedUrl(url);
-        } else {
-          console.error("Failed to get signed URL");
-        }
-      } catch (err) {
-        console.error("Error fetching signed image:", err);
-      }
-    };
-
-    fetchFirstSignedUrl();
-  }, [garden]);
-
-  if (!garden) return <div>Select a garden for details.</div>;
+  const chips: string[] = [];
+  if (garden.volunteersWelcome) chips.push("Volunteers welcome");
+  if (garden.membershipRequired) chips.push("Membership required");
 
   return (
-    <div className="max-w-lg mx-auto flex flex-col justify-center items-start p-3">
-      <h3 className="text-4xl font-bold text-[#55b47e] pangolin-regular uppercase">
-        {garden.description}
-      </h3>
-      <h3 className="text-md font-bold text-white pt-5 mb-5">
-        {garden.address}
-      </h3>
-
-      <div className="mb-10">
-        <Link
-          to={`/venues/${garden.id}`}
-          className="inline-block bg-[#55b47e] hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200"
-        >
-          More Information
-        </Link>
-      </div>
+    <div className="flex flex-col gap-4">
       <div>
-        <div className="max-w-[380px]">
-          <PhotoGallery photos={garden.photos ?? []} />
-        </div>
+        <p className="text-xs font-semibold uppercase tracking-wider text-[#7fd1a3]">
+          Community garden
+        </p>
+        <h3 className="mt-1 text-2xl font-bold leading-tight text-white">
+          {garden.name || garden.description}
+        </h3>
+        {garden.address && (
+          <p className="mt-2 flex items-start gap-1.5 text-sm text-white/70">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="mt-0.5 shrink-0 text-[#7fd1a3]"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            {garden.address}
+          </p>
+        )}
       </div>
+
+      {chips.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {chips.map((chip) => (
+            <span
+              key={chip}
+              className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/90"
+            >
+              {chip}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {garden.photos && garden.photos.length > 0 && (
+        <div className="w-full overflow-hidden rounded-lg">
+          <PhotoGallery photos={garden.photos} />
+        </div>
+      )}
+
+      <Link
+        to={`/venues/${garden.id}`}
+        className="mt-1 inline-flex items-center justify-center rounded-lg bg-[#55b47e] px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-green-700"
+      >
+        View full details
+      </Link>
     </div>
   );
 }

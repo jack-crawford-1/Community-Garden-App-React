@@ -194,6 +194,8 @@ export const getGardens = async (req, res) => {
           rules: venue.rules,
           facilities: venue.facilities,
           accessibility: venue.accessibility,
+          volunteersWelcome: venue.volunteersWelcome,
+          membershipRequired: venue.membershipRequired,
         },
         geometry: {
           type: "Point",

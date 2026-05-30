@@ -24,39 +24,23 @@ export default function Events({
   if (!events || events.length === 0) return null;
 
   return (
-    <ul className="space-y-3">
+    <ul className="max-w-2xl divide-y divide-white/10">
       {events.map((ev, idx) => {
         const d = formatDate(ev.date);
         return (
           <li
             key={ev.date + ev.details + idx}
-            className="flex items-stretch gap-4 rounded-xl bg-white/5 border border-white/10 overflow-hidden"
+            className="flex items-baseline gap-5 py-3"
           >
-            <div
-              className="flex flex-col justify-center items-center px-5 py-4 min-w-[88px] shrink-0"
-              style={{ backgroundColor: `${ACCENT}1a` }}
+            <span
+              className="w-28 shrink-0 text-sm font-semibold"
+              style={{ color: ACCENT }}
             >
-              <span
-                className="text-2xl font-bold leading-none"
-                style={{ color: ACCENT }}
-              >
-                {d?.day ?? "·"}
-              </span>
-              <span
-                className="text-[11px] uppercase tracking-[0.2em] mt-1"
-                style={{ color: ACCENT }}
-              >
-                {d?.month ?? "TBC"}
-              </span>
-            </div>
-            <div className="flex-1 py-4 pr-4 min-w-0">
-              {d?.full && (
-                <p className="text-xs uppercase tracking-[0.15em] text-white/40 mb-1">
-                  {d.full}
-                </p>
-              )}
-              <p className="text-green-50 leading-relaxed">{ev.details}</p>
-            </div>
+              {d ? `${d.day} ${d.month}` : "TBC"}
+            </span>
+            <span className="text-sm leading-relaxed text-green-50/90">
+              {ev.details}
+            </span>
           </li>
         );
       })}

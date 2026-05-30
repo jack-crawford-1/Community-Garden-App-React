@@ -11,9 +11,9 @@ export default function LocationCard({ garden }: { garden: Garden }) {
     .filter(Boolean);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 rounded-2xl overflow-hidden bg-white/5 border border-white/10">
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
       {/* Left: address & meta */}
-      <div className="lg:col-span-2 p-6 flex flex-col justify-between gap-6">
+      <div className="lg:col-span-2 flex flex-col justify-between gap-6">
         <div>
           <p
             className="text-xs uppercase tracking-[0.2em] mb-3"
@@ -44,7 +44,7 @@ export default function LocationCard({ garden }: { garden: Garden }) {
       </div>
 
       {/* Right: map */}
-      <div className="lg:col-span-3 h-[260px] lg:h-auto min-h-[200px]">
+      <div className="lg:col-span-3 h-[280px] overflow-hidden rounded-xl border border-white/10">
         {API_KEY ? (
           <APIProvider apiKey={API_KEY}>
             <Map
