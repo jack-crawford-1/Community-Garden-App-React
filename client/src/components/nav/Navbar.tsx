@@ -1,103 +1,51 @@
-import { useEffect, useRef, useState } from "react";
-import { NavLink, useNavigate } from "react-router";
+import { NavLink } from "react-router";
 
-const HIDE_AFTER = 50;
-const REPO_URL =
-  "https://github.com/jack-crawford-1/Community-Garden-App-React";
+const links = [
+  { to: "/", label: "Map", end: true },
+  { to: "/gardens", label: "Directory" },
+  { to: "/about", label: "About" },
+];
 
-const Navbar = () => {
-  const [visible, setVisible] = useState(true);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userEmail, setUserEmail] = useState("");
-  const lastScrollY = useRef(0);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setVisible(
-        currentScrollY < HIDE_AFTER || currentScrollY < lastScrollY.current
-      );
-      lastScrollY.current = currentScrollY;
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    const email = localStorage.getItem("userEmail");
-    setIsLoggedIn(!!token);
-    if (email) setUserEmail(email);
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("userEmail");
-    setIsLoggedIn(false);
-    setUserEmail("");
-    navigate("/login");
-  };
-
+export default function Navbar() {
   return (
-    <nav
-      className={`w-full sticky top-0 z-50 transition-transform duration-300 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      <div className="flex h-16 items-center justify-between bg-[#55b47e] px-4 shadow-sm sm:px-7">
+    <nav className="sticky top-0 z-50 w-full">
+      <div className="flex h-16 items-center justify-between bg-leaf-500 px-4 shadow-sm sm:px-7">
         <NavLink to="/" className="flex items-center gap-2.5">
-          <img
-            src="/svg/leaf.svg"
-            alt="GrowLocal logo"
-            className="h-8 w-8"
-          />
-          <span className="flex flex-col leading-none">
-            <span className="text-xl font-bold text-white">GrowLocal</span>
-            <span className="hidden text-[11px] font-medium text-green-50/80 sm:block">
+          <img src="/svg/leaf.svg" alt="" className="h-8 w-8" />
+          <span className="hidden flex-col leading-none sm:flex">
+            <span className="font-display text-xl font-semibold text-white">GrowLocal</span>
+            <span className="text-[11px] font-medium text-green-50/80">
               Community gardens of Aotearoa
             </span>
           </span>
         </NavLink>
 
-        <div className="flex items-center gap-2 sm:gap-3">
-          <a
-            href={REPO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="View source on GitHub"
-            aria-label="View source on GitHub"
-            className="hidden h-9 w-9 items-center justify-center rounded-md text-white/90 transition-colors hover:bg-white/15 hover:text-white sm:flex"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
-            </svg>
-          </a>
-
-          {isLoggedIn ? (
-            <>
-              <span className="hidden max-w-[180px] truncate text-sm text-green-50/90 md:block">
-                {userEmail}
-              </span>
-              <button
-                onClick={handleLogout}
-                className="rounded-md bg-white px-3.5 py-1.5 text-sm font-semibold text-green-700 transition-colors hover:bg-green-50"
-              >
-                Log out
-              </button>
-            </>
-          ) : (
+        <div className="flex items-center gap-1 sm:gap-2">
+          {links.map((link) => (
             <NavLink
-              to="/login"
-              className="rounded-md bg-white px-3.5 py-1.5 text-sm font-semibold text-green-700 transition-colors hover:bg-green-50"
+              key={link.to}
+              to={link.to}
+              end={link.end}
+              className={({ isActive }) =>
+                `rounded-md px-3 py-1.5 text-sm font-semibold transition-colors ${
+                  isActive
+                    ? "bg-white/20 text-white"
+                    : "text-green-50/90 hover:bg-white/10 hover:text-white"
+                }`
+              }
             >
-              Log in
+              {link.label}
             </NavLink>
-          )}
+          ))}
+          <NavLink
+            to="/suggest"
+            className="ml-1 rounded-md bg-white px-3.5 py-1.5 text-sm font-semibold text-leaf-700 transition-colors hover:bg-leaf-100"
+          >
+            <span className="sm:hidden">Suggest</span>
+            <span className="hidden sm:inline">Suggest a garden</span>
+          </NavLink>
         </div>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

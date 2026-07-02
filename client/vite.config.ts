@@ -3,25 +3,15 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => {
-  const isProduction = mode === "production";
-
-  return {
-    plugins: [react(), tailwindcss()],
-    server: {
-      proxy: {
-        "/api": {
-          target: isProduction
-            ? "https://community-garden-app-react-production.up.railway.app"
-            : "http://localhost:3000",
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ""),
-        },
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  server: {
+    proxy: {
+      // Forward API calls to the local Express server during development.
+      "/api": {
+        target: "http://localhost:3000",
+        changeOrigin: true,
       },
     },
-    build: {
-      outDir: "dist",
-      emptyOutDir: true,
-    },
-  };
+  },
 });

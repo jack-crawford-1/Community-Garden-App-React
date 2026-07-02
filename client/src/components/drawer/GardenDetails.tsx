@@ -1,26 +1,21 @@
 import { Link } from "react-router";
-import type { Garden } from "../../types/GardenInterface";
-import { PhotoGallery } from "../../app/GardenPage";
+import type { GardenSummary } from "../../types/garden";
 
-export default function GardenDetails({ garden }: { garden: Garden | null }) {
+export default function GardenDetails({ garden }: { garden: GardenSummary | null }) {
   if (!garden) {
-    return (
-      <p className="text-sm text-white/60">Select a garden for details.</p>
-    );
+    return <p className="text-sm text-white/60">Select a garden to see its details.</p>;
   }
-
-  const chips: string[] = [];
-  if (garden.volunteersWelcome) chips.push("Volunteers welcome");
-  if (garden.membershipRequired) chips.push("Membership required");
 
   return (
     <div className="flex flex-col gap-4">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-wider text-[#7fd1a3]">
-          Community garden
-        </p>
-        <h3 className="mt-1 text-2xl font-bold leading-tight text-white">
-          {garden.name || garden.description}
+        {garden.suburb && (
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-leaf-300">
+            {garden.suburb}
+          </p>
+        )}
+        <h3 className="mt-1 font-display text-2xl font-semibold leading-tight text-white">
+          {garden.name}
         </h3>
         {garden.address && (
           <p className="mt-2 flex items-start gap-1.5 text-sm text-white/70">
@@ -33,7 +28,8 @@ export default function GardenDetails({ garden }: { garden: Garden | null }) {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="mt-0.5 shrink-0 text-[#7fd1a3]"
+              className="mt-0.5 shrink-0 text-leaf-300"
+              aria-hidden="true"
             >
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
               <circle cx="12" cy="10" r="3" />
@@ -43,28 +39,31 @@ export default function GardenDetails({ garden }: { garden: Garden | null }) {
         )}
       </div>
 
-      {chips.length > 0 && (
-        <div className="flex flex-wrap gap-2">
-          {chips.map((chip) => (
-            <span
-              key={chip}
-              className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/90"
-            >
-              {chip}
-            </span>
-          ))}
-        </div>
+      {garden.description && (
+        <p className="text-sm leading-relaxed text-white/80">{garden.description}</p>
       )}
 
-      {garden.photos && garden.photos.length > 0 && (
-        <div className="w-full overflow-hidden rounded-lg">
-          <PhotoGallery photos={garden.photos} />
-        </div>
-      )}
+      <div className="flex flex-col gap-2 text-sm">
+        {garden.contact?.email && (
+          <a href={`mailto:${garden.contact.email}`} className="text-leaf-300 hover:underline">
+            ✉ {garden.contact.email}
+          </a>
+        )}
+        {garden.contact?.website && (
+          <a
+            href={garden.contact.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-leaf-300 hover:underline"
+          >
+            ↗ {garden.contact.website.replace(/^https?:\/\//, "")}
+          </a>
+        )}
+      </div>
 
       <Link
-        to={`/venues/${garden.id}`}
-        className="mt-1 inline-flex items-center justify-center rounded-lg bg-[#55b47e] px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-green-700"
+        to={`/gardens/${garden.id}`}
+        className="mt-1 inline-flex items-center justify-center rounded-lg bg-leaf-500 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-leaf-600"
       >
         View full details
       </Link>

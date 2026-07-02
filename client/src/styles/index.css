@@ -1,51 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap");
 @import "tailwindcss";
 
+@theme {
+  --color-leaf-50: #f2f8f4;
+  --color-leaf-100: #eaf5ee;
+  --color-leaf-300: #7fd1a3;
+  --color-leaf-500: #55b47e;
+  --color-leaf-600: #3f8f5a;
+  --color-leaf-700: #2f7d4f;
+  --color-moss-900: #16241c;
+  --color-moss-950: #0f1a14;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+}
+
 :root {
-  color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: light-dark(black, white);
-  background-color: light-dark(white, black);
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  color: #14201a;
+  background-color: #ffffff;
+  font-family: var(--font-sans);
   letter-spacing: -0.005em;
 }
 
-html,
-body {
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-}
-
-.flex-title {
-  color: light-dark(#e02d2d, #ffffff);
-  font-size: clamp(3rem, 7vw, 6rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-/* Legacy helper classes — kept so existing className usages still work,
-   now all rebound to Inter for a unified professional look. */
-.pangolin-regular,
-.ubuntu-regular {
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  font-weight: 500;
-  font-style: normal;
+h1,
+h2 {
   letter-spacing: -0.01em;
 }
 
-.ubuntu-bold {
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.015em;
-}
-
-/* Tighter tracking on display-size headings */
-h1,
-h2 {
-  letter-spacing: -0.02em;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

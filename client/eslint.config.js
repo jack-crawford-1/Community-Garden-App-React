@@ -22,6 +22,8 @@ export default defineConfig([
     },
     rules: {
       ...reactX.configs["recommended-typescript"].rules,
+      "@typescript-eslint/restrict-template-expressions": ["error", { allowNumber: true }],
+      "@typescript-eslint/no-confusing-void-expression": ["error", { ignoreArrowShorthand: true }],
     },
   },
 ]);

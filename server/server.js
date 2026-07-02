@@ -1,49 +1,27 @@
-// import app from "./index.js";
-// import chalk from "chalk";
+import app from "./app.js";
+import { env } from "./config/env.js";
+import { connectDB, disconnectDB } from "./db/connect.js";
 
-// const port = 3000;
+try {
+  await connectDB(env.mongoUri, env.dbName);
+} catch (err) {
+  console.error("Failed to connect to MongoDB:", err.message);
+  process.exit(1);
+}
 
-// app.listen(port, () => {
-//   console.log(`                      `);
-//   console.log(
-//     chalk.white.bgRgb(0, 98, 15)(` Starting Express Server                 `)
-//   );
-//   console.log(
-//     chalk.white.bgRgb(0, 98, 15)(` Server Running at http://localhost:${port} `)
-//   );
+const server = app.listen(env.port, "0.0.0.0", () => {
+  console.log(`API listening on http://localhost:${env.port}`);
+});
 
-//   console.log(`                      `);
-// });
-
-import app from "./index.js";
-import chalk from "chalk";
-import { connectDB } from "./db/mongodbConnection.js"; // ✅ import it
-
-const port = process.env.PORT || 3000;
-
-// connect before starting server
-connectDB(process.env.URI)
-  .then(() => {
-    app.listen(port, "0.0.0.0", () => {
-      console.log(`                      `);
-      console.log(
-        chalk.white.bgRgb(
-          0,
-          98,
-          15,
-        )(` Starting Express Server                 `),
-      );
-      console.log(
-        chalk.white.bgRgb(
-          0,
-          98,
-          15,
-        )(` Server Running at http://localhost:${port} `),
-      );
-      console.log(`                      `);
-    });
-  })
-  .catch((err) => {
-    console.error("Failed to connect to DB", err);
-    process.exit(1);
+async function shutdown(signal) {
+  console.log(`${signal} received — shutting down`);
+  server.close(async () => {
+    await disconnectDB();
+    process.exit(0);
   });
+  // Force-exit if connections refuse to drain.
+  setTimeout(() => process.exit(1), 10_000).unref();
+}
+
+process.on("SIGTERM", () => shutdown("SIGTERM"));
+process.on("SIGINT", () => shutdown("SIGINT"));

@@ -1,15 +1,15 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-const keyJson = Buffer.from(
-  process.env.GOOGLE_CLOUD_KEY_JSON_BASE64 || "",
-  "base64"
-).toString("utf-8");
+function required(name) {
+  const value = process.env[name];
+  if (!value) throw new Error(`Missing required environment variable: ${name}`);
+  return value;
+}
 
 export const env = {
-  uri: process.env.URI,
-  dbName: process.env.DB_NAME,
-  dbCollection: process.env.DB_COLLECTION,
-  bucketName: process.env.BUCKET_NAME,
-  googleCloudCredentials: JSON.parse(keyJson),
+  port: Number(process.env.PORT) || 3000,
+  mongoUri: required("URI"),
+  dbName: process.env.DB_NAME || "communityGardens",
+  nodeEnv: process.env.NODE_ENV || "development",
 };

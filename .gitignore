@@ -1,6 +1,4 @@
-# Node modules
-client/node_modules/
-server/node_modules/
+# Dependencies
 node_modules/
 
 # Logs
@@ -16,11 +14,7 @@ yarn-error.log*
 dist/
 build/
 
-# Environment files
+# Environment files (keep .env.example)
 .env
 .env.local
 .env.*.local
-
-*.md
-
-package-lock.json

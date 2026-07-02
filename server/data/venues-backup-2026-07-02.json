@@ -1,0 +1,4591 @@
+[
+  {
+    "_id": "6860a7776848659927e00696",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "description": "A volunteer-run community garden in Newtown with raised beds, a shared tool shed and a busy compost system. New growers of all experience levels are welcome.",
+    "address": "Carrara Park, 107 Daniell Street, Newtown, Wellington",
+    "coordinator": "Aroha Williams",
+    "lat": -41.3055,
+    "lon": 174.782,
+    "openingHours": {
+      "Monday": [
+        "07:00",
+        "19:00"
+      ],
+      "Tuesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Wednesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Thursday": [
+        "07:00",
+        "19:00"
+      ],
+      "Friday": [
+        "07:00",
+        "19:00"
+      ],
+      "Saturday": [
+        "08:00",
+        "18:00"
+      ],
+      "Sunday": [
+        "08:00",
+        "18:00"
+      ],
+      "Holidays": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "established": "2009-01-01",
+    "volunteersWelcome": false,
+    "facilities": [
+      "Tool shed",
+      "Rainwater tanks",
+      "Communal seating",
+      "Greenhouse"
+    ],
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77af4e5a42929aec91e4"
+      },
+      {
+        "date": "2026-08-15",
+        "details": "Harvest potluck",
+        "_id": "6a1a77af4e5a42929aec91e5"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77af4e5a42929aec91e6"
+      }
+    ],
+    "accessibility": [
+      "Raised beds for limited mobility",
+      "Sealed pathways"
+    ],
+    "environment": {
+      "gardenSizeSqm": 200,
+      "numberOfBeds": 8,
+      "produceType": [
+        "Tomatoes",
+        "Silverbeet",
+        "Kale",
+        "Runner beans",
+        "Pumpkin"
+      ],
+      "waterConservation": [
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Free-draining loam"
+      ],
+      "pollinatorSupport": [
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Home-made compost",
+        "Sheep pellets"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Spray-free",
+      "waterSource": [
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Drip irrigation",
+      "compostingFacilities": [
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Straw mulch"
+      ]
+    },
+    "contact": {
+      "email": "newtown@growlocal.example.nz",
+      "phone": "04 380 1000",
+      "website": "https://growlocal.example.nz/newtown",
+      "social": {
+        "facebook": "https://facebook.com/newtowngarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Lock the gate when you leave",
+      "Children to be supervised",
+      "No sprays in shared beds"
+    ],
+    "partnerships": [
+      "Wellington City Council",
+      "Sustainability Trust"
+    ],
+    "wasteManagement": [
+      "On-site composting",
+      "Green-waste collection"
+    ],
+    "id": 8,
+    "membershipRequired": true,
+    "insurance": "Public liability cover via the Wellington City Council community garden programme.",
+    "phone": "+64 21 123 456",
+    "__v": 2,
+    "isTestGarden": false,
+    "name": "Newtown Garden"
+  },
+  {
+    "_id": "6a08d8a0697da7d34bb0b171",
+    "_sourceId": "2",
+    "__v": 2,
+    "accessibility": [
+      "Sealed pathways",
+      "Accessible toilet nearby",
+      "Level entry from street"
+    ],
+    "address": "104 Houghton Bay Road, Houghton Bay, Wellington",
+    "contact": {
+      "email": "houghtonbay@growlocal.example.nz",
+      "phone": "04 381 1037",
+      "website": "https://growlocal.example.nz/houghton-bay",
+      "social": {
+        "facebook": "https://facebook.com/houghtonbaygarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Tucked into Houghton Bay, this garden brings neighbours together to grow vegetables, herbs and flowers using organic, spray-free methods.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Seedling & seed swap",
+        "_id": "6a1a77af4e5a42929aec91e8"
+      },
+      {
+        "date": "2026-09-15",
+        "details": "Composting workshop",
+        "_id": "6a1a77af4e5a42929aec91e9"
+      }
+    ],
+    "facilities": [
+      "Rainwater tanks",
+      "Communal seating",
+      "Greenhouse",
+      "Compost bays",
+      "Wheelbarrows"
+    ],
+    "isTestGarden": false,
+    "lat": -41.33382873952372,
+    "lon": 174.78702059131902,
+    "partnerships": [
+      "Sustainability Trust",
+      "Local primary school",
+      "Forest & Bird"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Children to be supervised",
+      "No sprays in shared beds",
+      "Share surplus on the produce table",
+      "Return tools to the shed after use"
+    ],
+    "coordinator": "Tāne Reed",
+    "environment": {
+      "gardenSizeSqm": 337,
+      "numberOfBeds": 15,
+      "produceType": [
+        "Silverbeet",
+        "Kale",
+        "Runner beans",
+        "Pumpkin",
+        "Mixed herbs",
+        "Strawberries"
+      ],
+      "waterConservation": [
+        "Heavy mulching",
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Clay loam",
+        "Sandy loam"
+      ],
+      "pollinatorSupport": [
+        "Native plantings",
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Sheep pellets",
+        "Seaweed solution",
+        "Comfrey tea"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Certified organic",
+      "waterSource": [
+        "Mains supply",
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Hand watering",
+      "compostingFacilities": [
+        "Worm farm",
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Wood chip",
+        "Leaf litter"
+      ]
+    },
+    "established": "2010-02-01",
+    "insurance": "Covered under the Sustainability Trust community garden policy.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Houghton Bay Garden",
+    "openingHours": {
+      "Monday": [
+        "",
+        ""
+      ],
+      "Tuesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Wednesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Thursday": [
+        "08:00",
+        "17:00"
+      ],
+      "Friday": [
+        "08:00",
+        "17:00"
+      ],
+      "Saturday": [
+        "09:00",
+        "16:00"
+      ],
+      "Sunday": [
+        "09:00",
+        "16:00"
+      ],
+      "Holidays": [
+        "",
+        ""
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Green-waste collection",
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a0697da7d34bb0b172",
+    "_sourceId": "14",
+    "__v": 2,
+    "accessibility": [
+      "Accessible toilet nearby",
+      "Level entry from street",
+      "Wheelchair-accessible paths",
+      "Raised beds for limited mobility"
+    ],
+    "address": "21- 29 Oxford Street, Tawa, Wellington",
+    "contact": {
+      "email": "tawa@growlocal.example.nz",
+      "phone": "04 382 1074",
+      "website": "https://growlocal.example.nz/tawa",
+      "social": {
+        "facebook": "https://facebook.com/tawagarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A friendly Tawa garden focused on growing kai locally, sharing surplus produce and learning together through regular working bees.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Harvest potluck",
+        "_id": "6a1a77af4e5a42929aec91eb"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77af4e5a42929aec91ec"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77af4e5a42929aec91ed"
+      }
+    ],
+    "facilities": [
+      "Communal seating",
+      "Greenhouse",
+      "Compost bays",
+      "Wheelbarrows",
+      "Potting bench",
+      "Picnic table"
+    ],
+    "isTestGarden": false,
+    "lat": -41.17156669377803,
+    "lon": 174.8264556794282,
+    "partnerships": [
+      "Local primary school",
+      "Forest & Bird",
+      "Kaicycle",
+      "Regional food bank"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1505471768190-275e2ad7b3f9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "No sprays in shared beds",
+      "Share surplus on the produce table",
+      "Return tools to the shed after use",
+      "Compost green waste only",
+      "Lock the gate when you leave"
+    ],
+    "coordinator": "Mere Tipene",
+    "environment": {
+      "gardenSizeSqm": 474,
+      "numberOfBeds": 22,
+      "produceType": [
+        "Kale",
+        "Runner beans",
+        "Pumpkin",
+        "Mixed herbs",
+        "Strawberries",
+        "Garlic",
+        "Lettuce"
+      ],
+      "waterConservation": [
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Sandy loam"
+      ],
+      "pollinatorSupport": [
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Seaweed solution",
+        "Comfrey tea",
+        "Worm castings",
+        "Home-made compost"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Transitioning to organic",
+      "waterSource": [
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Soaker hoses",
+      "compostingFacilities": [
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Leaf litter"
+      ]
+    },
+    "established": "2011-03-01",
+    "insurance": "Public liability insurance held through the local residents' association.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Tawa Garden",
+    "openingHours": {
+      "Monday": [
+        "06:30",
+        "20:00"
+      ],
+      "Tuesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Wednesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Thursday": [
+        "06:30",
+        "20:00"
+      ],
+      "Friday": [
+        "06:30",
+        "20:00"
+      ],
+      "Saturday": [
+        "06:30",
+        "20:00"
+      ],
+      "Sunday": [
+        "06:30",
+        "20:00"
+      ],
+      "Holidays": [
+        "06:30",
+        "20:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a0697da7d34bb0b173",
+    "_sourceId": "16",
+    "__v": 2,
+    "accessibility": [
+      "Level entry from street",
+      "Wheelchair-accessible paths"
+    ],
+    "address": "46 Hornsey Road, Melrose, Wellington",
+    "contact": {
+      "email": "melrose@growlocal.example.nz",
+      "phone": "04 383 1111",
+      "website": "https://growlocal.example.nz/melrose",
+      "social": {
+        "facebook": "https://facebook.com/melrosegarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Started by local residents, the Melrose garden offers individual plots, communal beds and a welcoming space to grow food and meet people.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Composting workshop",
+        "_id": "6a1a77af4e5a42929aec91ef"
+      },
+      {
+        "date": "2026-08-15",
+        "details": "Kids' planting morning",
+        "_id": "6a1a77af4e5a42929aec91f0"
+      }
+    ],
+    "facilities": [
+      "Greenhouse",
+      "Compost bays",
+      "Wheelbarrows",
+      "Potting bench"
+    ],
+    "isTestGarden": false,
+    "lat": -41.32982347942037,
+    "lon": 174.78560226677067,
+    "partnerships": [
+      "Forest & Bird",
+      "Kaicycle"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1505471768190-275e2ad7b3f9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Share surplus on the produce table",
+      "Return tools to the shed after use",
+      "Compost green waste only"
+    ],
+    "coordinator": "James Carter",
+    "environment": {
+      "gardenSizeSqm": 611,
+      "numberOfBeds": 29,
+      "produceType": [
+        "Runner beans",
+        "Pumpkin",
+        "Mixed herbs",
+        "Strawberries",
+        "Garlic",
+        "Lettuce",
+        "Courgettes",
+        "Rhubarb"
+      ],
+      "waterConservation": [
+        "Greywater reuse",
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Compost-enriched topsoil",
+        "Raised-bed mix"
+      ],
+      "pollinatorSupport": [
+        "Wildflower strip",
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Comfrey tea",
+        "Worm castings"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Not certified",
+      "waterSource": [
+        "On-site bore",
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Timed sprinklers",
+      "compostingFacilities": [
+        "Communal compost",
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Pea straw",
+        "Straw mulch"
+      ]
+    },
+    "established": "2012-04-01",
+    "insurance": "Public liability cover via the Wellington City Council community garden programme.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Melrose Garden",
+    "openingHours": {
+      "Monday": [
+        "07:00",
+        "19:00"
+      ],
+      "Tuesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Wednesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Thursday": [
+        "07:00",
+        "19:00"
+      ],
+      "Friday": [
+        "07:00",
+        "19:00"
+      ],
+      "Saturday": [
+        "08:00",
+        "18:00"
+      ],
+      "Sunday": [
+        "08:00",
+        "18:00"
+      ],
+      "Holidays": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Cardboard mulching",
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a0697da7d34bb0b174",
+    "_sourceId": "1",
+    "__v": 2,
+    "accessibility": [
+      "Wheelchair-accessible paths",
+      "Raised beds for limited mobility",
+      "Sealed pathways"
+    ],
+    "address": "Harrison Street, Brooklyn, Wellington",
+    "contact": {
+      "email": "brooklyn@growlocal.example.nz",
+      "phone": "04 384 1148",
+      "website": "https://growlocal.example.nz/brooklyn",
+      "social": {
+        "facebook": "https://facebook.com/brooklyngarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A volunteer-run community garden in Brooklyn with raised beds, a shared tool shed and a busy compost system. New growers of all experience levels are welcome.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77af4e5a42929aec91f2"
+      },
+      {
+        "date": "2026-09-15",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77af4e5a42929aec91f3"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Harvest potluck",
+        "_id": "6a1a77af4e5a42929aec91f4"
+      }
+    ],
+    "facilities": [
+      "Compost bays",
+      "Wheelbarrows",
+      "Potting bench",
+      "Picnic table",
+      "Children's plot"
+    ],
+    "isTestGarden": false,
+    "lat": -41.30603619016248,
+    "lon": 174.76491125812308,
+    "partnerships": [
+      "Kaicycle",
+      "Regional food bank",
+      "Neighbourhood association"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Return tools to the shed after use",
+      "Compost green waste only",
+      "Lock the gate when you leave",
+      "Children to be supervised"
+    ],
+    "coordinator": "Sophie Nguyen",
+    "environment": {
+      "gardenSizeSqm": 748,
+      "numberOfBeds": 36,
+      "produceType": [
+        "Pumpkin",
+        "Mixed herbs",
+        "Strawberries",
+        "Garlic",
+        "Lettuce"
+      ],
+      "waterConservation": [
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Raised-bed mix"
+      ],
+      "pollinatorSupport": [
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Worm castings",
+        "Home-made compost",
+        "Sheep pellets"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Spray-free",
+      "waterSource": [
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Drip irrigation",
+      "compostingFacilities": [
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Straw mulch"
+      ]
+    },
+    "established": "2013-05-01",
+    "insurance": "Covered under the Sustainability Trust community garden policy.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": true,
+    "name": "Brooklyn Garden",
+    "openingHours": {
+      "Monday": [
+        "",
+        ""
+      ],
+      "Tuesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Wednesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Thursday": [
+        "08:00",
+        "17:00"
+      ],
+      "Friday": [
+        "08:00",
+        "17:00"
+      ],
+      "Saturday": [
+        "09:00",
+        "16:00"
+      ],
+      "Sunday": [
+        "09:00",
+        "16:00"
+      ],
+      "Holidays": [
+        "",
+        ""
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a0697da7d34bb0b175",
+    "_sourceId": "3",
+    "__v": 2,
+    "accessibility": [
+      "Raised beds for limited mobility",
+      "Sealed pathways",
+      "Accessible toilet nearby",
+      "Level entry from street"
+    ],
+    "address": "Lawson Place, Mount Victoria, Wellington",
+    "contact": {
+      "email": "mountvictoria@growlocal.example.nz",
+      "phone": "04 385 1185",
+      "website": "https://growlocal.example.nz/mount-victoria",
+      "social": {
+        "facebook": "https://facebook.com/mountvictoriagarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Tucked into Mount Victoria, this garden brings neighbours together to grow vegetables, herbs and flowers using organic, spray-free methods.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Kids' planting morning",
+        "_id": "6a1a77af4e5a42929aec91f6"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Seedling & seed swap",
+        "_id": "6a1a77af4e5a42929aec91f7"
+      }
+    ],
+    "facilities": [
+      "Wheelbarrows",
+      "Potting bench",
+      "Picnic table",
+      "Children's plot",
+      "Notice board",
+      "Tool shed"
+    ],
+    "isTestGarden": false,
+    "lat": -41.29618557618583,
+    "lon": 174.78970341748038,
+    "partnerships": [
+      "Regional food bank",
+      "Neighbourhood association",
+      "Wellington City Council",
+      "Sustainability Trust"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Compost green waste only",
+      "Lock the gate when you leave",
+      "Children to be supervised",
+      "No sprays in shared beds",
+      "Share surplus on the produce table"
+    ],
+    "coordinator": "Hemi Walker",
+    "environment": {
+      "gardenSizeSqm": 885,
+      "numberOfBeds": 9,
+      "produceType": [
+        "Mixed herbs",
+        "Strawberries",
+        "Garlic",
+        "Lettuce",
+        "Courgettes",
+        "Rhubarb"
+      ],
+      "waterConservation": [
+        "Heavy mulching",
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Free-draining loam",
+        "Clay loam"
+      ],
+      "pollinatorSupport": [
+        "Native plantings",
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Home-made compost",
+        "Sheep pellets",
+        "Seaweed solution",
+        "Comfrey tea"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Certified organic",
+      "waterSource": [
+        "Mains supply",
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Hand watering",
+      "compostingFacilities": [
+        "Worm farm",
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Wood chip",
+        "Leaf litter"
+      ]
+    },
+    "established": "2014-06-01",
+    "insurance": "Public liability insurance held through the local residents' association.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Mount Victoria Garden",
+    "openingHours": {
+      "Monday": [
+        "06:30",
+        "20:00"
+      ],
+      "Tuesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Wednesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Thursday": [
+        "06:30",
+        "20:00"
+      ],
+      "Friday": [
+        "06:30",
+        "20:00"
+      ],
+      "Saturday": [
+        "06:30",
+        "20:00"
+      ],
+      "Sunday": [
+        "06:30",
+        "20:00"
+      ],
+      "Holidays": [
+        "06:30",
+        "20:00"
+      ]
+    },
+    "volunteersWelcome": false,
+    "wasteManagement": [
+      "Green-waste collection",
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a0697da7d34bb0b176",
+    "_sourceId": "4",
+    "__v": 2,
+    "accessibility": [
+      "Sealed pathways",
+      "Accessible toilet nearby"
+    ],
+    "address": "Beside 559 Adelaide Rd, Berhampore",
+    "contact": {
+      "email": "berhampore@growlocal.example.nz",
+      "phone": "04 386 1222",
+      "website": "https://growlocal.example.nz/berhampore",
+      "social": {
+        "facebook": "https://facebook.com/berhamporegarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A friendly Berhampore garden focused on growing kai locally, sharing surplus produce and learning together through regular working bees.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77af4e5a42929aec91f9"
+      },
+      {
+        "date": "2026-08-15",
+        "details": "Harvest potluck",
+        "_id": "6a1a77af4e5a42929aec91fa"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77af4e5a42929aec91fb"
+      }
+    ],
+    "facilities": [
+      "Potting bench",
+      "Picnic table",
+      "Children's plot",
+      "Notice board"
+    ],
+    "isTestGarden": false,
+    "lat": -41.325231961951225,
+    "lon": 174.77561898208262,
+    "partnerships": [
+      "Neighbourhood association",
+      "Wellington City Council"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Lock the gate when you leave",
+      "Children to be supervised",
+      "No sprays in shared beds"
+    ],
+    "coordinator": "Olivia Chen",
+    "environment": {
+      "gardenSizeSqm": 1022,
+      "numberOfBeds": 16,
+      "produceType": [
+        "Strawberries",
+        "Garlic",
+        "Lettuce",
+        "Courgettes",
+        "Rhubarb",
+        "Spring onions",
+        "Broad beans"
+      ],
+      "waterConservation": [
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Clay loam"
+      ],
+      "pollinatorSupport": [
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Sheep pellets",
+        "Seaweed solution"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Transitioning to organic",
+      "waterSource": [
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Soaker hoses",
+      "compostingFacilities": [
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Leaf litter"
+      ]
+    },
+    "established": "2015-07-01",
+    "insurance": "Public liability cover via the Wellington City Council community garden programme.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Berhampore Garden",
+    "openingHours": {
+      "Monday": [
+        "07:00",
+        "19:00"
+      ],
+      "Tuesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Wednesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Thursday": [
+        "07:00",
+        "19:00"
+      ],
+      "Friday": [
+        "07:00",
+        "19:00"
+      ],
+      "Saturday": [
+        "08:00",
+        "18:00"
+      ],
+      "Sunday": [
+        "08:00",
+        "18:00"
+      ],
+      "Holidays": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a0697da7d34bb0b177",
+    "_sourceId": "5",
+    "__v": 2,
+    "accessibility": [
+      "Accessible toilet nearby",
+      "Level entry from street",
+      "Wheelchair-accessible paths"
+    ],
+    "address": "5 Hospital Road, Newtown, Wellington",
+    "contact": {
+      "email": "newtown@growlocal.example.nz",
+      "phone": "04 387 1259",
+      "website": "https://growlocal.example.nz/newtown",
+      "social": {
+        "facebook": "https://facebook.com/newtowngarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Started by local residents, the Newtown garden offers individual plots, communal beds and a welcoming space to grow food and meet people.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Seedling & seed swap",
+        "_id": "6a1a77b04e5a42929aec91fd"
+      },
+      {
+        "date": "2026-09-15",
+        "details": "Composting workshop",
+        "_id": "6a1a77b04e5a42929aec91fe"
+      }
+    ],
+    "facilities": [
+      "Picnic table",
+      "Children's plot",
+      "Notice board",
+      "Tool shed",
+      "Rainwater tanks"
+    ],
+    "isTestGarden": false,
+    "lat": -41.30619347507297,
+    "lon": 174.77944347889306,
+    "partnerships": [
+      "Wellington City Council",
+      "Sustainability Trust",
+      "Local primary school"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Children to be supervised",
+      "No sprays in shared beds",
+      "Share surplus on the produce table",
+      "Return tools to the shed after use"
+    ],
+    "coordinator": "Daniel O'Brien",
+    "environment": {
+      "gardenSizeSqm": 1159,
+      "numberOfBeds": 23,
+      "produceType": [
+        "Garlic",
+        "Lettuce",
+        "Courgettes",
+        "Rhubarb",
+        "Spring onions",
+        "Broad beans",
+        "Carrots",
+        "Beetroot"
+      ],
+      "waterConservation": [
+        "Greywater reuse",
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Sandy loam",
+        "Compost-enriched topsoil"
+      ],
+      "pollinatorSupport": [
+        "Wildflower strip",
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Seaweed solution",
+        "Comfrey tea",
+        "Worm castings"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Not certified",
+      "waterSource": [
+        "On-site bore",
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Timed sprinklers",
+      "compostingFacilities": [
+        "Communal compost",
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Pea straw",
+        "Straw mulch"
+      ]
+    },
+    "established": "2016-08-01",
+    "insurance": "Covered under the Sustainability Trust community garden policy.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Newtown Garden",
+    "openingHours": {
+      "Monday": [
+        "",
+        ""
+      ],
+      "Tuesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Wednesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Thursday": [
+        "08:00",
+        "17:00"
+      ],
+      "Friday": [
+        "08:00",
+        "17:00"
+      ],
+      "Saturday": [
+        "09:00",
+        "16:00"
+      ],
+      "Sunday": [
+        "09:00",
+        "16:00"
+      ],
+      "Holidays": [
+        "",
+        ""
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Cardboard mulching",
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a0697da7d34bb0b178",
+    "_sourceId": "6",
+    "__v": 2,
+    "accessibility": [
+      "Level entry from street",
+      "Wheelchair-accessible paths",
+      "Raised beds for limited mobility",
+      "Sealed pathways"
+    ],
+    "address": "21 Beauchamp Street, Karori, Wellington",
+    "contact": {
+      "email": "karori@growlocal.example.nz",
+      "phone": "04 388 1296",
+      "website": "https://growlocal.example.nz/karori",
+      "social": {
+        "facebook": "https://facebook.com/karorigarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A volunteer-run community garden in Karori with raised beds, a shared tool shed and a busy compost system. New growers of all experience levels are welcome.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Harvest potluck",
+        "_id": "6a1a77b04e5a42929aec9200"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77b04e5a42929aec9201"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77b04e5a42929aec9202"
+      }
+    ],
+    "facilities": [
+      "Children's plot",
+      "Notice board",
+      "Tool shed",
+      "Rainwater tanks",
+      "Communal seating",
+      "Greenhouse"
+    ],
+    "isTestGarden": false,
+    "lat": -41.28616452806992,
+    "lon": 174.73818619833375,
+    "partnerships": [
+      "Sustainability Trust",
+      "Local primary school",
+      "Forest & Bird",
+      "Kaicycle"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "No sprays in shared beds",
+      "Share surplus on the produce table",
+      "Return tools to the shed after use",
+      "Compost green waste only",
+      "Lock the gate when you leave"
+    ],
+    "coordinator": "Pita Rangi",
+    "environment": {
+      "gardenSizeSqm": 1296,
+      "numberOfBeds": 30,
+      "produceType": [
+        "Lettuce",
+        "Courgettes",
+        "Rhubarb",
+        "Spring onions",
+        "Broad beans"
+      ],
+      "waterConservation": [
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Compost-enriched topsoil"
+      ],
+      "pollinatorSupport": [
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Comfrey tea",
+        "Worm castings",
+        "Home-made compost",
+        "Sheep pellets"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Spray-free",
+      "waterSource": [
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Drip irrigation",
+      "compostingFacilities": [
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Straw mulch"
+      ]
+    },
+    "established": "2017-09-01",
+    "insurance": "Public liability insurance held through the local residents' association.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": true,
+    "name": "Karori Garden",
+    "openingHours": {
+      "Monday": [
+        "06:30",
+        "20:00"
+      ],
+      "Tuesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Wednesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Thursday": [
+        "06:30",
+        "20:00"
+      ],
+      "Friday": [
+        "06:30",
+        "20:00"
+      ],
+      "Saturday": [
+        "06:30",
+        "20:00"
+      ],
+      "Sunday": [
+        "06:30",
+        "20:00"
+      ],
+      "Holidays": [
+        "06:30",
+        "20:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a0697da7d34bb0b179",
+    "_sourceId": "8",
+    "__v": 2,
+    "accessibility": [
+      "Wheelchair-accessible paths",
+      "Raised beds for limited mobility"
+    ],
+    "address": "1 Endeavour Street, Lyall Bay, Wellington",
+    "contact": {
+      "email": "lyallbay@growlocal.example.nz",
+      "phone": "04 389 1333",
+      "website": "https://growlocal.example.nz/lyall-bay",
+      "social": {
+        "facebook": "https://facebook.com/lyallbaygarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Tucked into Lyall Bay, this garden brings neighbours together to grow vegetables, herbs and flowers using organic, spray-free methods.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Composting workshop",
+        "_id": "6a1a77b04e5a42929aec9204"
+      },
+      {
+        "date": "2026-08-15",
+        "details": "Kids' planting morning",
+        "_id": "6a1a77b04e5a42929aec9205"
+      }
+    ],
+    "facilities": [
+      "Notice board",
+      "Tool shed",
+      "Rainwater tanks",
+      "Communal seating"
+    ],
+    "isTestGarden": false,
+    "lat": -41.32187534750211,
+    "lon": 174.79342900229608,
+    "partnerships": [
+      "Local primary school",
+      "Forest & Bird"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Share surplus on the produce table",
+      "Return tools to the shed after use",
+      "Compost green waste only"
+    ],
+    "coordinator": "Emma Thompson",
+    "environment": {
+      "gardenSizeSqm": 1433,
+      "numberOfBeds": 37,
+      "produceType": [
+        "Courgettes",
+        "Rhubarb",
+        "Spring onions",
+        "Broad beans",
+        "Carrots",
+        "Beetroot"
+      ],
+      "waterConservation": [
+        "Heavy mulching",
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Raised-bed mix",
+        "Free-draining loam"
+      ],
+      "pollinatorSupport": [
+        "Native plantings",
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Worm castings",
+        "Home-made compost"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Certified organic",
+      "waterSource": [
+        "Mains supply",
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Hand watering",
+      "compostingFacilities": [
+        "Worm farm",
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Wood chip",
+        "Leaf litter"
+      ]
+    },
+    "established": "2018-01-01",
+    "insurance": "Public liability cover via the Wellington City Council community garden programme.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Lyall Bay Garden",
+    "openingHours": {
+      "Monday": [
+        "07:00",
+        "19:00"
+      ],
+      "Tuesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Wednesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Thursday": [
+        "07:00",
+        "19:00"
+      ],
+      "Friday": [
+        "07:00",
+        "19:00"
+      ],
+      "Saturday": [
+        "08:00",
+        "18:00"
+      ],
+      "Sunday": [
+        "08:00",
+        "18:00"
+      ],
+      "Holidays": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Green-waste collection",
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a0697da7d34bb0b17a",
+    "_sourceId": "9",
+    "__v": 2,
+    "accessibility": [
+      "Raised beds for limited mobility",
+      "Sealed pathways",
+      "Accessible toilet nearby"
+    ],
+    "address": "1 Main Road, Miramar, Wellington",
+    "contact": {
+      "email": "miramar@growlocal.example.nz",
+      "phone": "04 390 1370",
+      "website": "https://growlocal.example.nz/miramar",
+      "social": {
+        "facebook": "https://facebook.com/miramargarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A friendly Miramar garden focused on growing kai locally, sharing surplus produce and learning together through regular working bees.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77b04e5a42929aec9207"
+      },
+      {
+        "date": "2026-09-15",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77b04e5a42929aec9208"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Harvest potluck",
+        "_id": "6a1a77b04e5a42929aec9209"
+      }
+    ],
+    "facilities": [
+      "Tool shed",
+      "Rainwater tanks",
+      "Communal seating",
+      "Greenhouse",
+      "Compost bays"
+    ],
+    "isTestGarden": false,
+    "lat": -41.29447785437829,
+    "lon": 174.82635511490287,
+    "partnerships": [
+      "Forest & Bird",
+      "Kaicycle",
+      "Regional food bank"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1505471768190-275e2ad7b3f9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Return tools to the shed after use",
+      "Compost green waste only",
+      "Lock the gate when you leave",
+      "Children to be supervised"
+    ],
+    "coordinator": "Wiremu Cooper",
+    "environment": {
+      "gardenSizeSqm": 1570,
+      "numberOfBeds": 10,
+      "produceType": [
+        "Rhubarb",
+        "Spring onions",
+        "Broad beans",
+        "Carrots",
+        "Beetroot",
+        "Tomatoes",
+        "Silverbeet"
+      ],
+      "waterConservation": [
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Free-draining loam"
+      ],
+      "pollinatorSupport": [
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Home-made compost",
+        "Sheep pellets",
+        "Seaweed solution"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Transitioning to organic",
+      "waterSource": [
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Soaker hoses",
+      "compostingFacilities": [
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Leaf litter"
+      ]
+    },
+    "established": "2019-02-01",
+    "insurance": "Covered under the Sustainability Trust community garden policy.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Miramar Garden",
+    "openingHours": {
+      "Monday": [
+        "",
+        ""
+      ],
+      "Tuesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Wednesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Thursday": [
+        "08:00",
+        "17:00"
+      ],
+      "Friday": [
+        "08:00",
+        "17:00"
+      ],
+      "Saturday": [
+        "09:00",
+        "16:00"
+      ],
+      "Sunday": [
+        "09:00",
+        "16:00"
+      ],
+      "Holidays": [
+        "",
+        ""
+      ]
+    },
+    "volunteersWelcome": false,
+    "wasteManagement": [
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b17b",
+    "_sourceId": "10",
+    "__v": 2,
+    "accessibility": [
+      "Sealed pathways",
+      "Accessible toilet nearby",
+      "Level entry from street",
+      "Wheelchair-accessible paths"
+    ],
+    "address": "Owhiro Bay Community Gardens, 72 Happy Valley Road, Owhiro Bay, Wellington",
+    "contact": {
+      "email": "owhirobay@growlocal.example.nz",
+      "phone": "04 391 1407",
+      "website": "https://growlocal.example.nz/owhiro-bay",
+      "social": {
+        "facebook": "https://facebook.com/owhirobaygarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Started by local residents, the Owhiro Bay garden offers individual plots, communal beds and a welcoming space to grow food and meet people.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Kids' planting morning",
+        "_id": "6a1a77b04e5a42929aec920b"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Seedling & seed swap",
+        "_id": "6a1a77b04e5a42929aec920c"
+      }
+    ],
+    "facilities": [
+      "Rainwater tanks",
+      "Communal seating",
+      "Greenhouse",
+      "Compost bays",
+      "Wheelbarrows",
+      "Potting bench"
+    ],
+    "isTestGarden": false,
+    "lat": -41.34087916789776,
+    "lon": 174.7608688699453,
+    "partnerships": [
+      "Kaicycle",
+      "Regional food bank",
+      "Neighbourhood association",
+      "Wellington City Council"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1505471768190-275e2ad7b3f9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Compost green waste only",
+      "Lock the gate when you leave",
+      "Children to be supervised",
+      "No sprays in shared beds",
+      "Share surplus on the produce table"
+    ],
+    "coordinator": "Grace Patel",
+    "environment": {
+      "gardenSizeSqm": 307,
+      "numberOfBeds": 17,
+      "produceType": [
+        "Spring onions",
+        "Broad beans",
+        "Carrots",
+        "Beetroot",
+        "Tomatoes",
+        "Silverbeet",
+        "Kale",
+        "Runner beans"
+      ],
+      "waterConservation": [
+        "Greywater reuse",
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Clay loam",
+        "Sandy loam"
+      ],
+      "pollinatorSupport": [
+        "Wildflower strip",
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Sheep pellets",
+        "Seaweed solution",
+        "Comfrey tea",
+        "Worm castings"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Not certified",
+      "waterSource": [
+        "On-site bore",
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Timed sprinklers",
+      "compostingFacilities": [
+        "Communal compost",
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Pea straw",
+        "Straw mulch"
+      ]
+    },
+    "established": "2020-03-01",
+    "insurance": "Public liability insurance held through the local residents' association.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Owhiro Bay Garden",
+    "openingHours": {
+      "Monday": [
+        "06:30",
+        "20:00"
+      ],
+      "Tuesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Wednesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Thursday": [
+        "06:30",
+        "20:00"
+      ],
+      "Friday": [
+        "06:30",
+        "20:00"
+      ],
+      "Saturday": [
+        "06:30",
+        "20:00"
+      ],
+      "Sunday": [
+        "06:30",
+        "20:00"
+      ],
+      "Holidays": [
+        "06:30",
+        "20:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Cardboard mulching",
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b17c",
+    "_sourceId": "11",
+    "__v": 2,
+    "accessibility": [
+      "Accessible toilet nearby",
+      "Level entry from street"
+    ],
+    "address": "27 Chelsea Street, Miramar, Wellington",
+    "contact": {
+      "email": "miramar@growlocal.example.nz",
+      "phone": "04 392 1444",
+      "website": "https://growlocal.example.nz/miramar",
+      "social": {
+        "facebook": "https://facebook.com/miramargarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A volunteer-run community garden in Miramar with raised beds, a shared tool shed and a busy compost system. New growers of all experience levels are welcome.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77b04e5a42929aec920e"
+      },
+      {
+        "date": "2026-08-15",
+        "details": "Harvest potluck",
+        "_id": "6a1a77b04e5a42929aec920f"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77b04e5a42929aec9210"
+      }
+    ],
+    "facilities": [
+      "Communal seating",
+      "Greenhouse",
+      "Compost bays",
+      "Wheelbarrows"
+    ],
+    "isTestGarden": false,
+    "lat": -41.31767589476399,
+    "lon": 174.81699435580308,
+    "partnerships": [
+      "Regional food bank",
+      "Neighbourhood association"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Lock the gate when you leave",
+      "Children to be supervised",
+      "No sprays in shared beds"
+    ],
+    "coordinator": "Liam Murphy",
+    "environment": {
+      "gardenSizeSqm": 444,
+      "numberOfBeds": 24,
+      "produceType": [
+        "Broad beans",
+        "Carrots",
+        "Beetroot",
+        "Tomatoes",
+        "Silverbeet"
+      ],
+      "waterConservation": [
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Sandy loam"
+      ],
+      "pollinatorSupport": [
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Seaweed solution",
+        "Comfrey tea"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Spray-free",
+      "waterSource": [
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Drip irrigation",
+      "compostingFacilities": [
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Straw mulch"
+      ]
+    },
+    "established": "2021-04-01",
+    "insurance": "Public liability cover via the Wellington City Council community garden programme.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": true,
+    "name": "Miramar Garden",
+    "openingHours": {
+      "Monday": [
+        "07:00",
+        "19:00"
+      ],
+      "Tuesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Wednesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Thursday": [
+        "07:00",
+        "19:00"
+      ],
+      "Friday": [
+        "07:00",
+        "19:00"
+      ],
+      "Saturday": [
+        "08:00",
+        "18:00"
+      ],
+      "Sunday": [
+        "08:00",
+        "18:00"
+      ],
+      "Holidays": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b17d",
+    "_sourceId": "12",
+    "__v": 2,
+    "accessibility": [
+      "Level entry from street",
+      "Wheelchair-accessible paths",
+      "Raised beds for limited mobility"
+    ],
+    "address": "Carrara Park, 107 Daniell Street, Newtownm Wellington",
+    "contact": {
+      "email": "hataitai@growlocal.example.nz",
+      "phone": "04 393 1481",
+      "website": "https://growlocal.example.nz/hataitai",
+      "social": {
+        "facebook": "https://facebook.com/hataitaigarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Tucked into Hataitai, this garden brings neighbours together to grow vegetables, herbs and flowers using organic, spray-free methods.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Seedling & seed swap",
+        "_id": "6a1a77b04e5a42929aec9212"
+      },
+      {
+        "date": "2026-09-15",
+        "details": "Composting workshop",
+        "_id": "6a1a77b04e5a42929aec9213"
+      }
+    ],
+    "facilities": [
+      "Greenhouse",
+      "Compost bays",
+      "Wheelbarrows",
+      "Potting bench",
+      "Picnic table"
+    ],
+    "isTestGarden": false,
+    "lat": -41.31543346443111,
+    "lon": 174.78365589742182,
+    "partnerships": [
+      "Neighbourhood association",
+      "Wellington City Council",
+      "Sustainability Trust"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Children to be supervised",
+      "No sprays in shared beds",
+      "Share surplus on the produce table",
+      "Return tools to the shed after use"
+    ],
+    "coordinator": "Ana Faleolo",
+    "environment": {
+      "gardenSizeSqm": 581,
+      "numberOfBeds": 31,
+      "produceType": [
+        "Carrots",
+        "Beetroot",
+        "Tomatoes",
+        "Silverbeet",
+        "Kale",
+        "Runner beans"
+      ],
+      "waterConservation": [
+        "Heavy mulching",
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Compost-enriched topsoil",
+        "Raised-bed mix"
+      ],
+      "pollinatorSupport": [
+        "Native plantings",
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Comfrey tea",
+        "Worm castings",
+        "Home-made compost"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Certified organic",
+      "waterSource": [
+        "Mains supply",
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Hand watering",
+      "compostingFacilities": [
+        "Worm farm",
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Wood chip",
+        "Leaf litter"
+      ]
+    },
+    "established": "2009-05-01",
+    "insurance": "Covered under the Sustainability Trust community garden policy.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Hataitai Garden",
+    "openingHours": {
+      "Monday": [
+        "",
+        ""
+      ],
+      "Tuesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Wednesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Thursday": [
+        "08:00",
+        "17:00"
+      ],
+      "Friday": [
+        "08:00",
+        "17:00"
+      ],
+      "Saturday": [
+        "09:00",
+        "16:00"
+      ],
+      "Sunday": [
+        "09:00",
+        "16:00"
+      ],
+      "Holidays": [
+        "",
+        ""
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Green-waste collection",
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b17e",
+    "_sourceId": "13",
+    "__v": 2,
+    "accessibility": [
+      "Wheelchair-accessible paths",
+      "Raised beds for limited mobility",
+      "Sealed pathways",
+      "Accessible toilet nearby"
+    ],
+    "address": "Jay Street Reserve, Paparangi, Wellington",
+    "contact": {
+      "email": "lyallbay@growlocal.example.nz",
+      "phone": "04 394 1518",
+      "website": "https://growlocal.example.nz/lyall-bay",
+      "social": {
+        "facebook": "https://facebook.com/lyallbaygarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A friendly Lyall Bay garden focused on growing kai locally, sharing surplus produce and learning together through regular working bees.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Harvest potluck",
+        "_id": "6a1a77b04e5a42929aec9215"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77b04e5a42929aec9216"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77b04e5a42929aec9217"
+      }
+    ],
+    "facilities": [
+      "Compost bays",
+      "Wheelbarrows",
+      "Potting bench",
+      "Picnic table",
+      "Children's plot",
+      "Notice board"
+    ],
+    "isTestGarden": false,
+    "lat": -41.21534418088773,
+    "lon": 174.82190874079058,
+    "partnerships": [
+      "Wellington City Council",
+      "Sustainability Trust",
+      "Local primary school",
+      "Forest & Bird"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "No sprays in shared beds",
+      "Share surplus on the produce table",
+      "Return tools to the shed after use",
+      "Compost green waste only",
+      "Lock the gate when you leave"
+    ],
+    "coordinator": "Ruby Sinclair",
+    "environment": {
+      "gardenSizeSqm": 718,
+      "numberOfBeds": 38,
+      "produceType": [
+        "Beetroot",
+        "Tomatoes",
+        "Silverbeet",
+        "Kale",
+        "Runner beans",
+        "Pumpkin",
+        "Mixed herbs"
+      ],
+      "waterConservation": [
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Raised-bed mix"
+      ],
+      "pollinatorSupport": [
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Worm castings",
+        "Home-made compost",
+        "Sheep pellets",
+        "Seaweed solution"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Transitioning to organic",
+      "waterSource": [
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Soaker hoses",
+      "compostingFacilities": [
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Leaf litter"
+      ]
+    },
+    "established": "2010-06-01",
+    "insurance": "Public liability insurance held through the local residents' association.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Lyall Bay Garden",
+    "openingHours": {
+      "Monday": [
+        "06:30",
+        "20:00"
+      ],
+      "Tuesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Wednesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Thursday": [
+        "06:30",
+        "20:00"
+      ],
+      "Friday": [
+        "06:30",
+        "20:00"
+      ],
+      "Saturday": [
+        "06:30",
+        "20:00"
+      ],
+      "Sunday": [
+        "06:30",
+        "20:00"
+      ],
+      "Holidays": [
+        "06:30",
+        "20:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b17f",
+    "_sourceId": "15",
+    "__v": 2,
+    "accessibility": [
+      "Raised beds for limited mobility",
+      "Sealed pathways"
+    ],
+    "address": "Tanera Park Community Garden\r\nTanera Park, Brooklyn",
+    "contact": {
+      "email": "brooklyn@growlocal.example.nz",
+      "phone": "04 395 1555",
+      "website": "https://growlocal.example.nz/brooklyn",
+      "social": {
+        "facebook": "https://facebook.com/brooklyngarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Started by local residents, the Brooklyn garden offers individual plots, communal beds and a welcoming space to grow food and meet people.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Composting workshop",
+        "_id": "6a1a77b04e5a42929aec9219"
+      },
+      {
+        "date": "2026-08-15",
+        "details": "Kids' planting morning",
+        "_id": "6a1a77b04e5a42929aec921a"
+      }
+    ],
+    "facilities": [
+      "Wheelbarrows",
+      "Potting bench",
+      "Picnic table",
+      "Children's plot"
+    ],
+    "isTestGarden": false,
+    "lat": -41.297463129400356,
+    "lon": 174.767266631671,
+    "partnerships": [
+      "Sustainability Trust",
+      "Local primary school"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Share surplus on the produce table",
+      "Return tools to the shed after use",
+      "Compost green waste only"
+    ],
+    "coordinator": "Manaia Brown",
+    "environment": {
+      "gardenSizeSqm": 855,
+      "numberOfBeds": 11,
+      "produceType": [
+        "Tomatoes",
+        "Silverbeet",
+        "Kale",
+        "Runner beans",
+        "Pumpkin",
+        "Mixed herbs",
+        "Strawberries",
+        "Garlic"
+      ],
+      "waterConservation": [
+        "Greywater reuse",
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Free-draining loam",
+        "Clay loam"
+      ],
+      "pollinatorSupport": [
+        "Wildflower strip",
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Home-made compost",
+        "Sheep pellets"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Not certified",
+      "waterSource": [
+        "On-site bore",
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Timed sprinklers",
+      "compostingFacilities": [
+        "Communal compost",
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Pea straw",
+        "Straw mulch"
+      ]
+    },
+    "established": "2011-07-01",
+    "insurance": "Public liability cover via the Wellington City Council community garden programme.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Brooklyn Garden",
+    "openingHours": {
+      "Monday": [
+        "07:00",
+        "19:00"
+      ],
+      "Tuesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Wednesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Thursday": [
+        "07:00",
+        "19:00"
+      ],
+      "Friday": [
+        "07:00",
+        "19:00"
+      ],
+      "Saturday": [
+        "08:00",
+        "18:00"
+      ],
+      "Sunday": [
+        "08:00",
+        "18:00"
+      ],
+      "Holidays": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "volunteersWelcome": false,
+    "wasteManagement": [
+      "Cardboard mulching",
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b180",
+    "_sourceId": "17",
+    "__v": 2,
+    "accessibility": [
+      "Sealed pathways",
+      "Accessible toilet nearby",
+      "Level entry from street"
+    ],
+    "address": "66 Thurleigh Grove, Karori, Wellington",
+    "contact": {
+      "email": "karori@growlocal.example.nz",
+      "phone": "04 396 1592",
+      "website": "https://growlocal.example.nz/karori",
+      "social": {
+        "facebook": "https://facebook.com/karorigarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A volunteer-run community garden in Karori with raised beds, a shared tool shed and a busy compost system. New growers of all experience levels are welcome.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77b04e5a42929aec921c"
+      },
+      {
+        "date": "2026-09-15",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77b04e5a42929aec921d"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Harvest potluck",
+        "_id": "6a1a77b04e5a42929aec921e"
+      }
+    ],
+    "facilities": [
+      "Potting bench",
+      "Picnic table",
+      "Children's plot",
+      "Notice board",
+      "Tool shed"
+    ],
+    "isTestGarden": false,
+    "lat": -41.28750688331195,
+    "lon": 174.71795268972855,
+    "partnerships": [
+      "Local primary school",
+      "Forest & Bird",
+      "Kaicycle"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Return tools to the shed after use",
+      "Compost green waste only",
+      "Lock the gate when you leave",
+      "Children to be supervised"
+    ],
+    "coordinator": "Aroha Williams",
+    "environment": {
+      "gardenSizeSqm": 992,
+      "numberOfBeds": 18,
+      "produceType": [
+        "Silverbeet",
+        "Kale",
+        "Runner beans",
+        "Pumpkin",
+        "Mixed herbs"
+      ],
+      "waterConservation": [
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Clay loam"
+      ],
+      "pollinatorSupport": [
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Sheep pellets",
+        "Seaweed solution",
+        "Comfrey tea"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Spray-free",
+      "waterSource": [
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Drip irrigation",
+      "compostingFacilities": [
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Straw mulch"
+      ]
+    },
+    "established": "2012-08-01",
+    "insurance": "Covered under the Sustainability Trust community garden policy.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": true,
+    "name": "Karori Garden",
+    "openingHours": {
+      "Monday": [
+        "",
+        ""
+      ],
+      "Tuesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Wednesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Thursday": [
+        "08:00",
+        "17:00"
+      ],
+      "Friday": [
+        "08:00",
+        "17:00"
+      ],
+      "Saturday": [
+        "09:00",
+        "16:00"
+      ],
+      "Sunday": [
+        "09:00",
+        "16:00"
+      ],
+      "Holidays": [
+        "",
+        ""
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b181",
+    "_sourceId": "18",
+    "__v": 2,
+    "accessibility": [
+      "Accessible toilet nearby",
+      "Level entry from street",
+      "Wheelchair-accessible paths",
+      "Raised beds for limited mobility"
+    ],
+    "address": "25 MacDonald Crescent, Te Aro",
+    "contact": {
+      "email": "tearo@growlocal.example.nz",
+      "phone": "04 397 1629",
+      "website": "https://growlocal.example.nz/te-aro",
+      "social": {
+        "facebook": "https://facebook.com/tearogarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Tucked into Te Aro, this garden brings neighbours together to grow vegetables, herbs and flowers using organic, spray-free methods.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Kids' planting morning",
+        "_id": "6a1a77b04e5a42929aec9220"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Seedling & seed swap",
+        "_id": "6a1a77b04e5a42929aec9221"
+      }
+    ],
+    "facilities": [
+      "Picnic table",
+      "Children's plot",
+      "Notice board",
+      "Tool shed",
+      "Rainwater tanks",
+      "Communal seating"
+    ],
+    "isTestGarden": false,
+    "lat": -41.29092122579166,
+    "lon": 174.7718370283887,
+    "partnerships": [
+      "Forest & Bird",
+      "Kaicycle",
+      "Regional food bank",
+      "Neighbourhood association"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1505471768190-275e2ad7b3f9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Compost green waste only",
+      "Lock the gate when you leave",
+      "Children to be supervised",
+      "No sprays in shared beds",
+      "Share surplus on the produce table"
+    ],
+    "coordinator": "Tāne Reed",
+    "environment": {
+      "gardenSizeSqm": 1129,
+      "numberOfBeds": 25,
+      "produceType": [
+        "Kale",
+        "Runner beans",
+        "Pumpkin",
+        "Mixed herbs",
+        "Strawberries",
+        "Garlic"
+      ],
+      "waterConservation": [
+        "Heavy mulching",
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Sandy loam",
+        "Compost-enriched topsoil"
+      ],
+      "pollinatorSupport": [
+        "Native plantings",
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Seaweed solution",
+        "Comfrey tea",
+        "Worm castings",
+        "Home-made compost"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Certified organic",
+      "waterSource": [
+        "Mains supply",
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Hand watering",
+      "compostingFacilities": [
+        "Worm farm",
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Wood chip",
+        "Leaf litter"
+      ]
+    },
+    "established": "2013-09-01",
+    "insurance": "Public liability insurance held through the local residents' association.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Te Aro Garden",
+    "openingHours": {
+      "Monday": [
+        "06:30",
+        "20:00"
+      ],
+      "Tuesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Wednesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Thursday": [
+        "06:30",
+        "20:00"
+      ],
+      "Friday": [
+        "06:30",
+        "20:00"
+      ],
+      "Saturday": [
+        "06:30",
+        "20:00"
+      ],
+      "Sunday": [
+        "06:30",
+        "20:00"
+      ],
+      "Holidays": [
+        "06:30",
+        "20:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Green-waste collection",
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b182",
+    "_sourceId": "20",
+    "__v": 2,
+    "accessibility": [
+      "Level entry from street",
+      "Wheelchair-accessible paths"
+    ],
+    "address": "Elliott Park, Brooklyn, Wellington",
+    "contact": {
+      "email": "brooklyn@growlocal.example.nz",
+      "phone": "04 398 1666",
+      "website": "https://growlocal.example.nz/brooklyn",
+      "social": {
+        "facebook": "https://facebook.com/brooklyngarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A friendly Brooklyn garden focused on growing kai locally, sharing surplus produce and learning together through regular working bees.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77b04e5a42929aec9223"
+      },
+      {
+        "date": "2026-08-15",
+        "details": "Harvest potluck",
+        "_id": "6a1a77b04e5a42929aec9224"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77b04e5a42929aec9225"
+      }
+    ],
+    "facilities": [
+      "Children's plot",
+      "Notice board",
+      "Tool shed",
+      "Rainwater tanks"
+    ],
+    "isTestGarden": false,
+    "lat": -41.30833015215447,
+    "lon": 174.7578900153861,
+    "partnerships": [
+      "Kaicycle",
+      "Regional food bank"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1505471768190-275e2ad7b3f9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Lock the gate when you leave",
+      "Children to be supervised",
+      "No sprays in shared beds"
+    ],
+    "coordinator": "Mere Tipene",
+    "environment": {
+      "gardenSizeSqm": 1266,
+      "numberOfBeds": 32,
+      "produceType": [
+        "Runner beans",
+        "Pumpkin",
+        "Mixed herbs",
+        "Strawberries",
+        "Garlic",
+        "Lettuce",
+        "Courgettes"
+      ],
+      "waterConservation": [
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Compost-enriched topsoil"
+      ],
+      "pollinatorSupport": [
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Comfrey tea",
+        "Worm castings"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Transitioning to organic",
+      "waterSource": [
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Soaker hoses",
+      "compostingFacilities": [
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Leaf litter"
+      ]
+    },
+    "established": "2014-01-01",
+    "insurance": "Public liability cover via the Wellington City Council community garden programme.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Brooklyn Garden",
+    "openingHours": {
+      "Monday": [
+        "07:00",
+        "19:00"
+      ],
+      "Tuesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Wednesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Thursday": [
+        "07:00",
+        "19:00"
+      ],
+      "Friday": [
+        "07:00",
+        "19:00"
+      ],
+      "Saturday": [
+        "08:00",
+        "18:00"
+      ],
+      "Sunday": [
+        "08:00",
+        "18:00"
+      ],
+      "Holidays": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b183",
+    "_sourceId": "420",
+    "__v": 2,
+    "accessibility": [
+      "Wheelchair-accessible paths",
+      "Raised beds for limited mobility",
+      "Sealed pathways"
+    ],
+    "address": "6-8 Bridge Street, Rongotai",
+    "contact": {
+      "email": "khandallah@growlocal.example.nz",
+      "phone": "04 399 1703",
+      "website": "https://growlocal.example.nz/khandallah",
+      "social": {
+        "facebook": "https://facebook.com/khandallahgarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Started by local residents, the Khandallah garden offers individual plots, communal beds and a welcoming space to grow food and meet people.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Seedling & seed swap",
+        "_id": "6a1a77b04e5a42929aec9227"
+      },
+      {
+        "date": "2026-09-15",
+        "details": "Composting workshop",
+        "_id": "6a1a77b04e5a42929aec9228"
+      }
+    ],
+    "facilities": [
+      "Notice board",
+      "Tool shed",
+      "Rainwater tanks",
+      "Communal seating",
+      "Greenhouse"
+    ],
+    "isTestGarden": false,
+    "lat": -41.3201291926326,
+    "lon": 174.80523998927097,
+    "partnerships": [
+      "Regional food bank",
+      "Neighbourhood association",
+      "Wellington City Council"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Children to be supervised",
+      "No sprays in shared beds",
+      "Share surplus on the produce table",
+      "Return tools to the shed after use"
+    ],
+    "coordinator": "James Carter",
+    "environment": {
+      "gardenSizeSqm": 1403,
+      "numberOfBeds": 39,
+      "produceType": [
+        "Pumpkin",
+        "Mixed herbs",
+        "Strawberries",
+        "Garlic",
+        "Lettuce",
+        "Courgettes",
+        "Rhubarb",
+        "Spring onions"
+      ],
+      "waterConservation": [
+        "Greywater reuse",
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Raised-bed mix",
+        "Free-draining loam"
+      ],
+      "pollinatorSupport": [
+        "Wildflower strip",
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Worm castings",
+        "Home-made compost",
+        "Sheep pellets"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Not certified",
+      "waterSource": [
+        "On-site bore",
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Timed sprinklers",
+      "compostingFacilities": [
+        "Communal compost",
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Pea straw",
+        "Straw mulch"
+      ]
+    },
+    "established": "2015-02-01",
+    "insurance": "Covered under the Sustainability Trust community garden policy.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Khandallah Garden",
+    "openingHours": {
+      "Monday": [
+        "",
+        ""
+      ],
+      "Tuesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Wednesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Thursday": [
+        "08:00",
+        "17:00"
+      ],
+      "Friday": [
+        "08:00",
+        "17:00"
+      ],
+      "Saturday": [
+        "09:00",
+        "16:00"
+      ],
+      "Sunday": [
+        "09:00",
+        "16:00"
+      ],
+      "Holidays": [
+        "",
+        ""
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Cardboard mulching",
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b184",
+    "_sourceId": "421",
+    "__v": 2,
+    "accessibility": [
+      "Raised beds for limited mobility",
+      "Sealed pathways",
+      "Accessible toilet nearby",
+      "Level entry from street"
+    ],
+    "address": "137 The Parade, Island Bay",
+    "contact": {
+      "email": "islandbay@growlocal.example.nz",
+      "phone": "04 400 1740",
+      "website": "https://growlocal.example.nz/island-bay",
+      "social": {
+        "facebook": "https://facebook.com/islandbaygarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A volunteer-run community garden in Island Bay with raised beds, a shared tool shed and a busy compost system. New growers of all experience levels are welcome.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Harvest potluck",
+        "_id": "6a1a77b04e5a42929aec922a"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77b04e5a42929aec922b"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77b04e5a42929aec922c"
+      }
+    ],
+    "facilities": [
+      "Tool shed",
+      "Rainwater tanks",
+      "Communal seating",
+      "Greenhouse",
+      "Compost bays",
+      "Wheelbarrows"
+    ],
+    "isTestGarden": false,
+    "lat": -41.33449052656927,
+    "lon": 174.77392630361024,
+    "partnerships": [
+      "Neighbourhood association",
+      "Wellington City Council",
+      "Sustainability Trust",
+      "Local primary school"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "No sprays in shared beds",
+      "Share surplus on the produce table",
+      "Return tools to the shed after use",
+      "Compost green waste only",
+      "Lock the gate when you leave"
+    ],
+    "coordinator": "Sophie Nguyen",
+    "environment": {
+      "gardenSizeSqm": 1540,
+      "numberOfBeds": 12,
+      "produceType": [
+        "Mixed herbs",
+        "Strawberries",
+        "Garlic",
+        "Lettuce",
+        "Courgettes"
+      ],
+      "waterConservation": [
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Free-draining loam"
+      ],
+      "pollinatorSupport": [
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Home-made compost",
+        "Sheep pellets",
+        "Seaweed solution",
+        "Comfrey tea"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Spray-free",
+      "waterSource": [
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Drip irrigation",
+      "compostingFacilities": [
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Straw mulch"
+      ]
+    },
+    "established": "2016-03-01",
+    "insurance": "Public liability insurance held through the local residents' association.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": true,
+    "name": "Island Bay Garden",
+    "openingHours": {
+      "Monday": [
+        "06:30",
+        "20:00"
+      ],
+      "Tuesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Wednesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Thursday": [
+        "06:30",
+        "20:00"
+      ],
+      "Friday": [
+        "06:30",
+        "20:00"
+      ],
+      "Saturday": [
+        "06:30",
+        "20:00"
+      ],
+      "Sunday": [
+        "06:30",
+        "20:00"
+      ],
+      "Holidays": [
+        "06:30",
+        "20:00"
+      ]
+    },
+    "volunteersWelcome": false,
+    "wasteManagement": [
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b185",
+    "_sourceId": "422",
+    "__v": 2,
+    "accessibility": [
+      "Sealed pathways",
+      "Accessible toilet nearby"
+    ],
+    "address": "10 Linden Avenue",
+    "contact": {
+      "email": "ngaio@growlocal.example.nz",
+      "phone": "04 401 1777",
+      "website": "https://growlocal.example.nz/ngaio",
+      "social": {
+        "facebook": "https://facebook.com/ngaiogarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Tucked into Ngaio, this garden brings neighbours together to grow vegetables, herbs and flowers using organic, spray-free methods.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Composting workshop",
+        "_id": "6a1a77b04e5a42929aec922e"
+      },
+      {
+        "date": "2026-08-15",
+        "details": "Kids' planting morning",
+        "_id": "6a1a77b04e5a42929aec922f"
+      }
+    ],
+    "facilities": [
+      "Rainwater tanks",
+      "Communal seating",
+      "Greenhouse",
+      "Compost bays"
+    ],
+    "isTestGarden": false,
+    "lat": -41.157264177604205,
+    "lon": 174.83122751243147,
+    "partnerships": [
+      "Wellington City Council",
+      "Sustainability Trust"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Share surplus on the produce table",
+      "Return tools to the shed after use",
+      "Compost green waste only"
+    ],
+    "coordinator": "Hemi Walker",
+    "environment": {
+      "gardenSizeSqm": 277,
+      "numberOfBeds": 19,
+      "produceType": [
+        "Strawberries",
+        "Garlic",
+        "Lettuce",
+        "Courgettes",
+        "Rhubarb",
+        "Spring onions"
+      ],
+      "waterConservation": [
+        "Heavy mulching",
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Clay loam",
+        "Sandy loam"
+      ],
+      "pollinatorSupport": [
+        "Native plantings",
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Sheep pellets",
+        "Seaweed solution"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Certified organic",
+      "waterSource": [
+        "Mains supply",
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Hand watering",
+      "compostingFacilities": [
+        "Worm farm",
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Wood chip",
+        "Leaf litter"
+      ]
+    },
+    "established": "2017-04-01",
+    "insurance": "Public liability cover via the Wellington City Council community garden programme.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Ngaio Garden",
+    "openingHours": {
+      "Monday": [
+        "07:00",
+        "19:00"
+      ],
+      "Tuesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Wednesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Thursday": [
+        "07:00",
+        "19:00"
+      ],
+      "Friday": [
+        "07:00",
+        "19:00"
+      ],
+      "Saturday": [
+        "08:00",
+        "18:00"
+      ],
+      "Sunday": [
+        "08:00",
+        "18:00"
+      ],
+      "Holidays": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Green-waste collection",
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b186",
+    "_sourceId": "423",
+    "__v": 2,
+    "accessibility": [
+      "Accessible toilet nearby",
+      "Level entry from street",
+      "Wheelchair-accessible paths"
+    ],
+    "address": "48 Aro Street, Aro Valley",
+    "contact": {
+      "email": "arovalley@growlocal.example.nz",
+      "phone": "04 402 1814",
+      "website": "https://growlocal.example.nz/aro-valley",
+      "social": {
+        "facebook": "https://facebook.com/arovalleygarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A friendly Aro Valley garden focused on growing kai locally, sharing surplus produce and learning together through regular working bees.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77b04e5a42929aec9231"
+      },
+      {
+        "date": "2026-09-15",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77b04e5a42929aec9232"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Harvest potluck",
+        "_id": "6a1a77b04e5a42929aec9233"
+      }
+    ],
+    "facilities": [
+      "Communal seating",
+      "Greenhouse",
+      "Compost bays",
+      "Wheelbarrows",
+      "Potting bench"
+    ],
+    "isTestGarden": false,
+    "lat": -41.29493338743201,
+    "lon": 174.76891000602657,
+    "partnerships": [
+      "Sustainability Trust",
+      "Local primary school",
+      "Forest & Bird"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Return tools to the shed after use",
+      "Compost green waste only",
+      "Lock the gate when you leave",
+      "Children to be supervised"
+    ],
+    "coordinator": "Olivia Chen",
+    "environment": {
+      "gardenSizeSqm": 414,
+      "numberOfBeds": 26,
+      "produceType": [
+        "Garlic",
+        "Lettuce",
+        "Courgettes",
+        "Rhubarb",
+        "Spring onions",
+        "Broad beans",
+        "Carrots"
+      ],
+      "waterConservation": [
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Sandy loam"
+      ],
+      "pollinatorSupport": [
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Seaweed solution",
+        "Comfrey tea",
+        "Worm castings"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Transitioning to organic",
+      "waterSource": [
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Soaker hoses",
+      "compostingFacilities": [
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Leaf litter"
+      ]
+    },
+    "established": "2018-05-01",
+    "insurance": "Covered under the Sustainability Trust community garden policy.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Aro Valley Garden",
+    "openingHours": {
+      "Monday": [
+        "",
+        ""
+      ],
+      "Tuesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Wednesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Thursday": [
+        "08:00",
+        "17:00"
+      ],
+      "Friday": [
+        "08:00",
+        "17:00"
+      ],
+      "Saturday": [
+        "09:00",
+        "16:00"
+      ],
+      "Sunday": [
+        "09:00",
+        "16:00"
+      ],
+      "Holidays": [
+        "",
+        ""
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b187",
+    "_sourceId": "424",
+    "__v": 2,
+    "accessibility": [
+      "Level entry from street",
+      "Wheelchair-accessible paths",
+      "Raised beds for limited mobility",
+      "Sealed pathways"
+    ],
+    "address": "96 - 112 Kelburn Parade",
+    "contact": {
+      "email": "roseneath@growlocal.example.nz",
+      "phone": "04 403 1851",
+      "website": "https://growlocal.example.nz/roseneath",
+      "social": {
+        "facebook": "https://facebook.com/roseneathgarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Started by local residents, the Roseneath garden offers individual plots, communal beds and a welcoming space to grow food and meet people.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Kids' planting morning",
+        "_id": "6a1a77b04e5a42929aec9235"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Seedling & seed swap",
+        "_id": "6a1a77b04e5a42929aec9236"
+      }
+    ],
+    "facilities": [
+      "Greenhouse",
+      "Compost bays",
+      "Wheelbarrows",
+      "Potting bench",
+      "Picnic table",
+      "Children's plot"
+    ],
+    "isTestGarden": false,
+    "lat": -41.29146955596913,
+    "lon": 174.7653963600158,
+    "partnerships": [
+      "Local primary school",
+      "Forest & Bird",
+      "Kaicycle",
+      "Regional food bank"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Compost green waste only",
+      "Lock the gate when you leave",
+      "Children to be supervised",
+      "No sprays in shared beds",
+      "Share surplus on the produce table"
+    ],
+    "coordinator": "Daniel O'Brien",
+    "environment": {
+      "gardenSizeSqm": 551,
+      "numberOfBeds": 33,
+      "produceType": [
+        "Lettuce",
+        "Courgettes",
+        "Rhubarb",
+        "Spring onions",
+        "Broad beans",
+        "Carrots",
+        "Beetroot",
+        "Tomatoes"
+      ],
+      "waterConservation": [
+        "Greywater reuse",
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Compost-enriched topsoil",
+        "Raised-bed mix"
+      ],
+      "pollinatorSupport": [
+        "Wildflower strip",
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Comfrey tea",
+        "Worm castings",
+        "Home-made compost",
+        "Sheep pellets"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Not certified",
+      "waterSource": [
+        "On-site bore",
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Timed sprinklers",
+      "compostingFacilities": [
+        "Communal compost",
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Pea straw",
+        "Straw mulch"
+      ]
+    },
+    "established": "2019-06-01",
+    "insurance": "Public liability insurance held through the local residents' association.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Roseneath Garden",
+    "openingHours": {
+      "Monday": [
+        "06:30",
+        "20:00"
+      ],
+      "Tuesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Wednesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Thursday": [
+        "06:30",
+        "20:00"
+      ],
+      "Friday": [
+        "06:30",
+        "20:00"
+      ],
+      "Saturday": [
+        "06:30",
+        "20:00"
+      ],
+      "Sunday": [
+        "06:30",
+        "20:00"
+      ],
+      "Holidays": [
+        "06:30",
+        "20:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Cardboard mulching",
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b188",
+    "_sourceId": "426",
+    "__v": 2,
+    "accessibility": [
+      "Wheelchair-accessible paths",
+      "Raised beds for limited mobility"
+    ],
+    "address": "Kelburn Park",
+    "contact": {
+      "email": "houghtonbay@growlocal.example.nz",
+      "phone": "04 404 1888",
+      "website": "https://growlocal.example.nz/houghton-bay",
+      "social": {
+        "facebook": "https://facebook.com/houghtonbaygarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A volunteer-run community garden in Houghton Bay with raised beds, a shared tool shed and a busy compost system. New growers of all experience levels are welcome.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77b04e5a42929aec9238"
+      },
+      {
+        "date": "2026-08-15",
+        "details": "Harvest potluck",
+        "_id": "6a1a77b04e5a42929aec9239"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77b04e5a42929aec923a"
+      }
+    ],
+    "facilities": [
+      "Compost bays",
+      "Wheelbarrows",
+      "Potting bench",
+      "Picnic table"
+    ],
+    "isTestGarden": false,
+    "lat": -41.287893411425955,
+    "lon": 174.77133951553625,
+    "partnerships": [
+      "Forest & Bird",
+      "Kaicycle"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Lock the gate when you leave",
+      "Children to be supervised",
+      "No sprays in shared beds"
+    ],
+    "coordinator": "Pita Rangi",
+    "environment": {
+      "gardenSizeSqm": 688,
+      "numberOfBeds": 40,
+      "produceType": [
+        "Courgettes",
+        "Rhubarb",
+        "Spring onions",
+        "Broad beans",
+        "Carrots"
+      ],
+      "waterConservation": [
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Raised-bed mix"
+      ],
+      "pollinatorSupport": [
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Worm castings",
+        "Home-made compost"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Spray-free",
+      "waterSource": [
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Drip irrigation",
+      "compostingFacilities": [
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Straw mulch"
+      ]
+    },
+    "established": "2020-07-01",
+    "insurance": "Public liability cover via the Wellington City Council community garden programme.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": true,
+    "name": "Houghton Bay Garden",
+    "openingHours": {
+      "Monday": [
+        "07:00",
+        "19:00"
+      ],
+      "Tuesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Wednesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Thursday": [
+        "07:00",
+        "19:00"
+      ],
+      "Friday": [
+        "07:00",
+        "19:00"
+      ],
+      "Saturday": [
+        "08:00",
+        "18:00"
+      ],
+      "Sunday": [
+        "08:00",
+        "18:00"
+      ],
+      "Holidays": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b189",
+    "_sourceId": "427",
+    "__v": 2,
+    "accessibility": [
+      "Raised beds for limited mobility",
+      "Sealed pathways",
+      "Accessible toilet nearby"
+    ],
+    "address": "Lyall Bay Community Garden, 67 Freyberg Street, Lyall Bay",
+    "contact": {
+      "email": "lyallbay@growlocal.example.nz",
+      "phone": "04 405 1925",
+      "website": "https://growlocal.example.nz/lyall-bay",
+      "social": {
+        "facebook": "https://facebook.com/lyallbaygarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Tucked into Lyall Bay, this garden brings neighbours together to grow vegetables, herbs and flowers using organic, spray-free methods.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Seedling & seed swap",
+        "_id": "6a1a77b14e5a42929aec923c"
+      },
+      {
+        "date": "2026-09-15",
+        "details": "Composting workshop",
+        "_id": "6a1a77b14e5a42929aec923d"
+      }
+    ],
+    "facilities": [
+      "Wheelbarrows",
+      "Potting bench",
+      "Picnic table",
+      "Children's plot",
+      "Notice board"
+    ],
+    "isTestGarden": false,
+    "lat": -41.32689086741138,
+    "lon": 174.7937290894402,
+    "partnerships": [
+      "Kaicycle",
+      "Regional food bank",
+      "Neighbourhood association"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1505471768190-275e2ad7b3f9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Children to be supervised",
+      "No sprays in shared beds",
+      "Share surplus on the produce table",
+      "Return tools to the shed after use"
+    ],
+    "coordinator": "Emma Thompson",
+    "environment": {
+      "gardenSizeSqm": 825,
+      "numberOfBeds": 13,
+      "produceType": [
+        "Rhubarb",
+        "Spring onions",
+        "Broad beans",
+        "Carrots",
+        "Beetroot",
+        "Tomatoes"
+      ],
+      "waterConservation": [
+        "Heavy mulching",
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Free-draining loam",
+        "Clay loam"
+      ],
+      "pollinatorSupport": [
+        "Native plantings",
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Home-made compost",
+        "Sheep pellets",
+        "Seaweed solution"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Certified organic",
+      "waterSource": [
+        "Mains supply",
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Hand watering",
+      "compostingFacilities": [
+        "Worm farm",
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Wood chip",
+        "Leaf litter"
+      ]
+    },
+    "established": "2021-08-01",
+    "insurance": "Covered under the Sustainability Trust community garden policy.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Lyall Bay Garden",
+    "openingHours": {
+      "Monday": [
+        "",
+        ""
+      ],
+      "Tuesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Wednesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Thursday": [
+        "08:00",
+        "17:00"
+      ],
+      "Friday": [
+        "08:00",
+        "17:00"
+      ],
+      "Saturday": [
+        "09:00",
+        "16:00"
+      ],
+      "Sunday": [
+        "09:00",
+        "16:00"
+      ],
+      "Holidays": [
+        "",
+        ""
+      ]
+    },
+    "volunteersWelcome": false,
+    "wasteManagement": [
+      "Green-waste collection",
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b18a",
+    "_sourceId": "428",
+    "__v": 2,
+    "accessibility": [
+      "Sealed pathways",
+      "Accessible toilet nearby",
+      "Level entry from street",
+      "Wheelchair-accessible paths"
+    ],
+    "address": "Massey Wellington Campus, Tasman Street",
+    "contact": {
+      "email": "melrose@growlocal.example.nz",
+      "phone": "04 406 1962",
+      "website": "https://growlocal.example.nz/melrose",
+      "social": {
+        "facebook": "https://facebook.com/melrosegarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A friendly Melrose garden focused on growing kai locally, sharing surplus produce and learning together through regular working bees.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Harvest potluck",
+        "_id": "6a1a77b14e5a42929aec923f"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77b14e5a42929aec9240"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77b14e5a42929aec9241"
+      }
+    ],
+    "facilities": [
+      "Potting bench",
+      "Picnic table",
+      "Children's plot",
+      "Notice board",
+      "Tool shed",
+      "Rainwater tanks"
+    ],
+    "isTestGarden": false,
+    "lat": -41.30149636074133,
+    "lon": 174.7762532112897,
+    "partnerships": [
+      "Regional food bank",
+      "Neighbourhood association",
+      "Wellington City Council",
+      "Sustainability Trust"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1505471768190-275e2ad7b3f9?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "No sprays in shared beds",
+      "Share surplus on the produce table",
+      "Return tools to the shed after use",
+      "Compost green waste only",
+      "Lock the gate when you leave"
+    ],
+    "coordinator": "Wiremu Cooper",
+    "environment": {
+      "gardenSizeSqm": 962,
+      "numberOfBeds": 20,
+      "produceType": [
+        "Spring onions",
+        "Broad beans",
+        "Carrots",
+        "Beetroot",
+        "Tomatoes",
+        "Silverbeet",
+        "Kale"
+      ],
+      "waterConservation": [
+        "Drip irrigation",
+        "Greywater reuse"
+      ],
+      "soilType": [
+        "Clay loam"
+      ],
+      "pollinatorSupport": [
+        "Insect hotel",
+        "Wildflower strip"
+      ],
+      "fertiliserUse": [
+        "Sheep pellets",
+        "Seaweed solution",
+        "Comfrey tea",
+        "Worm castings"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Transitioning to organic",
+      "waterSource": [
+        "Rain barrels"
+      ],
+      "irrigationSystem": "Soaker hoses",
+      "compostingFacilities": [
+        "Bokashi bins"
+      ],
+      "mulchingPractices": [
+        "Leaf litter"
+      ]
+    },
+    "established": "2009-09-01",
+    "insurance": "Public liability insurance held through the local residents' association.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Melrose Garden",
+    "openingHours": {
+      "Monday": [
+        "06:30",
+        "20:00"
+      ],
+      "Tuesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Wednesday": [
+        "06:30",
+        "20:00"
+      ],
+      "Thursday": [
+        "06:30",
+        "20:00"
+      ],
+      "Friday": [
+        "06:30",
+        "20:00"
+      ],
+      "Saturday": [
+        "06:30",
+        "20:00"
+      ],
+      "Sunday": [
+        "06:30",
+        "20:00"
+      ],
+      "Holidays": [
+        "06:30",
+        "20:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Soft-plastics recycling",
+      "Cardboard mulching"
+    ]
+  },
+  {
+    "_id": "6a08d8a1697da7d34bb0b18b",
+    "_sourceId": "429",
+    "__v": 2,
+    "accessibility": [
+      "Accessible toilet nearby",
+      "Level entry from street"
+    ],
+    "address": "Pukehinau Flats, lawn on the corner of Ohiro Road and Aro Street",
+    "contact": {
+      "email": "wilton@growlocal.example.nz",
+      "phone": "04 407 1999",
+      "website": "https://growlocal.example.nz/wilton",
+      "social": {
+        "facebook": "https://facebook.com/wiltongarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "Started by local residents, the Wilton garden offers individual plots, communal beds and a welcoming space to grow food and meet people.",
+    "events": [
+      {
+        "date": "2026-08-15",
+        "details": "Composting workshop",
+        "_id": "6a1a77b14e5a42929aec9243"
+      },
+      {
+        "date": "2026-08-15",
+        "details": "Kids' planting morning",
+        "_id": "6a1a77b14e5a42929aec9244"
+      }
+    ],
+    "facilities": [
+      "Picnic table",
+      "Children's plot",
+      "Notice board",
+      "Tool shed"
+    ],
+    "isTestGarden": false,
+    "lat": -41.296283605230904,
+    "lon": 174.76969895017464,
+    "partnerships": [
+      "Neighbourhood association",
+      "Wellington City Council"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Share surplus on the produce table",
+      "Return tools to the shed after use",
+      "Compost green waste only"
+    ],
+    "coordinator": "Grace Patel",
+    "environment": {
+      "gardenSizeSqm": 1099,
+      "numberOfBeds": 27,
+      "produceType": [
+        "Broad beans",
+        "Carrots",
+        "Beetroot",
+        "Tomatoes",
+        "Silverbeet",
+        "Kale",
+        "Runner beans",
+        "Pumpkin"
+      ],
+      "waterConservation": [
+        "Greywater reuse",
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Sandy loam",
+        "Compost-enriched topsoil"
+      ],
+      "pollinatorSupport": [
+        "Wildflower strip",
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Seaweed solution",
+        "Comfrey tea"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Harvesting salad greens, zucchini and the first tomatoes.",
+        "Autumn": "Planting onions and leafy greens as the soil cools.",
+        "Winter": "Mulching, composting and planning next season's plots.",
+        "Spring": "Beds turned over and the new season's seedlings going in."
+      },
+      "organicCertification": "Not certified",
+      "waterSource": [
+        "On-site bore",
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Timed sprinklers",
+      "compostingFacilities": [
+        "Communal compost",
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Pea straw",
+        "Straw mulch"
+      ]
+    },
+    "established": "2010-01-01",
+    "insurance": "Public liability cover via the Wellington City Council community garden programme.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": false,
+    "name": "Wilton Garden",
+    "openingHours": {
+      "Monday": [
+        "07:00",
+        "19:00"
+      ],
+      "Tuesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Wednesday": [
+        "07:00",
+        "19:00"
+      ],
+      "Thursday": [
+        "07:00",
+        "19:00"
+      ],
+      "Friday": [
+        "07:00",
+        "19:00"
+      ],
+      "Saturday": [
+        "08:00",
+        "18:00"
+      ],
+      "Sunday": [
+        "08:00",
+        "18:00"
+      ],
+      "Holidays": [
+        "09:00",
+        "16:00"
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "Cardboard mulching",
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  },
+  {
+    "_id": "6a08d8a2697da7d34bb0b18c",
+    "_sourceId": "430",
+    "__v": 2,
+    "accessibility": [
+      "Level entry from street",
+      "Wheelchair-accessible paths",
+      "Raised beds for limited mobility"
+    ],
+    "address": "Corner of Tarikaka Street and Ngata Street, Ngaio",
+    "contact": {
+      "email": "ngaio@growlocal.example.nz",
+      "phone": "04 408 2036",
+      "website": "https://growlocal.example.nz/ngaio",
+      "social": {
+        "facebook": "https://facebook.com/ngaiogarden",
+        "other": "",
+        "other2": ""
+      }
+    },
+    "description": "A volunteer-run community garden in Ngaio with raised beds, a shared tool shed and a busy compost system. New growers of all experience levels are welcome.",
+    "events": [
+      {
+        "date": "2026-07-15",
+        "details": "Pruning demonstration",
+        "_id": "6a1a77b14e5a42929aec9246"
+      },
+      {
+        "date": "2026-09-15",
+        "details": "Monthly working bee — all welcome",
+        "_id": "6a1a77b14e5a42929aec9247"
+      },
+      {
+        "date": "2026-10-14",
+        "details": "Harvest potluck",
+        "_id": "6a1a77b14e5a42929aec9248"
+      }
+    ],
+    "facilities": [
+      "Children's plot",
+      "Notice board",
+      "Tool shed",
+      "Rainwater tanks",
+      "Communal seating"
+    ],
+    "isTestGarden": false,
+    "lat": -41.24778002128509,
+    "lon": 174.77883029984204,
+    "partnerships": [
+      "Wellington City Council",
+      "Sustainability Trust",
+      "Local primary school"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=1200&q=70",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=70"
+    ],
+    "rules": [
+      "Return tools to the shed after use",
+      "Compost green waste only",
+      "Lock the gate when you leave",
+      "Children to be supervised"
+    ],
+    "coordinator": "Liam Murphy",
+    "environment": {
+      "gardenSizeSqm": 1236,
+      "numberOfBeds": 34,
+      "produceType": [
+        "Carrots",
+        "Beetroot",
+        "Tomatoes",
+        "Silverbeet",
+        "Kale"
+      ],
+      "waterConservation": [
+        "Rainwater harvesting",
+        "Heavy mulching"
+      ],
+      "soilType": [
+        "Compost-enriched topsoil"
+      ],
+      "pollinatorSupport": [
+        "Bee-friendly flower borders",
+        "Native plantings"
+      ],
+      "fertiliserUse": [
+        "Comfrey tea",
+        "Worm castings",
+        "Home-made compost"
+      ],
+      "seasonalPlantingCalendar": {
+        "Summer": "Tomatoes, beans and courgettes in full swing — keep the water up.",
+        "Autumn": "Sowing garlic, broad beans and winter brassicas.",
+        "Winter": "Kale, silverbeet and leeks carry the beds through the cold.",
+        "Spring": "Seed-raising tomatoes and pumpkins under cover; first plantings out."
+      },
+      "organicCertification": "Spray-free",
+      "waterSource": [
+        "Rainwater tanks"
+      ],
+      "irrigationSystem": "Drip irrigation",
+      "compostingFacilities": [
+        "Three-bay compost system"
+      ],
+      "mulchingPractices": [
+        "Straw mulch"
+      ]
+    },
+    "established": "2011-02-01",
+    "insurance": "Covered under the Sustainability Trust community garden policy.",
+    "lastUpdated": "2026-05-30T00:00:00.000Z",
+    "membershipRequired": true,
+    "name": "Ngaio Garden",
+    "openingHours": {
+      "Monday": [
+        "",
+        ""
+      ],
+      "Tuesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Wednesday": [
+        "08:00",
+        "17:00"
+      ],
+      "Thursday": [
+        "08:00",
+        "17:00"
+      ],
+      "Friday": [
+        "08:00",
+        "17:00"
+      ],
+      "Saturday": [
+        "09:00",
+        "16:00"
+      ],
+      "Sunday": [
+        "09:00",
+        "16:00"
+      ],
+      "Holidays": [
+        "",
+        ""
+      ]
+    },
+    "volunteersWelcome": true,
+    "wasteManagement": [
+      "On-site composting",
+      "Green-waste collection"
+    ]
+  }
+]
