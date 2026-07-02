@@ -17,37 +17,15 @@ server/   Express 5 + Mongoose (MongoDB Atlas)                        → Railwa
 
 The server exposes a small JSON API:
 
-| Method | Path                | Description                                  |
-| ------ | ------------------- | -------------------------------------------- |
-| GET    | `/health`           | Health check                                 |
-| GET    | `/api/gardens`      | All gardens as a GeoJSON FeatureCollection (`?region=` to filter) |
-| GET    | `/api/gardens/:id`  | One garden document                          |
-| POST   | `/api/suggestions`  | Submit a new-garden suggestion or correction (rate-limited) |
+| Method | Path               | Description                                                       |
+| ------ | ------------------ | ----------------------------------------------------------------- |
+| GET    | `/health`          | Health check                                                      |
+| GET    | `/api/gardens`     | All gardens as a GeoJSON FeatureCollection (`?region=` to filter) |
+| GET    | `/api/gardens/:id` | One garden document                                               |
+| POST   | `/api/suggestions` | Submit a new-garden suggestion or correction (rate-limited)       |
 
 Hardening: `helmet`, open CORS (public read-only data), global + per-route rate
 limits, request-size limits, JSON 404/error handlers, graceful shutdown.
-
-## Local development
-
-Prerequisites: Node 20+, a MongoDB database, a Google Maps API key (with a Map ID).
-
-```bash
-# 1. Server
-cd server
-cp .env.example .env        # fill in URI (Mongo connection string) and DB_NAME
-npm install
-npm run seed                # load the WCC dataset into your database
-npm run dev:api             # API on http://localhost:3000
-
-# 2. Client (separate terminal)
-cd client
-echo "VITE_GOOGLE_MAPS_API_KEY=<your key>" > .env
-echo "VITE_MAP_ID=<your map id>" >> .env
-npm install
-npm run dev                 # app on http://localhost:5173 (proxies /api to :3000)
-```
-
-`npm run dev` from `server/` starts both the API and the client together.
 
 ## Data pipeline
 
